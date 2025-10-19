@@ -128,54 +128,79 @@ const isDirectVideo = (url: string): boolean => {
   height: 100%;
 }
 
+/* Navigation Arrows - Modern Design */
 .product-media-swiper :deep(.swiper-button-next),
 .product-media-swiper :deep(.swiper-button-prev) {
   color: #fff;
-  background: rgba(79, 82, 255, 0.8);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  transition: all 0.3s ease;
+  background: linear-gradient(135deg, rgba(79, 82, 255, 0.95), rgba(60, 63, 187, 0.95));
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(79, 82, 255, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .product-media-swiper :deep(.swiper-button-next:hover),
 .product-media-swiper :deep(.swiper-button-prev:hover) {
-  background: rgba(79, 82, 255, 1);
+  background: linear-gradient(135deg, rgba(79, 82, 255, 1), rgba(60, 63, 187, 1));
   transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(79, 82, 255, 0.6);
 }
 
 .product-media-swiper :deep(.swiper-button-next::after),
 .product-media-swiper :deep(.swiper-button-prev::after) {
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+/* Position adjustments for better visibility */
+.product-media-swiper :deep(.swiper-button-next) {
+  right: 16px;
+}
+
+.product-media-swiper :deep(.swiper-button-prev) {
+  left: 16px;
+}
+
+/* Pagination Bullets - Enhanced Design */
+.product-media-swiper :deep(.swiper-pagination) {
+  bottom: 20px !important;
 }
 
 .product-media-swiper :deep(.swiper-pagination-bullet) {
-  width: 12px;
-  height: 12px;
-  background: #fff;
-  opacity: 0.5;
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.6);
+  opacity: 1;
   transition: all 0.3s ease;
+  margin: 0 6px !important;
 }
 
 .product-media-swiper :deep(.swiper-pagination-bullet-active) {
   background: #4f52ff;
-  opacity: 1;
-  transform: scale(1.2);
+  width: 28px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(79, 82, 255, 0.5);
 }
 
+/* Dark Mode */
 @media (prefers-color-scheme: dark) {
   .product-media-swiper :deep(.swiper-button-next),
   .product-media-swiper :deep(.swiper-button-prev) {
-    background: rgba(156, 207, 255, 0.8);
+    background: linear-gradient(135deg, rgba(156, 207, 255, 0.95), rgba(116, 118, 255, 0.95));
+    box-shadow: 0 4px 12px rgba(156, 207, 255, 0.4);
   }
 
   .product-media-swiper :deep(.swiper-button-next:hover),
   .product-media-swiper :deep(.swiper-button-prev:hover) {
-    background: rgba(156, 207, 255, 1);
+    background: linear-gradient(135deg, rgba(156, 207, 255, 1), rgba(116, 118, 255, 1));
+    box-shadow: 0 6px 20px rgba(156, 207, 255, 0.6);
   }
 
   .product-media-swiper :deep(.swiper-pagination-bullet-active) {
     background: #9ccfff;
+    box-shadow: 0 2px 8px rgba(156, 207, 255, 0.5);
   }
 }
 </style>

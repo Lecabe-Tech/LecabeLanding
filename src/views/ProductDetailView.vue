@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { computed, onMounted, watch } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { useProducts } from '@/composables/useProducts'
 import { useReviews } from '@/composables/useReviews'
 import { useScrollAnimation } from '@/composables/useScrollAnimation'
 import { useContactForm } from '@/composables/useContactForm'
+import type { Product } from '@/types/product'
 import StarRating from '@/components/StarRating.vue'
 import ProductMediaSwiper from '@/components/ProductMediaSwiper.vue'
 import ProductReviews from '@/components/ProductReviews.vue'
@@ -13,20 +14,26 @@ import ProductReviews from '@/components/ProductReviews.vue'
 const route = useRoute()
 const router = useRouter()
 const { t } = useI18n()
-const { loadProducts, getProductById } = useProducts()
+const { getProductById } = useProducts()
 const { reviews, loading: reviewsLoading, averageRating, loadReviews, clearReviews } = useReviews()
 const { setPrefilled } = useContactForm()
 
 // Scroll animations
 const detailSection = useScrollAnimation()
 
+// Product state
+const product = ref<Product | undefined>(undefined)
+const productLoading = ref(true)
+
 /**
- * Get current product
+ * Load current product
  */
-const product = computed(() => {
+const loadProduct = async () => {
   const id = route.params.id as string
-  return getProductById(id)
-})
+  productLoading.value = true
+  product.value = await getProductById(id)
+  productLoading.value = false
+}
 
 /**
  * Navigate back to produtos
@@ -57,18 +64,25 @@ const openLink = (url: string): void => {
 }
 
 /**
- * Load product reviews when product changes
+ * Load product and reviews on mount
  */
-watch(() => product.value, (newProduct) => {
-  if (newProduct) {
-    loadReviews(newProduct.id)
+onMounted(async () => {
+  await loadProduct()
+  if (product.value) {
+    loadReviews(product.value.id)
+  }
+})
+
+/**
+ * Watch for route changes and reload product
+ */
+watch(() => route.params.id, async () => {
+  await loadProduct()
+  if (product.value) {
+    loadReviews(product.value.id)
   } else {
     clearReviews()
   }
-}, { immediate: true })
-
-onMounted(() => {
-  loadProducts()
 })
 </script>
 
