@@ -781,16 +781,30 @@ watch(() => window.location.hash, () => {
 
           <!-- Body - Form -->
           <div class="w-full max-w-3xl mx-auto">
-            <form class="space-y-6">
+            <form 
+              class="space-y-6"
+              @submit.prevent="handleContactSubmit"
+              aria-label="Formulário de contato"
+            >
               <!-- Name and Email Row -->
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <label class="flex flex-col">
-                  <span class="text-gray-700 dark:text-gray-300 text-sm font-medium mb-2">
+                  <span
+                    id="name-label"
+                    class="text-gray-700 dark:text-gray-300 text-sm font-medium mb-2"
+                  >
                     {{ t('contact.form.name') }}
                   </span>
                   <input
                     v-model="formData.name"
                     :placeholder="t('contact.form.name')"
+                    type="text"
+                    name="name"
+                    autocomplete="name"
+                    required
+                    aria-labelledby="name-label"
+                    :aria-invalid="formErrors.name"
+                    :aria-describedby="formErrors.name ? 'name-error' : undefined"
                     class="form-input w-full rounded-lg text-gray-900 dark:text-white focus:outline-0 focus:ring-2 border-none bg-white dark:bg-brand-medium-dark-primary h-14 placeholder:text-gray-400 dark:placeholder:text-gray-500 p-4 text-base font-normal leading-normal transition-all duration-200 shadow-sm"
                     :class="{
                       'focus:ring-brand-primary dark:focus:ring-brand-light-primary': !formErrors.name,
@@ -799,17 +813,28 @@ watch(() => window.location.hash, () => {
                   >
                   <span
                     v-if="formErrors.name"
+                    id="name-error"
                     class="text-red-500 text-sm mt-1"
+                    role="alert"
                   >Nome é obrigatório</span>
                 </label>
                 <label class="flex flex-col">
-                  <span class="text-gray-700 dark:text-gray-300 text-sm font-medium mb-2">
+                  <span
+                    id="email-label"
+                    class="text-gray-700 dark:text-gray-300 text-sm font-medium mb-2"
+                  >
                     {{ t('contact.form.email') }}
                   </span>
                   <input
                     v-model="formData.email"
                     :placeholder="t('contact.form.email')"
                     type="email"
+                    name="email"
+                    autocomplete="email"
+                    required
+                    aria-labelledby="email-label"
+                    :aria-invalid="formErrors.email"
+                    :aria-describedby="formErrors.email ? 'email-error' : undefined"
                     class="form-input w-full rounded-lg text-gray-900 dark:text-white focus:outline-0 focus:ring-2 border-none bg-white dark:bg-brand-medium-dark-primary h-14 placeholder:text-gray-400 dark:placeholder:text-gray-500 p-4 text-base font-normal leading-normal transition-all duration-200 shadow-sm"
                     :class="{
                       'focus:ring-brand-primary dark:focus:ring-brand-light-primary': !formErrors.email,
@@ -818,7 +843,9 @@ watch(() => window.location.hash, () => {
                   >
                   <span
                     v-if="formErrors.email"
+                    id="email-error"
                     class="text-red-500 text-sm mt-1"
+                    role="alert"
                   >E-mail inválido</span>
                 </label>
               </div>

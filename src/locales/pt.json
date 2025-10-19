@@ -3,7 +3,9 @@
     "services": "Serviços",
     "about": "Sobre Nós",
     "contact": "Contato",
-    "getStarted": "Começar"
+    "getStarted": "Começar",
+    "goHome": "Ir para página inicial",
+    "goToProducts": "Ir para Produtos"
   },
   "hero": {
     "title": "Criando Produtos Exclusivos para Sua Empresa",

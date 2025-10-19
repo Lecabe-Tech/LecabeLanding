@@ -3,7 +3,9 @@
     "services": "Services",
     "about": "About Us",
     "contact": "Contact",
-    "getStarted": "Get Started"
+    "getStarted": "Get Started",
+    "goHome": "Go to home page",
+    "goToProducts": "Go to Products"
   },
   "hero": {
     "title": "Creating Exclusive Products for Your Company",

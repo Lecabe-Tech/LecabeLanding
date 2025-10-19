@@ -57,13 +57,14 @@ const goHome = (): void => {
 
 <template>
   <header
+    role="banner"
     class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 dark:border-brand-medium-dark-primary px-4 sm:px-6 lg:px-10 py-3 bg-white dark:bg-brand-dark transition-colors duration-300"
   >
     <!-- Logo -->
     <div class="flex items-center gap-4 text-gray-900 dark:text-white">
       <button
-        class="flex items-center gap-2 hover:opacity-80 transition-opacity"
-        aria-label="Go to home"
+        class="flex items-center gap-2 hover:opacity-80 transition-opacity focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded-lg"
+        :aria-label="t('nav.goHome') || 'Ir para página inicial'"
         @click="goHome"
       >
         <img
@@ -82,22 +83,29 @@ const goHome = (): void => {
     </div>
 
     <!-- Desktop Navigation -->
-    <div class="hidden md:flex flex-1 justify-end gap-8">
+    <nav
+      class="hidden md:flex flex-1 justify-end gap-8"
+      role="navigation"
+      aria-label="Navegação principal"
+    >
       <div class="flex items-center gap-9">
         <button
-          class="text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-colors duration-200"
+          class="text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2 py-1"
+          :aria-label="`Navegar para ${t('nav.services')}`"
           @click="scrollToSection('services')"
         >
           {{ t('nav.services') }}
         </button>
         <button
-          class="text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-colors duration-200"
+          class="text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2 py-1"
+          :aria-label="`Navegar para ${t('nav.about')}`"
           @click="scrollToSection('about')"
         >
           {{ t('nav.about') }}
         </button>
         <button
-          class="text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-colors duration-200"
+          class="text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2 py-1"
+          :aria-label="`Navegar para ${t('nav.contact')}`"
           @click="scrollToSection('contact')"
         >
           {{ t('nav.contact') }}
@@ -109,7 +117,8 @@ const goHome = (): void => {
         <LanguageSwitcher />
         
         <button
-          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-10 px-4 bg-brand-dark dark:bg-brand-primary text-neutral-50 text-sm font-bold leading-normal tracking-[0.015em] hover:bg-brand-primary dark:hover:bg-brand-dark-primary transition-colors duration-300"
+          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-10 px-4 bg-brand-dark dark:bg-brand-primary text-neutral-50 text-sm font-bold leading-normal tracking-[0.015em] hover:bg-brand-primary dark:hover:bg-brand-dark-primary transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-brand-light-primary"
+          :aria-label="t('nav.goToProducts') || 'Ir para Produtos'"
           @click="goToMarketplace"
         >
           <svg
@@ -131,8 +140,10 @@ const goHome = (): void => {
       <ThemeToggle />
       <button
         type="button"
-        class="p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-brand-medium-dark-primary rounded-lg focus:outline-none transition-colors"
-        :aria-label="isMenuOpen ? 'Close menu' : 'Open menu'"
+        class="p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-brand-medium-dark-primary rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary transition-colors"
+        :aria-label="isMenuOpen ? 'Fechar menu' : 'Abrir menu'"
+        :aria-expanded="isMenuOpen"
+        aria-controls="mobile-menu"
         @click="toggleMenu"
       >
         <svg
@@ -168,25 +179,31 @@ const goHome = (): void => {
       leave-from-class="opacity-100 scale-100"
       leave-to-class="opacity-0 scale-95"
     >
-      <div
+      <nav
         v-if="isMenuOpen"
+        id="mobile-menu"
         class="absolute top-full left-0 right-0 md:hidden bg-white dark:bg-brand-dark border-b border-gray-200 dark:border-brand-medium-dark-primary shadow-lg"
+        role="navigation"
+        aria-label="Menu mobile"
       >
         <div class="flex flex-col px-4 py-4 space-y-3">
           <button
-            class="text-left text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-light-primary py-2 transition-colors font-medium"
+            class="text-left text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-light-primary py-2 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2"
+            :aria-label="`Navegar para ${t('nav.services')}`"
             @click="scrollToSection('services')"
           >
             {{ t('nav.services') }}
           </button>
           <button
-            class="text-left text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-light-primary py-2 transition-colors font-medium"
+            class="text-left text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-light-primary py-2 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2"
+            :aria-label="`Navegar para ${t('nav.about')}`"
             @click="scrollToSection('about')"
           >
             {{ t('nav.about') }}
           </button>
           <button
-            class="text-left text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-light-primary py-2 transition-colors font-medium"
+            class="text-left text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-light-primary py-2 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2"
+            :aria-label="`Navegar para ${t('nav.contact')}`"
             @click="scrollToSection('contact')"
           >
             {{ t('nav.contact') }}
@@ -197,7 +214,8 @@ const goHome = (): void => {
           </div>
           
           <button
-            class="flex min-w-[84px] w-full cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-10 px-4 bg-brand-dark dark:bg-brand-primary text-neutral-50 text-sm font-bold leading-normal tracking-[0.015em] hover:bg-brand-primary dark:hover:bg-brand-dark-primary transition-colors duration-300"
+            class="flex min-w-[84px] w-full cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-10 px-4 bg-brand-dark dark:bg-brand-primary text-neutral-50 text-sm font-bold leading-normal tracking-[0.015em] hover:bg-brand-primary dark:hover:bg-brand-dark-primary transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-brand-light-primary"
+            :aria-label="t('nav.goToProducts') || 'Ir para Produtos'"
             @click="goToMarketplace"
           >
             <svg
