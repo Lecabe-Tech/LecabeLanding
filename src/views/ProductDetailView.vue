@@ -88,9 +88,18 @@ watch(() => route.params.id, async () => {
 
 <template>
   <div class="min-h-screen bg-brand-light dark:bg-brand-dark transition-colors duration-300">
+    <!-- Loading State -->
+    <div
+      v-if="productLoading"
+      class="max-w-7xl mx-auto px-6 md:px-12 py-16 text-center"
+    >
+      <div class="inline-block animate-spin rounded-full h-12 w-12 border-4 border-brand-primary border-t-transparent" />
+      <p class="mt-4 text-gray-600 dark:text-gray-400">Carregando produto...</p>
+    </div>
+
     <!-- Product not found -->
     <div
-      v-if="!product"
+      v-else-if="!product"
       class="max-w-7xl mx-auto px-6 md:px-12 py-16"
     >
       <div class="text-center">
