@@ -8,13 +8,13 @@
     "goToProducts": "Aller aux Produits"
   },
   "hero": {
-    "title": "Créer des Produits Exclusifs pour Votre Entreprise",
-    "subtitle": "Chez Lecabe, nous développons des solutions logicielles personnalisées et exclusives pour votre entreprise. Nous construisons des produits qui s'emboîtent parfaitement, comme les pièces d'un puzzle, favorisant l'efficacité et améliorant l'expérience utilisateur. Notre équipe se consacre à comprendre vos besoins uniques et à fournir des solutions sur mesure avec soin et précision.",
+    "title": "Créer des Produits qui s'Intègrent à Vos Processus",
+    "subtitle": "Chez Lecabe, nous développons des solutions logicielles personnalisées qui s'intègrent parfaitement à vos processus d'entreprise. Nous construisons des produits qui s'emboîtent parfaitement, comme les pièces d'un puzzle, favorisant l'efficacité et améliorant l'expérience utilisateur. Notre équipe se consacre à comprendre vos besoins uniques et à fournir des solutions sur mesure avec soin et précision.",
     "cta": "Découvrez Nos Services"
   },
   "about": {
     "title": "À Propos de Nous",
-    "content": "Lecabe est une entreprise de logiciels spécialisée dans la création de produits exclusifs pour votre entreprise, où l'innovation et le soin méticuleux sont au cœur de chaque projet. Nous sommes spécialisés dans la création de solutions logicielles personnalisées, conçues pour s'emboîter parfaitement comme les pièces d'un puzzle unique. Notre approche est enracinée dans la compréhension de vos besoins spécifiques et la fourniture de solutions avec précision et excellence. Nous croyons en la création de logiciels qui non seulement répondent mais dépassent les attentes, garantissant un ajustement parfait pour vos objectifs commerciaux."
+    "content": "Lecabe est une entreprise de logiciels spécialisée dans la création de produits qui s'intègrent parfaitement à vos processus d'entreprise, où l'innovation et le soin méticuleux sont au cœur de chaque projet. Nous sommes spécialisés dans la création de solutions logicielles personnalisées, conçues pour s'emboîter parfaitement comme les pièces d'un puzzle unique. Notre approche est enracinée dans la compréhension de vos besoins spécifiques et la fourniture de solutions avec précision et excellence. Nous croyons en la création de logiciels qui non seulement répondent mais dépassent les attentes, garantissant un ajustement parfait pour vos objectifs commerciaux."
   },
   "services": {
     "title": "Nos Services",
@@ -33,9 +33,9 @@
         "title": "Conception d'Expérience Utilisateur",
         "description": "Nos experts en conception UX créent des expériences utilisateur intuitives et engageantes qui favorisent la satisfaction et la fidélité des clients, garantissant que chaque interaction est une pièce positive du parcours utilisateur."
       },
-      "development": {
-        "title": "Développement de Logiciels",
-        "description": "Construire des solutions logicielles robustes et évolutives adaptées aux besoins de votre entreprise, garantissant que chaque composant fonctionne en harmonie."
+      "maintenance": {
+        "title": "Maintenance et Support",
+        "description": "Nous fournissons un support technique continu et une maintenance préventive pour garantir que vos systèmes fonctionnent parfaitement, maintenant la stabilité et les performances."
       },
       "ai": {
         "title": "Intelligence Artificielle",

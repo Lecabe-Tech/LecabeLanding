@@ -47,7 +47,8 @@ const iconSrc = computed(() => {
     design: 'uiux',
     check: 'qa',
     robot: 'automation',
-    documentation: 'documentation'
+    documentation: 'documentation',
+    maintenance: 'maintenance'
   }
   const iconFile = iconMap[props.icon] || 'development'
   return `/assets/icons/services/${iconFile}.svg`

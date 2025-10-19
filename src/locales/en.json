@@ -8,13 +8,13 @@
     "goToProducts": "Go to Products"
   },
   "hero": {
-    "title": "Creating Exclusive Products for Your Company",
-    "subtitle": "At Lecabe, we develop personalized and exclusive software solutions for your business. We build products that fit together seamlessly, like pieces of a puzzle, driving efficiency and enhancing user experience. Our team is dedicated to understanding your unique needs and delivering tailored solutions with care and precision.",
+    "title": "Creating Products that Fit Your Processes",
+    "subtitle": "At Lecabe, we develop personalized software solutions that fit perfectly into your business processes. We build products that fit together seamlessly, like pieces of a puzzle, driving efficiency and enhancing user experience. Our team is dedicated to understanding your unique needs and delivering tailored solutions with care and precision.",
     "cta": "Explore Our Services"
   },
   "about": {
     "title": "About Us",
-    "content": "Lecabe is a software company specialized in creating exclusive products for your company, where innovation and meticulous care are at the heart of every project. We specialize in creating personalized software solutions, tailored to fit together seamlessly like the pieces of a unique puzzle. Our approach is rooted in understanding your specific needs and delivering solutions with precision and excellence. We believe in crafting software that not only meets but exceeds expectations, ensuring a perfect fit for your business objectives."
+    "content": "Lecabe is a software company specialized in creating products that fit perfectly into your business processes, where innovation and meticulous care are at the heart of every project. We specialize in creating personalized software solutions, tailored to fit together seamlessly like the pieces of a unique puzzle. Our approach is rooted in understanding your specific needs and delivering solutions with precision and excellence. We believe in crafting software that not only meets but exceeds expectations, ensuring a perfect fit for your business objectives."
   },
   "services": {
     "title": "Our Services",
@@ -33,9 +33,9 @@
         "title": "User Experience Design",
         "description": "Our UX design experts create intuitive and engaging user experiences that drive customer satisfaction and loyalty, ensuring every interaction is a positive piece of the user journey."
       },
-      "development": {
-        "title": "Software Development",
-        "description": "Building robust and scalable software solutions tailored to your business needs, ensuring every component works in harmony."
+      "maintenance": {
+        "title": "Maintenance and Support",
+        "description": "We provide continuous technical support and preventive maintenance to ensure your systems work perfectly, maintaining stability and performance."
       },
       "ai": {
         "title": "Artificial Intelligence",

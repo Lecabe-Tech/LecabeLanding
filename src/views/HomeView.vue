@@ -302,12 +302,12 @@ watch(() => window.location.hash, () => {
               width="full"
             />
 
-            <!-- Software Development -->
+            <!-- Maintenance and Support -->
             <ServiceCard
               number="04"
-              icon="code"
-              :title="t('services.items.development.title')"
-              :description="t('services.items.development.description')"
+              icon="maintenance"
+              :title="t('services.items.maintenance.title')"
+              :description="t('services.items.maintenance.description')"
               :animation-delay="servicesSection.isVisible.value ? '1050' : '0'"
               width="full"
             />

@@ -8,13 +8,13 @@
     "goToProducts": "Ir para Produtos"
   },
   "hero": {
-    "title": "Criando Produtos Exclusivos para Sua Empresa",
-    "subtitle": "Na Lecabe, desenvolvemos soluções de software personalizadas e exclusivas para o seu negócio. Construímos produtos que se encaixam perfeitamente, como peças de um quebra-cabeça, impulsionando a eficiência e melhorando a experiência do usuário. Nossa equipe se dedica a entender suas necessidades únicas e entregar soluções personalizadas com cuidado e precisão.",
+    "title": "Criando Produtos que se Encaixam nos Seus Processos",
+    "subtitle": "Na Lecabe, desenvolvemos soluções de software personalizadas que se encaixam perfeitamente nos seus processos de negócio. Construímos produtos que se encaixam perfeitamente, como peças de um quebra-cabeça, impulsionando a eficiência e melhorando a experiência do usuário. Nossa equipe se dedica a entender suas necessidades únicas e entregar soluções personalizadas com cuidado e precisão.",
     "cta": "Explore Nossos Serviços"
   },
   "about": {
     "title": "Sobre Nós",
-    "content": "A Lecabe é uma empresa de software especializada em criar produtos exclusivos para sua empresa, onde inovação e cuidado meticuloso estão no coração de cada projeto. Somos especializados em criar soluções de software personalizadas, adaptadas para se encaixarem perfeitamente como as peças de um quebra-cabeça único. Nossa abordagem está enraizada em entender suas necessidades específicas e entregar soluções com precisão e excelência. Acreditamos em criar software que não apenas atenda, mas supere as expectativas, garantindo um ajuste perfeito para seus objetivos de negócio."
+    "content": "A Lecabe é uma empresa de software especializada em criar produtos que se encaixam perfeitamente nos seus processos de negócio, onde inovação e cuidado meticuloso estão no coração de cada projeto. Somos especializados em criar soluções de software personalizadas, adaptadas para se encaixarem perfeitamente como as peças de um quebra-cabeça único. Nossa abordagem está enraizada em entender suas necessidades específicas e entregar soluções com precisão e excelência. Acreditamos em criar software que não apenas atenda, mas supere as expectativas, garantindo um ajuste perfeito para seus objetivos de negócio."
   },
   "services": {
     "title": "Nossos Serviços",
@@ -33,9 +33,9 @@
         "title": "Design de Experiência do Usuário",
         "description": "Nossos especialistas em design UX criam experiências de usuário intuitivas e envolventes que impulsionam a satisfação e fidelidade do cliente, garantindo que cada interação seja uma peça positiva da jornada do usuário."
       },
-      "development": {
-        "title": "Desenvolvimento de Software",
-        "description": "Construindo soluções de software robustas e escaláveis adaptadas às necessidades do seu negócio, garantindo que cada componente trabalhe em harmonia."
+      "maintenance": {
+        "title": "Manutenção e Suporte",
+        "description": "Oferecemos suporte técnico contínuo e manutenção preventiva para garantir que seus sistemas funcionem perfeitamente, mantendo a estabilidade e performance."
       },
       "ai": {
         "title": "Inteligência Artificial",
