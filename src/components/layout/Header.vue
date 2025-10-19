@@ -18,16 +18,25 @@ const toggleMenu = (): void => {
   isMenuOpen.value = !isMenuOpen.value
 }
 
-    /**
- * Navigate to section
+/**
+ * Navigate to section (handles navigation from other pages)
  */
-    const scrollToSection = (sectionId: string): void => {
-      const element = document.getElementById(sectionId)
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' })
-        isMenuOpen.value = false
-      }
+const scrollToSection = (sectionId: string): void => {
+  // Close mobile menu first
+  isMenuOpen.value = false
+  
+  // Check if we're on the home page
+  if (router.currentRoute.value.path !== '/') {
+    // Navigate to home page with hash
+    router.push({ path: '/', hash: `#${sectionId}` })
+  } else {
+    // Already on home page, just scroll
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
     }
+  }
+}
 
     /**
  * Navigate to produtos page
