@@ -18,8 +18,8 @@ const { getProductById } = useProducts()
 const { reviews, loading: reviewsLoading, averageRating, loadReviews, clearReviews } = useReviews()
 const { setPrefilled } = useContactForm()
 
-// Scroll animations
-const detailSection = useScrollAnimation()
+// Scroll animations - immediate visibility to avoid blank page
+const detailSection = useScrollAnimation({}, true)
 
 // Product state
 const product = ref<Product | undefined>(undefined)
