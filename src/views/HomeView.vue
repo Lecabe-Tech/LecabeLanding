@@ -59,10 +59,10 @@ const scrollToSection = (sectionId: string): void => {
 }
 
 /**
- * Navigate to marketplace page
+ * Navigate to produtos page
  */
 const goToMarketplace = (): void => {
-  router.push('/marketplace')
+  router.push('/produtos')
 }
 
 /**
@@ -607,9 +607,9 @@ watch(() => window.location.hash, () => {
 
     </div>
 
-    <!-- Marketplace Section - CTA Destacado with Full-Width Background -->
-    <section 
-      id="marketplace" 
+      <!-- Produtos Section - CTA Destacado with Full-Width Background -->
+      <section 
+        id="produtos"
       :ref="marketplaceSection.target"
       class="relative py-16 md:py-24 overflow-hidden bg-gradient-to-r from-brand-primary to-brand-dark-primary dark:from-brand-light-primary dark:to-brand-primary"
       :class="[
@@ -625,7 +625,7 @@ watch(() => window.location.hash, () => {
             class="h-12 md:h-16 w-auto"
           />
           <h2 class="text-white text-3xl md:text-4xl lg:text-5xl font-black leading-tight tracking-tight">
-            Marketplace
+            {{ t('marketplace.title') }}
           </h2>
         </div>
         <p class="text-white/90 text-base md:text-lg font-normal leading-relaxed mb-8 max-w-3xl mx-auto">

@@ -29,10 +29,10 @@ const product = computed(() => {
 })
 
 /**
- * Navigate back to marketplace
+ * Navigate back to produtos
  */
 const goBack = (): void => {
-  router.push('/marketplace')
+  router.push('/produtos')
 }
 
 /**
@@ -108,7 +108,7 @@ onMounted(() => {
               alt="Lecabe"
               class="h-5 w-auto"
             />
-            <span>Marketplace</span>
+            <span>{{ t('marketplace.page.title') }}</span>
           </button>
           <span class="text-gray-400">/</span>
           <span class="text-gray-700 dark:text-gray-300">{{ product.name }}</span>

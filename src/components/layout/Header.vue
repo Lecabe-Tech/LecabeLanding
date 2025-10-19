@@ -30,10 +30,10 @@ const toggleMenu = (): void => {
     }
 
     /**
- * Navigate to marketplace page
+ * Navigate to produtos page
  */
     const goToMarketplace = (): void => {
-      router.push('/marketplace')
+      router.push('/produtos')
       isMenuOpen.value = false
     }
 

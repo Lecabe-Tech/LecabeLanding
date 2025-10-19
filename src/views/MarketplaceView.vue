@@ -111,7 +111,7 @@ onUnmounted(() => {
             class="h-12 md:h-16 w-auto"
           />
           <h1 class="section-title text-white">
-            Marketplace
+            {{ t('marketplace.page.title') }}
           </h1>
         </div>
         <p class="section-description text-white/90 max-w-3xl mx-auto">

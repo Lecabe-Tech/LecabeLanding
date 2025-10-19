@@ -95,11 +95,11 @@
     }
   },
   "marketplace": {
-    "title": "Lecabe Marketplace",
-    "description": "Explore o marketplace da Lecabe para produtos plug-and-play que se integram perfeitamente aos seus processos. Compre estes produtos para adaptar ao seu fluxo de trabalho ou contrate nossos serviços para integração personalizada.",
-    "cta": "Ir para o Marketplace",
+    "title": "Produtos Lecabe",
+    "description": "Explore os produtos da Lecabe prontos para integração que se encaixam perfeitamente aos seus processos. Adquira estes produtos para adaptar ao seu fluxo de trabalho ou contrate nossos serviços para integração personalizada.",
+    "cta": "Ver Produtos",
     "page": {
-      "title": "Lecabe Marketplace",
+      "title": "Produtos Lecabe",
       "description": "Explore nossa seleção de produtos de software prontos para integração. Soluções profissionais que aceleram seu desenvolvimento e agregam valor ao seu negócio."
     },
     "loading": "Carregando produtos...",
@@ -141,7 +141,7 @@
     "allProductsLoaded": "Todos os produtos foram carregados",
     "detail": {
       "notFound": "Produto não encontrado",
-      "backToMarketplace": "Voltar ao Marketplace",
+      "backToMarketplace": "Voltar aos Produtos",
       "description": "Descrição",
       "subscribers": "assinantes",
       "sales": "vendas",
