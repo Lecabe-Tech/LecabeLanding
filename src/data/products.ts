@@ -21,7 +21,8 @@ export const mockProducts: Product[] = [
     avaliacoes: 4.8,
     qtd_vendas: 342,
     qtd_assinantes: 1245,
-    category: 'web'
+    category: 'web',
+    tags: ['SaaS', 'Possui SDK', 'API REST', 'Multi-tenant']
   },
   {
     id: '2',
@@ -33,9 +34,9 @@ export const mockProducts: Product[] = [
     avaliacoes: 4.9,
     qtd_vendas: 528,
     qtd_assinantes: 2103,
-    category: 'web'
-    ,
-    media: []
+    category: 'web',
+    media: [],
+    tags: ['SaaS', 'BI', 'Real-time', 'Cloud']
   },
   {
     id: '3',
@@ -47,9 +48,9 @@ export const mockProducts: Product[] = [
     avaliacoes: 4.7,
     qtd_vendas: 156,
     qtd_assinantes: 892,
-    category: 'mobile'
-    ,
-    media: []
+    category: 'mobile',
+    media: [],
+    tags: ['Mobile App', 'iOS', 'Android', 'GPS', 'Pagamentos']
   },
   {
     id: '4',
@@ -61,9 +62,9 @@ export const mockProducts: Product[] = [
     avaliacoes: 4.6,
     qtd_vendas: 234,
     qtd_assinantes: 1567,
-    category: 'ai'
-    ,
-    media: []
+    category: 'ai',
+    media: [],
+    tags: ['IA', 'Possui SDK', 'NLP', 'Multi-channel', 'SaaS']
   },
   {
     id: '5',
@@ -75,9 +76,9 @@ export const mockProducts: Product[] = [
     avaliacoes: 4.9,
     qtd_vendas: 421,
     qtd_assinantes: 1876,
-    category: 'web'
-    ,
-    media: []
+    category: 'web',
+    media: [],
+    tags: ['SaaS', 'E-commerce', 'Pagamentos', 'API REST']
   },
   {
     id: '6',
@@ -89,9 +90,9 @@ export const mockProducts: Product[] = [
     avaliacoes: 4.8,
     qtd_vendas: 389,
     qtd_assinantes: 1634,
-    category: 'web'
-    ,
-    media: []
+    category: 'web',
+    media: [],
+    tags: ['SaaS', 'CRM', 'Vendas', 'Marketing']
   },
   {
     id: '7',
@@ -103,9 +104,9 @@ export const mockProducts: Product[] = [
     avaliacoes: 4.5,
     qtd_vendas: 267,
     qtd_assinantes: 1123,
-    category: 'automation'
-    ,
-    media: []
+    category: 'automation',
+    media: [],
+    tags: ['SaaS', 'Marketing', 'A/B Testing', 'Analytics']
   },
   {
     id: '8',
@@ -117,9 +118,9 @@ export const mockProducts: Product[] = [
     avaliacoes: 4.7,
     qtd_vendas: 512,
     qtd_assinantes: 2341,
-    category: 'cloud'
-    ,
-    media: []
+    category: 'cloud',
+    media: [],
+    tags: ['Cloud', 'Backup', 'Segurança', 'Criptografia']
   },
   {
     id: '9',
@@ -131,9 +132,9 @@ export const mockProducts: Product[] = [
     avaliacoes: 4.6,
     qtd_vendas: 198,
     qtd_assinantes: 876,
-    category: 'mobile'
-    ,
-    media: []
+    category: 'mobile',
+    media: [],
+    tags: ['Mobile App', 'Produtividade', 'Cloud Sync', 'Colaboração']
   },
   {
     id: '10',
@@ -145,9 +146,9 @@ export const mockProducts: Product[] = [
     avaliacoes: 4.8,
     qtd_vendas: 301,
     qtd_assinantes: 1432,
-    category: 'ai'
-    ,
-    media: []
+    category: 'ai',
+    media: [],
+    tags: ['IA', 'BI', 'Relatórios', 'Analytics', 'SaaS']
   },
   {
     id: '11',
@@ -159,9 +160,9 @@ export const mockProducts: Product[] = [
     avaliacoes: 4.7,
     qtd_vendas: 445,
     qtd_assinantes: 1789,
-    category: 'web'
-    ,
-    media: []
+    category: 'web',
+    media: [],
+    tags: ['SaaS', 'ERP', 'Estoque', 'Código de Barras']
   },
   {
     id: '12',
@@ -173,9 +174,9 @@ export const mockProducts: Product[] = [
     avaliacoes: 4.9,
     qtd_vendas: 623,
     qtd_assinantes: 2567,
-    category: 'automation'
-    ,
-    media: []
+    category: 'automation',
+    media: [],
+    tags: ['SaaS', 'Automação', 'Integrações', 'No-Code']
   }
 ]
 

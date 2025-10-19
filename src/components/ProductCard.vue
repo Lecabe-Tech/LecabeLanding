@@ -67,6 +67,20 @@ const openDemo = (): void => {
         <StarRating :rating="product.avaliacoes" />
       </div>
 
+      <!-- Tags -->
+      <div
+        v-if="product.tags && product.tags.length > 0"
+        class="flex flex-wrap gap-1.5 mb-3"
+      >
+        <span
+          v-for="tag in product.tags.slice(0, 3)"
+          :key="tag"
+          class="px-2 py-0.5 bg-brand-primary/10 dark:bg-brand-light-primary/10 text-brand-primary dark:text-brand-light-primary text-xs font-medium rounded-full"
+        >
+          {{ tag }}
+        </span>
+      </div>
+
       <!-- Description -->
       <p class="card-description mb-4 line-clamp-3 flex-1">
         {{ product.description }}

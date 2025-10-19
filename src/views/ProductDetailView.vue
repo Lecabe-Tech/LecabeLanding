@@ -175,6 +175,20 @@ onMounted(() => {
               </div>
             </div>
 
+            <!-- Tags -->
+            <div
+              v-if="product.tags && product.tags.length > 0"
+              class="flex flex-wrap gap-2 mb-6"
+            >
+              <span
+                v-for="tag in product.tags"
+                :key="tag"
+                class="px-3 py-1 bg-brand-primary/10 dark:bg-brand-light-primary/10 text-brand-primary dark:text-brand-light-primary text-xs font-semibold rounded-full border border-brand-primary/20 dark:border-brand-light-primary/20"
+              >
+                {{ tag }}
+              </span>
+            </div>
+
             <!-- Description -->
             <div class="mb-8">
               <h2 class="card-title mb-3">
