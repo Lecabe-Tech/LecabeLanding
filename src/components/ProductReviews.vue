@@ -65,8 +65,10 @@ const getRatingPercentage = (count: number): number => {
           src="/assets/logos/simbolo-gradient.png" 
           alt="Lecabe"
           class="h-8 w-auto"
-        />
-        <h2 class="card-title">{{ t('marketplace.reviews.title') }}</h2>
+        >
+        <h2 class="card-title">
+          {{ t('marketplace.reviews.title') }}
+        </h2>
       </div>
       
       <!-- Rating Summary -->
@@ -78,7 +80,10 @@ const getRatingPercentage = (count: number): number => {
               {{ averageRating.toFixed(1) }}
             </span>
             <div>
-              <StarRating :rating="averageRating" :show-number="false" />
+              <StarRating
+                :rating="averageRating"
+                :show-number="false"
+              />
               <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">
                 {{ t('marketplace.reviews.basedOn', { count: reviews.length }) }}
               </p>
@@ -100,7 +105,7 @@ const getRatingPercentage = (count: number): number => {
               <div
                 class="h-full bg-yellow-400 transition-all duration-300"
                 :style="{ width: `${getRatingPercentage(ratingDistribution[star as keyof typeof ratingDistribution])}%` }"
-              ></div>
+              />
             </div>
             <span class="text-sm text-gray-600 dark:text-gray-400 w-12 text-right">
               {{ ratingDistribution[star as keyof typeof ratingDistribution] }}
@@ -111,7 +116,10 @@ const getRatingPercentage = (count: number): number => {
     </div>
 
     <!-- Reviews List -->
-    <div v-if="reviews.length > 0" class="space-y-6">
+    <div
+      v-if="reviews.length > 0"
+      class="space-y-6"
+    >
       <div
         v-for="review in reviews"
         :key="review.id"
@@ -124,7 +132,11 @@ const getRatingPercentage = (count: number): number => {
             v-if="review.avatar"
             class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0"
           >
-            <img :src="review.avatar" :alt="review.author" class="w-full h-full object-cover" />
+            <img
+              :src="review.avatar"
+              :alt="review.author"
+              class="w-full h-full object-cover"
+            >
           </div>
           <div
             v-else
@@ -143,7 +155,10 @@ const getRatingPercentage = (count: number): number => {
                 {{ formatDate(review.date) }}
               </span>
             </div>
-            <StarRating :rating="review.rating" :show-number="false" />
+            <StarRating
+              :rating="review.rating"
+              :show-number="false"
+            />
           </div>
         </div>
 
@@ -157,8 +172,18 @@ const getRatingPercentage = (count: number): number => {
           <button
             class="flex items-center gap-1 text-gray-600 dark:text-gray-400 hover:text-brand-primary dark:hover:text-brand-light-primary transition-colors"
           >
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"
+              />
             </svg>
             <span>{{ t('marketplace.reviews.helpful') }} ({{ review.helpful }})</span>
           </button>
@@ -167,14 +192,22 @@ const getRatingPercentage = (count: number): number => {
     </div>
 
     <!-- No Reviews -->
-    <div v-else class="text-center py-12">
+    <div
+      v-else
+      class="text-center py-12"
+    >
       <svg
         class="mx-auto h-16 w-16 text-gray-400 dark:text-gray-600 mb-4"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
       >
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"
+        />
       </svg>
       <p class="text-gray-600 dark:text-gray-400">
         {{ t('marketplace.reviews.noReviews') }}

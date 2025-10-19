@@ -3,16 +3,18 @@
     "services": "Serviços",
     "about": "Sobre Nós",
     "contact": "Contato",
-    "getStarted": "Começar"
+    "getStarted": "Começar",
+    "goHome": "Ir para página inicial",
+    "goToProducts": "Ir para Produtos"
   },
   "hero": {
-    "title": "Criando Produtos Exclusivos para Sua Empresa",
-    "subtitle": "Na Lecabe, desenvolvemos soluções de software personalizadas e exclusivas para o seu negócio. Construímos produtos que se encaixam perfeitamente, como peças de um quebra-cabeça, impulsionando a eficiência e melhorando a experiência do usuário. Nossa equipe se dedica a entender suas necessidades únicas e entregar soluções personalizadas com cuidado e precisão.",
+    "title": "Criando Produtos que se Encaixam nos Seus Processos",
+    "subtitle": "Na Lecabe, desenvolvemos soluções de software personalizadas que se encaixam perfeitamente nos seus processos de negócio. Construímos produtos que se encaixam perfeitamente, como peças de um quebra-cabeça, impulsionando a eficiência e melhorando a experiência do usuário. Nossa equipe se dedica a entender suas necessidades únicas e entregar soluções personalizadas com cuidado e precisão.",
     "cta": "Explore Nossos Serviços"
   },
   "about": {
     "title": "Sobre Nós",
-    "content": "A Lecabe é uma empresa de software especializada em criar produtos exclusivos para sua empresa, onde inovação e cuidado meticuloso estão no coração de cada projeto. Somos especializados em criar soluções de software personalizadas, adaptadas para se encaixarem perfeitamente como as peças de um quebra-cabeça único. Nossa abordagem está enraizada em entender suas necessidades específicas e entregar soluções com precisão e excelência. Acreditamos em criar software que não apenas atenda, mas supere as expectativas, garantindo um ajuste perfeito para seus objetivos de negócio."
+    "content": "A Lecabe é uma empresa de software especializada em criar produtos que se encaixam perfeitamente nos seus processos de negócio, onde inovação e cuidado meticuloso estão no coração de cada projeto. Somos especializados em criar soluções de software personalizadas, adaptadas para se encaixarem perfeitamente como as peças de um quebra-cabeça único. Nossa abordagem está enraizada em entender suas necessidades específicas e entregar soluções com precisão e excelência. Acreditamos em criar software que não apenas atenda, mas supere as expectativas, garantindo um ajuste perfeito para seus objetivos de negócio."
   },
   "services": {
     "title": "Nossos Serviços",
@@ -31,9 +33,9 @@
         "title": "Design de Experiência do Usuário",
         "description": "Nossos especialistas em design UX criam experiências de usuário intuitivas e envolventes que impulsionam a satisfação e fidelidade do cliente, garantindo que cada interação seja uma peça positiva da jornada do usuário."
       },
-      "development": {
-        "title": "Desenvolvimento de Software",
-        "description": "Construindo soluções de software robustas e escaláveis adaptadas às necessidades do seu negócio, garantindo que cada componente trabalhe em harmonia."
+      "maintenance": {
+        "title": "Manutenção e Suporte",
+        "description": "Oferecemos suporte técnico contínuo e manutenção preventiva para garantir que seus sistemas funcionem perfeitamente, mantendo a estabilidade e performance."
       },
       "ai": {
         "title": "Inteligência Artificial",
@@ -51,9 +53,9 @@
         "title": "Automação de Processos",
         "description": "Automatizando tarefas repetitivas para otimizar operações e reduzir custos, otimizando seu fluxo de trabalho para desempenho máximo."
       },
-      "customSoftware": {
-        "title": "Desenvolvimento de Software Personalizado",
-        "description": "Construímos software personalizado adaptado aos seus requisitos específicos, garantindo integração perfeita e desempenho ideal, como uma peça de quebra-cabeça perfeitamente elaborada."
+      "documentation": {
+        "title": "Documentação de Software",
+        "description": "Criamos documentação técnica completa e clara para seus sistemas, facilitando manutenção, onboarding de equipe e garantindo continuidade do projeto."
       },
       "cloud": {
         "title": "Soluções em Nuvem",
@@ -95,11 +97,11 @@
     }
   },
   "marketplace": {
-    "title": "Lecabe Marketplace",
-    "description": "Explore o marketplace da Lecabe para produtos plug-and-play que se integram perfeitamente aos seus processos. Compre estes produtos para adaptar ao seu fluxo de trabalho ou contrate nossos serviços para integração personalizada.",
-    "cta": "Ir para o Marketplace",
+    "title": "Produtos",
+    "description": "Explore os produtos da Lecabe prontos para integração que se encaixam perfeitamente aos seus processos. Adquira estes produtos para adaptar ao seu fluxo de trabalho ou contrate nossos serviços para integração personalizada.",
+    "cta": "Ver Produtos",
     "page": {
-      "title": "Lecabe Marketplace",
+      "title": "Produtos",
       "description": "Explore nossa seleção de produtos de software prontos para integração. Soluções profissionais que aceleram seu desenvolvimento e agregam valor ao seu negócio."
     },
     "loading": "Carregando produtos...",
@@ -141,7 +143,7 @@
     "allProductsLoaded": "Todos os produtos foram carregados",
     "detail": {
       "notFound": "Produto não encontrado",
-      "backToMarketplace": "Voltar ao Marketplace",
+      "backToMarketplace": "Voltar aos Produtos",
       "description": "Descrição",
       "subscribers": "assinantes",
       "sales": "vendas",
@@ -188,6 +190,17 @@
     "whatsapp": "WhatsApp",
     "email": "E-mail",
     "phone": "Telefone"
+  },
+  "common": {
+    "backToHome": "Voltar ao Início"
+  },
+  "privacy": {
+    "title": "Política de Privacidade",
+    "lastUpdated": "Última atualização"
+  },
+  "terms": {
+    "title": "Termos de Serviço",
+    "lastUpdated": "Última atualização"
   }
 }
 

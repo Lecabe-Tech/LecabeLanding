@@ -1,6 +1,10 @@
 import { ref, computed } from 'vue'
 import type { Category } from '@/types/product'
-import { fetchCategories } from '@/data/categories'
+import { fetchCategories as fetchMockCategories } from '@/data/categories'
+
+// Check environment - use mock data only in non-production
+const environment = import.meta.env.VITE_ENVIRONMENT || 'development'
+const isProduction = environment === 'prod' || environment === 'production'
 
 export function useCategories() {
   const categories = ref<Category[]>([])
@@ -9,6 +13,7 @@ export function useCategories() {
 
   /**
    * Load categories from API
+   * In production, fetches from API. In development, uses mock data.
    */
   const loadCategories = async (): Promise<void> => {
     if (loading.value) return
@@ -17,7 +22,16 @@ export function useCategories() {
     error.value = null
     
     try {
-      categories.value = await fetchCategories()
+      if (isProduction) {
+        // Production: Fetch from API
+        const apiUrl = import.meta.env.VITE_API_URL || '/api'
+        const response = await fetch(`${apiUrl}/products/categories`)
+        if (!response.ok) throw new Error('Failed to fetch categories')
+        categories.value = await response.json()
+      } else {
+        // Development: Use mock data
+        categories.value = await fetchMockCategories()
+      }
     } catch (e) {
       error.value = 'Erro ao carregar categorias'
       console.error('Error loading categories:', e)

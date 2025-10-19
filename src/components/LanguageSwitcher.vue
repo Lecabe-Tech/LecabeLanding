@@ -43,12 +43,15 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div ref="dropdownRef" class="relative">
+  <div
+    ref="dropdownRef"
+    class="relative"
+  >
     <button
       type="button"
       class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-brand-medium-dark-primary transition-colors duration-200"
-      @click.stop="toggleDropdown"
       aria-label="Change language"
+      @click.stop="toggleDropdown"
     >
       <span class="text-xl">{{ localeStore.getCurrentLocaleInfo().flag }}</span>
       <span class="text-sm font-medium">{{ localeStore.getCurrentLocaleInfo().code.toUpperCase() }}</span>
@@ -59,7 +62,12 @@ onUnmounted(() => {
         stroke="currentColor"
         viewBox="0 0 24 24"
       >
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M19 9l-7 7-7-7"
+        />
       </svg>
     </button>
 

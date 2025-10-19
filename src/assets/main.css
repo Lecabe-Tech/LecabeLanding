@@ -10,6 +10,35 @@
     @apply bg-white dark:bg-brand-dark text-gray-900 dark:text-gray-100;
     @apply transition-colors duration-300;
   }
+
+  /* Screen reader only - accessible but visually hidden */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  /* Skip to main content link for keyboard navigation */
+  .skip-to-main {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #4f52ff;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    z-index: 9999;
+  }
+
+  .skip-to-main:focus {
+    top: 0;
+  }
 }
 
 @layer components {
@@ -118,15 +147,26 @@
     opacity: 0;
   }
 
-  /* Timeline-specific animations */
+  /* Timeline-specific animations - optimized for mobile */
   .timeline-slide-in-right {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(30px);
   }
 
   .timeline-slide-in-left {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-30px);
+  }
+
+  /* Mobile-specific optimizations */
+  @media (max-width: 768px) {
+    .timeline-slide-in-right {
+      transform: translateX(15px);
+    }
+
+    .timeline-slide-in-left {
+      transform: translateX(-15px);
+    }
   }
 }
 

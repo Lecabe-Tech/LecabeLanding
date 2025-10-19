@@ -20,7 +20,7 @@ const { t } = useI18n()
  * Navigate to product details
  */
 const viewDetails = (): void => {
-  router.push(`/marketplace/${props.product.id}`)
+  router.push(`/produtos/${props.product.id}`)
 }
 
 /**
@@ -32,9 +32,11 @@ const openDemo = (): void => {
 </script>
 
 <template>
-  <div
+  <article
     class="product-card relative flex flex-col bg-white dark:bg-brand-medium-dark-primary/30 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group animate-scale-in h-full"
     :class="`animation-delay-${animationDelay}`"
+    role="article"
+    :aria-label="`Produto: ${product.name}`"
   >
     <!-- Product Image -->
     <div class="relative w-full h-48 md:h-56 overflow-hidden bg-gray-100 dark:bg-brand-dark">
@@ -42,7 +44,7 @@ const openDemo = (): void => {
         :src="product.cover_image"
         :alt="product.name"
         class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-      />
+      >
       
       <!-- Badges -->
       <div class="absolute top-3 right-3 flex flex-col gap-2">
@@ -67,6 +69,20 @@ const openDemo = (): void => {
         <StarRating :rating="product.avaliacoes" />
       </div>
 
+      <!-- Tags -->
+      <div
+        v-if="product.tags && product.tags.length > 0"
+        class="flex flex-wrap gap-1.5 mb-3"
+      >
+        <span
+          v-for="tag in product.tags.slice(0, 3)"
+          :key="tag"
+          class="px-2 py-0.5 bg-brand-primary/10 dark:bg-brand-light-primary/10 text-brand-primary dark:text-brand-light-primary text-xs font-medium rounded-full"
+        >
+          {{ tag }}
+        </span>
+      </div>
+
       <!-- Description -->
       <p class="card-description mb-4 line-clamp-3 flex-1">
         {{ product.description }}
@@ -75,20 +91,22 @@ const openDemo = (): void => {
       <!-- Actions - Inline Buttons -->
       <div class="flex gap-2">
         <button
+          class="flex-1 px-4 py-2.5 bg-brand-primary dark:bg-brand-light-primary text-white rounded-lg font-semibold text-sm hover:bg-brand-dark-primary dark:hover:bg-brand-medium-primary hover:scale-105 transition-all duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-brand-dark-primary dark:focus:ring-brand-medium-primary"
+          :aria-label="`Ver detalhes de ${product.name}`"
           @click="viewDetails"
-          class="flex-1 px-4 py-2.5 bg-brand-primary dark:bg-brand-light-primary text-white rounded-lg font-semibold text-sm hover:bg-brand-dark-primary dark:hover:bg-brand-medium-primary hover:scale-105 transition-all duration-300 shadow-md"
         >
           {{ t('marketplace.product.viewDetails') }}
         </button>
         <button
+          class="flex-1 px-4 py-2.5 bg-white dark:bg-brand-dark text-brand-primary dark:text-brand-light-primary border-2 border-brand-primary dark:border-brand-light-primary rounded-lg font-semibold text-sm hover:bg-brand-primary hover:text-white dark:hover:bg-brand-light-primary dark:hover:text-brand-dark transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary"
+          :aria-label="`Ver demonstração ao vivo de ${product.name}`"
           @click="openDemo"
-          class="flex-1 px-4 py-2.5 bg-white dark:bg-brand-dark text-brand-primary dark:text-brand-light-primary border-2 border-brand-primary dark:border-brand-light-primary rounded-lg font-semibold text-sm hover:bg-brand-primary hover:text-white dark:hover:bg-brand-light-primary dark:hover:text-brand-dark transition-all duration-300"
         >
           {{ t('marketplace.product.liveDemo') }}
         </button>
       </div>
     </div>
-  </div>
+  </article>
 </template>
 
 <style scoped>

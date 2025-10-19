@@ -40,6 +40,7 @@ export interface Product {
   qtd_vendas: number
   qtd_assinantes: number
   category: string
+  tags: string[] // Product tags like "Possui SDK", "SaaS", etc
 }
 
 /**

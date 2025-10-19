@@ -109,9 +109,9 @@ onUnmounted(() => {
             src="/assets/logos/simbolo-white.png" 
             alt="Lecabe"
             class="h-12 md:h-16 w-auto"
-          />
+          >
           <h1 class="section-title text-white">
-            Marketplace
+            {{ t('marketplace.page.title') }}
           </h1>
         </div>
         <p class="section-description text-white/90 max-w-3xl mx-auto">
@@ -136,13 +136,21 @@ onUnmounted(() => {
         />
 
         <!-- Loading State (Initial) -->
-        <div v-if="loading && products.length === 0" class="text-center py-16">
-          <div class="inline-block animate-spin rounded-full h-12 w-12 border-4 border-brand-primary border-t-transparent"></div>
-          <p class="mt-4 text-gray-600 dark:text-gray-400">{{ t('marketplace.loading') }}</p>
+        <div
+          v-if="loading && products.length === 0"
+          class="text-center py-16"
+        >
+          <div class="inline-block animate-spin rounded-full h-12 w-12 border-4 border-brand-primary border-t-transparent" />
+          <p class="mt-4 text-gray-600 dark:text-gray-400">
+            {{ t('marketplace.loading') }}
+          </p>
         </div>
 
         <!-- Products Grid -->
-        <div v-else-if="products.length > 0" class="mt-12">
+        <div
+          v-else-if="products.length > 0"
+          class="mt-12"
+        >
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             <ProductCard
               v-for="(product, index) in products"
@@ -157,15 +165,24 @@ onUnmounted(() => {
             ref="loadMoreTrigger"
             class="py-8 text-center"
           >
-            <div v-if="loadingMore || loading" class="inline-block animate-spin rounded-full h-10 w-10 border-4 border-brand-primary border-t-transparent"></div>
-            <p v-else-if="!hasMore" class="text-gray-600 dark:text-gray-400">
+            <div
+              v-if="loadingMore || loading"
+              class="inline-block animate-spin rounded-full h-10 w-10 border-4 border-brand-primary border-t-transparent"
+            />
+            <p
+              v-else-if="!hasMore"
+              class="text-gray-600 dark:text-gray-400"
+            >
               {{ t('marketplace.allProductsLoaded') }}
             </p>
           </div>
         </div>
 
         <!-- Empty State -->
-        <div v-else class="text-center py-16 mt-12">
+        <div
+          v-else
+          class="text-center py-16 mt-12"
+        >
           <svg
             class="mx-auto h-24 w-24 text-gray-400 dark:text-gray-600 mb-4"
             xmlns="http://www.w3.org/2000/svg"
@@ -173,7 +190,12 @@ onUnmounted(() => {
             viewBox="0 0 24 24"
             stroke="currentColor"
           >
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
           </svg>
           <h3 class="text-xl font-bold text-gray-700 dark:text-gray-300 mb-2">
             {{ t('marketplace.emptyState.title') }}

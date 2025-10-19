@@ -3,16 +3,18 @@
     "services": "Services",
     "about": "À Propos",
     "contact": "Contact",
-    "getStarted": "Commencer"
+    "getStarted": "Commencer",
+    "goHome": "Aller à la page d'accueil",
+    "goToProducts": "Aller aux Produits"
   },
   "hero": {
-    "title": "Créer des Produits Exclusifs pour Votre Entreprise",
-    "subtitle": "Chez Lecabe, nous développons des solutions logicielles personnalisées et exclusives pour votre entreprise. Nous construisons des produits qui s'emboîtent parfaitement, comme les pièces d'un puzzle, favorisant l'efficacité et améliorant l'expérience utilisateur. Notre équipe se consacre à comprendre vos besoins uniques et à fournir des solutions sur mesure avec soin et précision.",
+    "title": "Créer des Produits qui s'Intègrent à Vos Processus",
+    "subtitle": "Chez Lecabe, nous développons des solutions logicielles personnalisées qui s'intègrent parfaitement à vos processus d'entreprise. Nous construisons des produits qui s'emboîtent parfaitement, comme les pièces d'un puzzle, favorisant l'efficacité et améliorant l'expérience utilisateur. Notre équipe se consacre à comprendre vos besoins uniques et à fournir des solutions sur mesure avec soin et précision.",
     "cta": "Découvrez Nos Services"
   },
   "about": {
     "title": "À Propos de Nous",
-    "content": "Lecabe est une entreprise de logiciels spécialisée dans la création de produits exclusifs pour votre entreprise, où l'innovation et le soin méticuleux sont au cœur de chaque projet. Nous sommes spécialisés dans la création de solutions logicielles personnalisées, conçues pour s'emboîter parfaitement comme les pièces d'un puzzle unique. Notre approche est enracinée dans la compréhension de vos besoins spécifiques et la fourniture de solutions avec précision et excellence. Nous croyons en la création de logiciels qui non seulement répondent mais dépassent les attentes, garantissant un ajustement parfait pour vos objectifs commerciaux."
+    "content": "Lecabe est une entreprise de logiciels spécialisée dans la création de produits qui s'intègrent parfaitement à vos processus d'entreprise, où l'innovation et le soin méticuleux sont au cœur de chaque projet. Nous sommes spécialisés dans la création de solutions logicielles personnalisées, conçues pour s'emboîter parfaitement comme les pièces d'un puzzle unique. Notre approche est enracinée dans la compréhension de vos besoins spécifiques et la fourniture de solutions avec précision et excellence. Nous croyons en la création de logiciels qui non seulement répondent mais dépassent les attentes, garantissant un ajustement parfait pour vos objectifs commerciaux."
   },
   "services": {
     "title": "Nos Services",
@@ -31,9 +33,9 @@
         "title": "Conception d'Expérience Utilisateur",
         "description": "Nos experts en conception UX créent des expériences utilisateur intuitives et engageantes qui favorisent la satisfaction et la fidélité des clients, garantissant que chaque interaction est une pièce positive du parcours utilisateur."
       },
-      "development": {
-        "title": "Développement de Logiciels",
-        "description": "Construire des solutions logicielles robustes et évolutives adaptées aux besoins de votre entreprise, garantissant que chaque composant fonctionne en harmonie."
+      "maintenance": {
+        "title": "Maintenance et Support",
+        "description": "Nous fournissons un support technique continu et une maintenance préventive pour garantir que vos systèmes fonctionnent parfaitement, maintenant la stabilité et les performances."
       },
       "ai": {
         "title": "Intelligence Artificielle",
@@ -51,9 +53,9 @@
         "title": "Automatisation des Processus",
         "description": "Automatiser les tâches répétitives pour rationaliser les opérations et réduire les coûts, optimisant votre flux de travail pour des performances maximales."
       },
-      "customSoftware": {
-        "title": "Développement de Logiciels Personnalisés",
-        "description": "Nous créons des logiciels personnalisés adaptés à vos exigences spécifiques, garantissant une intégration transparente et des performances optimales, comme une pièce de puzzle parfaitement conçue."
+      "documentation": {
+        "title": "Documentation de Logiciels",
+        "description": "Nous créons une documentation technique complète et claire pour vos systèmes, facilitant la maintenance, l'intégration de l'équipe et assurant la continuité du projet."
       },
       "cloud": {
         "title": "Solutions Cloud",
@@ -95,11 +97,11 @@
     }
   },
   "marketplace": {
-    "title": "Lecabe Marketplace",
-    "description": "Explorez le marketplace Lecabe pour des produits plug-and-play qui s'intègrent parfaitement dans vos processus. Achetez ces produits pour vous adapter à votre flux de travail ou engagez nos services pour une intégration personnalisée.",
-    "cta": "Aller au Marketplace",
+    "title": "Produits",
+    "description": "Explorez les produits Lecabe prêts à l'intégration qui s'intègrent parfaitement dans vos processus. Achetez ces produits pour vous adapter à votre flux de travail ou engagez nos services pour une intégration personnalisée.",
+    "cta": "Voir les Produits",
     "page": {
-      "title": "Lecabe Marketplace",
+      "title": "Produits",
       "description": "Explorez notre sélection de produits logiciels prêts à l'intégration. Des solutions professionnelles qui accélèrent votre développement et ajoutent de la valeur à votre entreprise."
     },
     "loading": "Chargement des produits...",
@@ -141,7 +143,7 @@
     "allProductsLoaded": "Tous les produits ont été chargés",
     "detail": {
       "notFound": "Produit non trouvé",
-      "backToMarketplace": "Retour au Marketplace",
+      "backToMarketplace": "Retour aux Produits",
       "description": "Description",
       "subscribers": "abonnés",
       "sales": "ventes",
@@ -188,6 +190,17 @@
     "whatsapp": "WhatsApp",
     "email": "E-mail",
     "phone": "Téléphone"
+  },
+  "common": {
+    "backToHome": "Retour à l'accueil"
+  },
+  "privacy": {
+    "title": "Politique de Confidentialité",
+    "lastUpdated": "Dernière mise à jour"
+  },
+  "terms": {
+    "title": "Conditions d'Utilisation",
+    "lastUpdated": "Dernière mise à jour"
   }
 }
 

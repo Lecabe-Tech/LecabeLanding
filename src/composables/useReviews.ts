@@ -1,9 +1,13 @@
 import { ref, computed } from 'vue'
 import type { ProductReview } from '@/types/product'
 
+// Check environment - use mock data only in non-production
+const environment = import.meta.env.VITE_ENVIRONMENT || 'development'
+const isProduction = environment === 'prod' || environment === 'production'
+
 /**
  * Mock reviews data organized by product ID
- * Ready to be replaced by API call
+ * Used only in development mode
  */
 const mockReviewsData: Record<string, ProductReview[]> = {
   '1': [
@@ -402,22 +406,25 @@ export function useReviews() {
   const error = ref<string | null>(null)
 
   /**
-   * Load reviews for a specific product from API (currently using mock data)
+   * Load reviews for a specific product from API
+   * In production, fetches from API. In development, uses mock data.
    */
   const loadReviews = async (productId: string): Promise<void> => {
     loading.value = true
     error.value = null
 
     try {
-      // TODO: Replace with actual API call
-      // const response = await fetch(`/api/products/${productId}/reviews`)
-      // reviews.value = await response.json()
-      
-      // Simulate API delay
-      await new Promise(resolve => setTimeout(resolve, 300))
-      
-      // Get reviews for this product or empty array
-      reviews.value = mockReviewsData[productId] || []
+      if (isProduction) {
+        // Production: Fetch from API
+        const apiUrl = import.meta.env.VITE_API_URL || '/api'
+        const response = await fetch(`${apiUrl}/products/${productId}/reviews`)
+        if (!response.ok) throw new Error('Failed to fetch reviews')
+        reviews.value = await response.json()
+      } else {
+        // Development: Use mock data
+        await new Promise(resolve => setTimeout(resolve, 300))
+        reviews.value = mockReviewsData[productId] || []
+      }
     } catch (e) {
       error.value = 'Erro ao carregar avaliações'
       console.error(e)

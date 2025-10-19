@@ -18,22 +18,31 @@ const toggleMenu = (): void => {
   isMenuOpen.value = !isMenuOpen.value
 }
 
-    /**
- * Navigate to section
+/**
+ * Navigate to section (handles navigation from other pages)
  */
-    const scrollToSection = (sectionId: string): void => {
-      const element = document.getElementById(sectionId)
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' })
-        isMenuOpen.value = false
-      }
+const scrollToSection = (sectionId: string): void => {
+  // Close mobile menu first
+  isMenuOpen.value = false
+  
+  // Check if we're on the home page
+  if (router.currentRoute.value.path !== '/') {
+    // Navigate to home page with hash
+    router.push({ path: '/', hash: `#${sectionId}` })
+  } else {
+    // Already on home page, just scroll
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
     }
+  }
+}
 
     /**
- * Navigate to marketplace page
+ * Navigate to produtos page
  */
     const goToMarketplace = (): void => {
-      router.push('/marketplace')
+      router.push('/produtos')
       isMenuOpen.value = false
     }
 
@@ -48,48 +57,56 @@ const goHome = (): void => {
 
 <template>
   <header
+    role="banner"
     class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 dark:border-brand-medium-dark-primary px-4 sm:px-6 lg:px-10 py-3 bg-white dark:bg-brand-dark transition-colors duration-300"
   >
     <!-- Logo -->
     <div class="flex items-center gap-4 text-gray-900 dark:text-white">
       <button
-        class="flex items-center gap-2 hover:opacity-80 transition-opacity"
+        class="flex items-center gap-2 hover:opacity-80 transition-opacity focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded-lg"
+        :aria-label="t('nav.goHome') || 'Ir para página inicial'"
         @click="goHome"
-        aria-label="Go to home"
       >
         <img
           v-if="themeStore.isDark"
           src="/assets/logos/Logo-horizontal-degradê-branco-8.png"
           alt="Lecabe Logo"
           class="h-8 md:h-10 w-auto"
-        />
+        >
         <img
           v-else
           src="/assets/logos/Logo-horizontal-degradê -preto-8.png"
           alt="Lecabe Logo"
           class="h-8 md:h-10 w-auto"
-        />
+        >
       </button>
     </div>
 
     <!-- Desktop Navigation -->
-    <div class="hidden md:flex flex-1 justify-end gap-8">
+    <nav
+      class="hidden md:flex flex-1 justify-end gap-8"
+      role="navigation"
+      aria-label="Navegação principal"
+    >
       <div class="flex items-center gap-9">
         <button
+          class="text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2 py-1"
+          :aria-label="`Navegar para ${t('nav.services')}`"
           @click="scrollToSection('services')"
-          class="text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-colors duration-200"
         >
           {{ t('nav.services') }}
         </button>
         <button
+          class="text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2 py-1"
+          :aria-label="`Navegar para ${t('nav.about')}`"
           @click="scrollToSection('about')"
-          class="text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-colors duration-200"
         >
           {{ t('nav.about') }}
         </button>
         <button
+          class="text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2 py-1"
+          :aria-label="`Navegar para ${t('nav.contact')}`"
           @click="scrollToSection('contact')"
-          class="text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-colors duration-200"
         >
           {{ t('nav.contact') }}
         </button>
@@ -99,28 +116,42 @@ const goHome = (): void => {
         <ThemeToggle />
         <LanguageSwitcher />
         
-            <button
-              @click="goToMarketplace"
-              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-10 px-4 bg-brand-dark dark:bg-brand-primary text-neutral-50 text-sm font-bold leading-normal tracking-[0.015em] hover:bg-brand-primary dark:hover:bg-brand-dark-primary transition-colors duration-300"
-            >
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 256 256">
-            <path d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z"></path>
+        <button
+          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-10 px-4 bg-brand-dark dark:bg-brand-primary text-neutral-50 text-sm font-bold leading-normal tracking-[0.015em] hover:bg-brand-primary dark:hover:bg-brand-dark-primary transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-brand-light-primary"
+          :aria-label="t('nav.goToProducts') || 'Ir para Produtos'"
+          @click="goToMarketplace"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            fill="currentColor"
+            viewBox="0 0 256 256"
+          >
+            <path d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z" />
           </svg>
-          <span class="truncate">Marketplace</span>
+          <span class="truncate">Produtos</span>
         </button>
       </div>
-    </div>
+    </nav>
 
     <!-- Mobile menu button -->
     <div class="flex md:hidden items-center gap-2">
       <ThemeToggle />
       <button
         type="button"
-        class="p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-brand-medium-dark-primary rounded-lg focus:outline-none transition-colors"
+        class="p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-brand-medium-dark-primary rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary transition-colors"
+        :aria-label="isMenuOpen ? 'Fechar menu' : 'Abrir menu'"
+        :aria-expanded="isMenuOpen"
+        aria-controls="mobile-menu"
         @click="toggleMenu"
-        :aria-label="isMenuOpen ? 'Close menu' : 'Open menu'"
       >
-        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
           <path
             v-if="!isMenuOpen"
             stroke-linecap="round"
@@ -148,26 +179,32 @@ const goHome = (): void => {
       leave-from-class="opacity-100 scale-100"
       leave-to-class="opacity-0 scale-95"
     >
-      <div
+      <nav
         v-if="isMenuOpen"
+        id="mobile-menu"
         class="absolute top-full left-0 right-0 md:hidden bg-white dark:bg-brand-dark border-b border-gray-200 dark:border-brand-medium-dark-primary shadow-lg"
+        role="navigation"
+        aria-label="Menu mobile"
       >
         <div class="flex flex-col px-4 py-4 space-y-3">
           <button
+            class="text-left text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-light-primary py-2 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2"
+            :aria-label="`Navegar para ${t('nav.services')}`"
             @click="scrollToSection('services')"
-            class="text-left text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-light-primary py-2 transition-colors font-medium"
           >
             {{ t('nav.services') }}
           </button>
           <button
+            class="text-left text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-light-primary py-2 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2"
+            :aria-label="`Navegar para ${t('nav.about')}`"
             @click="scrollToSection('about')"
-            class="text-left text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-light-primary py-2 transition-colors font-medium"
           >
             {{ t('nav.about') }}
           </button>
           <button
+            class="text-left text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-light-primary py-2 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2"
+            :aria-label="`Navegar para ${t('nav.contact')}`"
             @click="scrollToSection('contact')"
-            class="text-left text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-light-primary py-2 transition-colors font-medium"
           >
             {{ t('nav.contact') }}
           </button>
@@ -177,16 +214,23 @@ const goHome = (): void => {
           </div>
           
           <button
+            class="flex min-w-[84px] w-full cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-10 px-4 bg-brand-dark dark:bg-brand-primary text-neutral-50 text-sm font-bold leading-normal tracking-[0.015em] hover:bg-brand-primary dark:hover:bg-brand-dark-primary transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-brand-light-primary"
+            :aria-label="t('nav.goToProducts') || 'Ir para Produtos'"
             @click="goToMarketplace"
-            class="flex min-w-[84px] w-full cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-10 px-4 bg-brand-dark dark:bg-brand-primary text-neutral-50 text-sm font-bold leading-normal tracking-[0.015em] hover:bg-brand-primary dark:hover:bg-brand-dark-primary transition-colors duration-300"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 256 256">
-              <path d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z"></path>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              fill="currentColor"
+              viewBox="0 0 256 256"
+            >
+              <path d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z" />
             </svg>
-            <span class="truncate">Marketplace</span>
+            <span class="truncate">Produtos</span>
           </button>
         </div>
-      </div>
+      </nav>
     </Transition>
   </header>
 </template>
