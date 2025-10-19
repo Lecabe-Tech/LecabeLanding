@@ -1,0 +1,193 @@
+{
+  "nav": {
+    "services": "Services",
+    "about": "À Propos",
+    "contact": "Contact",
+    "getStarted": "Commencer"
+  },
+  "hero": {
+    "title": "Créer des Produits Exclusifs pour Votre Entreprise",
+    "subtitle": "Chez Lecabe, nous développons des solutions logicielles personnalisées et exclusives pour votre entreprise. Nous construisons des produits qui s'emboîtent parfaitement, comme les pièces d'un puzzle, favorisant l'efficacité et améliorant l'expérience utilisateur. Notre équipe se consacre à comprendre vos besoins uniques et à fournir des solutions sur mesure avec soin et précision.",
+    "cta": "Découvrez Nos Services"
+  },
+  "about": {
+    "title": "À Propos de Nous",
+    "content": "Lecabe est une entreprise de logiciels spécialisée dans la création de produits exclusifs pour votre entreprise, où l'innovation et le soin méticuleux sont au cœur de chaque projet. Nous sommes spécialisés dans la création de solutions logicielles personnalisées, conçues pour s'emboîter parfaitement comme les pièces d'un puzzle unique. Notre approche est enracinée dans la compréhension de vos besoins spécifiques et la fourniture de solutions avec précision et excellence. Nous croyons en la création de logiciels qui non seulement répondent mais dépassent les attentes, garantissant un ajustement parfait pour vos objectifs commerciaux."
+  },
+  "services": {
+    "title": "Nos Services",
+    "subtitle": "Solutions Logicielles Complètes",
+    "description": "Du concept au déploiement, nous offrons une gamme complète de services de développement logiciel pour répondre aux besoins de votre entreprise, en veillant à ce que chaque pièce s'intègre parfaitement dans votre stratégie globale.",
+    "items": {
+      "customSoftware": {
+        "title": "Développement de Logiciels Personnalisés",
+        "description": "Nous créons des logiciels personnalisés adaptés à vos exigences spécifiques, garantissant une intégration transparente et des performances optimales, comme une pièce de puzzle parfaitement conçue."
+      },
+      "cloud": {
+        "title": "Solutions Cloud",
+        "description": "Exploitez la puissance du cloud avec nos solutions cloud évolutives et sécurisées, conçues pour améliorer l'agilité et réduire les coûts, s'intégrant parfaitement dans votre infrastructure numérique."
+      },
+      "ux": {
+        "title": "Conception d'Expérience Utilisateur",
+        "description": "Nos experts en conception UX créent des expériences utilisateur intuitives et engageantes qui favorisent la satisfaction et la fidélité des clients, garantissant que chaque interaction est une pièce positive du parcours utilisateur."
+      },
+      "development": {
+        "title": "Développement de Logiciels",
+        "description": "Construire des solutions logicielles robustes et évolutives adaptées aux besoins de votre entreprise, garantissant que chaque composant fonctionne en harmonie."
+      },
+      "ai": {
+        "title": "Intelligence Artificielle",
+        "description": "Mise en œuvre de l'IA et de l'apprentissage automatique pour stimuler l'innovation et l'efficacité, ajoutant une couche d'intelligence à vos solutions."
+      },
+      "uiux": {
+        "title": "Conception UI/UX",
+        "description": "Création d'interfaces et d'expériences utilisateur intuitives et engageantes, garantissant un parcours utilisateur fluide et agréable."
+      },
+      "qa": {
+        "title": "Assurance Qualité",
+        "description": "Garantir la plus haute qualité et fiabilité de votre logiciel grâce à des tests rigoureux, garantissant une solution fiable et robuste."
+      },
+      "automation": {
+        "title": "Automatisation des Processus",
+        "description": "Automatiser les tâches répétitives pour rationaliser les opérations et réduire les coûts, optimisant votre flux de travail pour des performances maximales."
+      },
+      "customSoftware": {
+        "title": "Développement de Logiciels Personnalisés",
+        "description": "Nous créons des logiciels personnalisés adaptés à vos exigences spécifiques, garantissant une intégration transparente et des performances optimales, comme une pièce de puzzle parfaitement conçue."
+      },
+      "cloud": {
+        "title": "Solutions Cloud",
+        "description": "Exploitez la puissance du cloud avec nos solutions cloud évolutives et sécurisées, conçues pour améliorer l'agilité et réduire les coûts, s'intégrant parfaitement dans votre infrastructure numérique."
+      },
+      "ux": {
+        "title": "Conception d'Expérience Utilisateur",
+        "description": "Nos experts en conception UX créent des expériences utilisateur intuitives et engageantes qui favorisent la satisfaction et la fidélité des clients, garantissant que chaque interaction est une pièce positive du parcours utilisateur."
+      }
+    }
+  },
+  "technologies": {
+    "title": "Nos Technologies"
+  },
+  "timeline": {
+    "title": "Chronologie du Développement Logiciel",
+    "step": "Étape",
+    "steps": {
+      "discovery": {
+        "title": "Découverte",
+        "description": "Cadrage initial du projet et compréhension des objectifs commerciaux, posant les bases d'une solution cohérente."
+      },
+      "requirements": {
+        "title": "Collecte des Exigences",
+        "description": "Analyse détaillée et documentation des exigences fonctionnelles et non fonctionnelles, garantissant que chaque détail est pris en compte."
+      },
+      "design": {
+        "title": "Conception et Prototypage",
+        "description": "Création de wireframes, de maquettes et de prototypes interactifs pour visualiser la solution, donnant vie à la vision."
+      },
+      "development": {
+        "title": "Développement et Tests",
+        "description": "Sprints de développement agile avec tests continus et assurance qualité, garantissant un produit final robuste et fiable."
+      },
+      "deployment": {
+        "title": "Déploiement et Support",
+        "description": "Déploiement transparent dans l'environnement de production avec maintenance et support continus, fournissant des soins et une attention à long terme."
+      }
+    }
+  },
+  "marketplace": {
+    "title": "Lecabe Marketplace",
+    "description": "Explorez le marketplace Lecabe pour des produits plug-and-play qui s'intègrent parfaitement dans vos processus. Achetez ces produits pour vous adapter à votre flux de travail ou engagez nos services pour une intégration personnalisée.",
+    "cta": "Aller au Marketplace",
+    "page": {
+      "title": "Lecabe Marketplace",
+      "description": "Explorez notre sélection de produits logiciels prêts à l'intégration. Des solutions professionnelles qui accélèrent votre développement et ajoutent de la valeur à votre entreprise."
+    },
+    "loading": "Chargement des produits...",
+    "filters": {
+      "search": "Rechercher",
+      "searchPlaceholder": "Rechercher des produits...",
+      "category": "Catégorie",
+      "allCategories": "Toutes les Catégories",
+        "categories": {
+          "all": "Tous",
+          "wms": "WMS",
+          "ai": "IA",
+          "erp": "ERP",
+          "chatbots": "Chatbots",
+          "automation": "Automatisation",
+          "analytics": "Analytics",
+          "crm": "CRM",
+          "ecommerce": "E-commerce",
+          "mobile": "Mobile",
+          "web": "Web",
+          "cloud": "Cloud"
+        },
+      "sortBy": "Trier par",
+      "sort": {
+        "popular": "Plus Populaires",
+        "rating": "Mieux Notés",
+        "priceAsc": "Prix Croissant",
+        "priceDesc": "Prix Décroissant"
+      }
+    },
+    "product": {
+      "viewDetails": "Voir les Détails",
+      "liveDemo": "Démo en Direct"
+    },
+    "emptyState": {
+      "title": "Aucun produit trouvé",
+      "description": "Essayez d'ajuster vos filtres ou votre recherche pour trouver ce que vous cherchez."
+    },
+    "allProductsLoaded": "Tous les produits ont été chargés",
+    "detail": {
+      "notFound": "Produit non trouvé",
+      "backToMarketplace": "Retour au Marketplace",
+      "description": "Description",
+      "subscribers": "abonnés",
+      "sales": "ventes",
+      "accessProduct": "Accéder au Produit",
+      "viewDemo": "Voir la Démo en Direct",
+      "contact": "Nous Contacter",
+      "contactSubject": "Intérêt pour le produit",
+      "contactMessage": "Bonjour, j'aimerais obtenir plus d'informations sur le produit {productName}."
+    },
+    "reviews": {
+      "title": "Avis des Clients",
+      "basedOn": "{count} avis",
+      "helpful": "Utile",
+      "noReviews": "Aucun avis pour ce produit pour le moment.",
+      "loading": "Chargement des avis..."
+    }
+  },
+  "contact": {
+    "title": "Contactez-Nous",
+    "subtitle": "Entrez en contact avec notre équipe",
+    "description": "Nous sommes là pour répondre à vos questions et discuter de la façon dont nous pouvons aider votre entreprise à réussir, en veillant à ce que chaque pièce de votre stratégie numérique s'emboîte parfaitement.",
+    "form": {
+      "name": "Votre nom",
+      "email": "Votre adresse e-mail",
+      "subject": "Sujet",
+      "message": "Votre message",
+      "language": "Langue préférée",
+      "languages": {
+        "pt": "Português",
+        "en": "English",
+        "fr": "Français"
+      },
+      "submit": "Envoyer",
+      "success": "Message envoyé avec succès!",
+      "error": "Erreur lors de l'envoi du message. Veuillez réessayer."
+    }
+  },
+  "footer": {
+    "privacyPolicy": "Politique de Confidentialité",
+    "termsOfService": "Conditions d'Utilisation",
+    "copyright": "© 2024 Lecabe. Tous droits réservés."
+  },
+  "floating": {
+    "whatsapp": "WhatsApp",
+    "email": "E-mail",
+    "phone": "Téléphone"
+  }
+}
+

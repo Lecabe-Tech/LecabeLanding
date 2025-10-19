@@ -1,0 +1,193 @@
+{
+  "nav": {
+    "services": "Serviços",
+    "about": "Sobre Nós",
+    "contact": "Contato",
+    "getStarted": "Começar"
+  },
+  "hero": {
+    "title": "Criando Produtos Exclusivos para Sua Empresa",
+    "subtitle": "Na Lecabe, desenvolvemos soluções de software personalizadas e exclusivas para o seu negócio. Construímos produtos que se encaixam perfeitamente, como peças de um quebra-cabeça, impulsionando a eficiência e melhorando a experiência do usuário. Nossa equipe se dedica a entender suas necessidades únicas e entregar soluções personalizadas com cuidado e precisão.",
+    "cta": "Explore Nossos Serviços"
+  },
+  "about": {
+    "title": "Sobre Nós",
+    "content": "A Lecabe é uma empresa de software especializada em criar produtos exclusivos para sua empresa, onde inovação e cuidado meticuloso estão no coração de cada projeto. Somos especializados em criar soluções de software personalizadas, adaptadas para se encaixarem perfeitamente como as peças de um quebra-cabeça único. Nossa abordagem está enraizada em entender suas necessidades específicas e entregar soluções com precisão e excelência. Acreditamos em criar software que não apenas atenda, mas supere as expectativas, garantindo um ajuste perfeito para seus objetivos de negócio."
+  },
+  "services": {
+    "title": "Nossos Serviços",
+    "subtitle": "Soluções Abrangentes de Software",
+    "description": "Do conceito à implantação, oferecemos um conjunto completo de serviços de desenvolvimento de software para atender às necessidades do seu negócio, garantindo que cada peça se encaixe perfeitamente em sua estratégia geral.",
+    "items": {
+      "customSoftware": {
+        "title": "Desenvolvimento de Software Personalizado",
+        "description": "Construímos software personalizado adaptado aos seus requisitos específicos, garantindo integração perfeita e desempenho ideal, como uma peça de quebra-cabeça perfeitamente elaborada."
+      },
+      "cloud": {
+        "title": "Soluções em Nuvem",
+        "description": "Aproveite o poder da nuvem com nossas soluções escaláveis e seguras, projetadas para aumentar a agilidade e reduzir custos, encaixando-se perfeitamente em sua infraestrutura digital."
+      },
+      "ux": {
+        "title": "Design de Experiência do Usuário",
+        "description": "Nossos especialistas em design UX criam experiências de usuário intuitivas e envolventes que impulsionam a satisfação e fidelidade do cliente, garantindo que cada interação seja uma peça positiva da jornada do usuário."
+      },
+      "development": {
+        "title": "Desenvolvimento de Software",
+        "description": "Construindo soluções de software robustas e escaláveis adaptadas às necessidades do seu negócio, garantindo que cada componente trabalhe em harmonia."
+      },
+      "ai": {
+        "title": "Inteligência Artificial",
+        "description": "Implementando IA e aprendizado de máquina para impulsionar inovação e eficiência, adicionando uma camada de inteligência às suas soluções."
+      },
+      "uiux": {
+        "title": "UI/UX Design",
+        "description": "Criando interfaces e experiências de usuário intuitivas e envolventes, garantindo uma jornada do usuário perfeita e agradável."
+      },
+      "qa": {
+        "title": "Garantia de Qualidade",
+        "description": "Garantindo a mais alta qualidade e confiabilidade do seu software através de testes rigorosos, assegurando uma solução confiável e robusta."
+      },
+      "automation": {
+        "title": "Automação de Processos",
+        "description": "Automatizando tarefas repetitivas para otimizar operações e reduzir custos, otimizando seu fluxo de trabalho para desempenho máximo."
+      },
+      "customSoftware": {
+        "title": "Desenvolvimento de Software Personalizado",
+        "description": "Construímos software personalizado adaptado aos seus requisitos específicos, garantindo integração perfeita e desempenho ideal, como uma peça de quebra-cabeça perfeitamente elaborada."
+      },
+      "cloud": {
+        "title": "Soluções em Nuvem",
+        "description": "Aproveite o poder da nuvem com nossas soluções escaláveis e seguras, projetadas para aumentar a agilidade e reduzir custos, encaixando-se perfeitamente em sua infraestrutura digital."
+      },
+      "ux": {
+        "title": "Design de Experiência do Usuário",
+        "description": "Nossos especialistas em design UX criam experiências de usuário intuitivas e envolventes que impulsionam a satisfação e fidelidade do cliente, garantindo que cada interação seja uma peça positiva da jornada do usuário."
+      }
+    }
+  },
+  "technologies": {
+    "title": "Nossas Tecnologias"
+  },
+  "timeline": {
+    "title": "Linha do Tempo de Desenvolvimento de Software",
+    "step": "Etapa",
+    "steps": {
+      "discovery": {
+        "title": "Descoberta",
+        "description": "Escopo inicial do projeto e compreensão dos objetivos de negócio, estabelecendo a base para uma solução coesa."
+      },
+      "requirements": {
+        "title": "Levantamento de Requisitos",
+        "description": "Análise detalhada e documentação de requisitos funcionais e não funcionais, garantindo que cada detalhe seja considerado."
+      },
+      "design": {
+        "title": "Design e Prototipagem",
+        "description": "Criando wireframes, mockups e protótipos interativos para visualizar a solução, dando vida à visão."
+      },
+      "development": {
+        "title": "Desenvolvimento e Testes",
+        "description": "Sprints de desenvolvimento ágil com testes contínuos e garantia de qualidade, assegurando um produto final robusto e confiável."
+      },
+      "deployment": {
+        "title": "Implantação e Suporte",
+        "description": "Implantação perfeita no ambiente de produção com manutenção e suporte contínuos, fornecendo cuidado e atenção a longo prazo."
+      }
+    }
+  },
+  "marketplace": {
+    "title": "Lecabe Marketplace",
+    "description": "Explore o marketplace da Lecabe para produtos plug-and-play que se integram perfeitamente aos seus processos. Compre estes produtos para adaptar ao seu fluxo de trabalho ou contrate nossos serviços para integração personalizada.",
+    "cta": "Ir para o Marketplace",
+    "page": {
+      "title": "Lecabe Marketplace",
+      "description": "Explore nossa seleção de produtos de software prontos para integração. Soluções profissionais que aceleram seu desenvolvimento e agregam valor ao seu negócio."
+    },
+    "loading": "Carregando produtos...",
+    "filters": {
+      "search": "Buscar",
+      "searchPlaceholder": "Procure por produtos...",
+      "category": "Categoria",
+      "allCategories": "Todas as Categorias",
+        "categories": {
+          "all": "Todos",
+          "wms": "WMS",
+          "ai": "IA",
+          "erp": "ERP",
+          "chatbots": "Chatbots",
+          "automation": "Automação",
+          "analytics": "Analytics",
+          "crm": "CRM",
+          "ecommerce": "E-commerce",
+          "mobile": "Mobile",
+          "web": "Web",
+          "cloud": "Nuvem"
+        },
+      "sortBy": "Ordenar por",
+      "sort": {
+        "popular": "Mais Populares",
+        "rating": "Melhor Avaliação",
+        "priceAsc": "Menor Preço",
+        "priceDesc": "Maior Preço"
+      }
+    },
+    "product": {
+      "viewDetails": "Ver Detalhes",
+      "liveDemo": "Ver Demo"
+    },
+    "emptyState": {
+      "title": "Nenhum produto encontrado",
+      "description": "Tente ajustar seus filtros ou busca para encontrar o que procura."
+    },
+    "allProductsLoaded": "Todos os produtos foram carregados",
+    "detail": {
+      "notFound": "Produto não encontrado",
+      "backToMarketplace": "Voltar ao Marketplace",
+      "description": "Descrição",
+      "subscribers": "assinantes",
+      "sales": "vendas",
+      "accessProduct": "Acessar Produto",
+      "viewDemo": "Ver Demo ao Vivo",
+      "contact": "Entrar em Contato",
+      "contactSubject": "Interesse no produto",
+      "contactMessage": "Olá, gostaria de obter mais informações sobre o produto {productName}."
+    },
+    "reviews": {
+      "title": "Avaliações de Clientes",
+      "basedOn": "{count} avaliações",
+      "helpful": "Útil",
+      "noReviews": "Ainda não há avaliações para este produto.",
+      "loading": "Carregando avaliações..."
+    }
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "subtitle": "Entre em contato com nossa equipe",
+    "description": "Estamos aqui para responder suas perguntas e discutir como podemos ajudar seu negócio a ter sucesso, garantindo que cada peça da sua estratégia digital se encaixe perfeitamente.",
+    "form": {
+      "name": "Seu nome",
+      "email": "Seu endereço de e-mail",
+      "subject": "Assunto",
+      "message": "Sua mensagem",
+      "language": "Idioma preferido",
+      "languages": {
+        "pt": "Português",
+        "en": "English",
+        "fr": "Français"
+      },
+      "submit": "Enviar",
+      "success": "Mensagem enviada com sucesso!",
+      "error": "Erro ao enviar mensagem. Tente novamente."
+    }
+  },
+  "footer": {
+    "privacyPolicy": "Política de Privacidade",
+    "termsOfService": "Termos de Serviço",
+    "copyright": "© 2024 Lecabe. Todos os direitos reservados."
+  },
+  "floating": {
+    "whatsapp": "WhatsApp",
+    "email": "E-mail",
+    "phone": "Telefone"
+  }
+}
+

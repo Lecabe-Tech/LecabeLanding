@@ -1,0 +1,193 @@
+{
+  "nav": {
+    "services": "Services",
+    "about": "About Us",
+    "contact": "Contact",
+    "getStarted": "Get Started"
+  },
+  "hero": {
+    "title": "Creating Exclusive Products for Your Company",
+    "subtitle": "At Lecabe, we develop personalized and exclusive software solutions for your business. We build products that fit together seamlessly, like pieces of a puzzle, driving efficiency and enhancing user experience. Our team is dedicated to understanding your unique needs and delivering tailored solutions with care and precision.",
+    "cta": "Explore Our Services"
+  },
+  "about": {
+    "title": "About Us",
+    "content": "Lecabe is a software company specialized in creating exclusive products for your company, where innovation and meticulous care are at the heart of every project. We specialize in creating personalized software solutions, tailored to fit together seamlessly like the pieces of a unique puzzle. Our approach is rooted in understanding your specific needs and delivering solutions with precision and excellence. We believe in crafting software that not only meets but exceeds expectations, ensuring a perfect fit for your business objectives."
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Comprehensive Software Solutions",
+    "description": "From concept to deployment, we offer a full suite of software development services to meet your business needs, ensuring each piece fits perfectly into your overall strategy.",
+    "items": {
+      "customSoftware": {
+        "title": "Custom Software Development",
+        "description": "We build custom software tailored to your specific requirements, ensuring seamless integration and optimal performance, like a perfectly crafted puzzle piece."
+      },
+      "cloud": {
+        "title": "Cloud Solutions",
+        "description": "Leverage the power of the cloud with our scalable and secure cloud solutions, designed to enhance agility and reduce costs, fitting seamlessly into your digital infrastructure."
+      },
+      "ux": {
+        "title": "User Experience Design",
+        "description": "Our UX design experts create intuitive and engaging user experiences that drive customer satisfaction and loyalty, ensuring every interaction is a positive piece of the user journey."
+      },
+      "development": {
+        "title": "Software Development",
+        "description": "Building robust and scalable software solutions tailored to your business needs, ensuring every component works in harmony."
+      },
+      "ai": {
+        "title": "Artificial Intelligence",
+        "description": "Implementing AI and machine learning to drive innovation and efficiency, adding a layer of intelligence to your solutions."
+      },
+      "uiux": {
+        "title": "UI/UX Design",
+        "description": "Creating intuitive and engaging user interfaces and experiences, ensuring a seamless and enjoyable user journey."
+      },
+      "qa": {
+        "title": "Quality Assurance",
+        "description": "Ensuring the highest quality and reliability of your software through rigorous testing, guaranteeing a dependable and robust solution."
+      },
+      "automation": {
+        "title": "Process Automation",
+        "description": "Automating repetitive tasks to streamline operations and reduce costs, optimizing your workflow for peak performance."
+      },
+      "customSoftware": {
+        "title": "Custom Software Development",
+        "description": "We build custom software tailored to your specific requirements, ensuring seamless integration and optimal performance, like a perfectly crafted puzzle piece."
+      },
+      "cloud": {
+        "title": "Cloud Solutions",
+        "description": "Leverage the power of the cloud with our scalable and secure cloud solutions, designed to enhance agility and reduce costs, fitting seamlessly into your digital infrastructure."
+      },
+      "ux": {
+        "title": "User Experience Design",
+        "description": "Our UX design experts create intuitive and engaging user experiences that drive customer satisfaction and loyalty, ensuring every interaction is a positive piece of the user journey."
+      }
+    }
+  },
+  "technologies": {
+    "title": "Our Technologies"
+  },
+  "timeline": {
+    "title": "Software Development Timeline",
+    "step": "Step",
+    "steps": {
+      "discovery": {
+        "title": "Discovery",
+        "description": "Initial project scoping and understanding business goals, laying the foundation for a cohesive solution."
+      },
+      "requirements": {
+        "title": "Requirements Gathering",
+        "description": "Detailed analysis and documentation of functional and non-functional requirements, ensuring every detail is considered."
+      },
+      "design": {
+        "title": "Design & Prototyping",
+        "description": "Creating wireframes, mockups, and interactive prototypes to visualize the solution, bringing the vision to life."
+      },
+      "development": {
+        "title": "Development & Testing",
+        "description": "Agile development sprints with continuous testing and quality assurance, ensuring a robust and reliable final product."
+      },
+      "deployment": {
+        "title": "Deployment & Support",
+        "description": "Seamless deployment to production environment with ongoing maintenance and support, providing long-term care and attention."
+      }
+    }
+  },
+  "marketplace": {
+    "title": "Lecabe Marketplace",
+    "description": "Explore the Lecabe marketplace for plug-and-play products that seamlessly integrate into your processes. Purchase these products to adapt to your workflow or engage our services for custom integration.",
+    "cta": "Go to the Marketplace",
+    "page": {
+      "title": "Lecabe Marketplace",
+      "description": "Explore our selection of ready-to-integrate software products. Professional solutions that accelerate your development and add value to your business."
+    },
+    "loading": "Loading products...",
+    "filters": {
+      "search": "Search",
+      "searchPlaceholder": "Search for products...",
+      "category": "Category",
+      "allCategories": "All Categories",
+        "categories": {
+          "all": "All",
+          "wms": "WMS",
+          "ai": "AI",
+          "erp": "ERP",
+          "chatbots": "Chatbots",
+          "automation": "Automation",
+          "analytics": "Analytics",
+          "crm": "CRM",
+          "ecommerce": "E-commerce",
+          "mobile": "Mobile",
+          "web": "Web",
+          "cloud": "Cloud"
+        },
+      "sortBy": "Sort by",
+      "sort": {
+        "popular": "Most Popular",
+        "rating": "Highest Rated",
+        "priceAsc": "Lowest Price",
+        "priceDesc": "Highest Price"
+      }
+    },
+    "product": {
+      "viewDetails": "View Details",
+      "liveDemo": "Live Demo"
+    },
+    "emptyState": {
+      "title": "No products found",
+      "description": "Try adjusting your filters or search to find what you're looking for."
+    },
+    "allProductsLoaded": "All products have been loaded",
+    "detail": {
+      "notFound": "Product not found",
+      "backToMarketplace": "Back to Marketplace",
+      "description": "Description",
+      "subscribers": "subscribers",
+      "sales": "sales",
+      "accessProduct": "Access Product",
+      "viewDemo": "View Live Demo",
+      "contact": "Contact Us",
+      "contactSubject": "Interest in product",
+      "contactMessage": "Hello, I would like to get more information about the product {productName}."
+    },
+    "reviews": {
+      "title": "Customer Reviews",
+      "basedOn": "{count} reviews",
+      "helpful": "Helpful",
+      "noReviews": "No reviews yet for this product.",
+      "loading": "Loading reviews..."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our team",
+    "description": "We're here to answer your questions and discuss how we can help your business succeed, ensuring every piece of your digital strategy fits perfectly.",
+    "form": {
+      "name": "Your name",
+      "email": "Your email address",
+      "subject": "Subject",
+      "message": "Your message",
+      "language": "Preferred language",
+      "languages": {
+        "pt": "Português",
+        "en": "English",
+        "fr": "Français"
+      },
+      "submit": "Submit",
+      "success": "Message sent successfully!",
+      "error": "Error sending message. Please try again."
+    }
+  },
+  "footer": {
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "copyright": "© 2024 Lecabe. All rights reserved."
+  },
+  "floating": {
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "phone": "Phone"
+  }
+}
+
