@@ -54,21 +54,21 @@ const goHome = (): void => {
     <div class="flex items-center gap-4 text-gray-900 dark:text-white">
       <button
         class="flex items-center gap-2 hover:opacity-80 transition-opacity"
-        @click="goHome"
         aria-label="Go to home"
+        @click="goHome"
       >
         <img
           v-if="themeStore.isDark"
           src="/assets/logos/Logo-horizontal-degradê-branco-8.png"
           alt="Lecabe Logo"
           class="h-8 md:h-10 w-auto"
-        />
+        >
         <img
           v-else
           src="/assets/logos/Logo-horizontal-degradê -preto-8.png"
           alt="Lecabe Logo"
           class="h-8 md:h-10 w-auto"
-        />
+        >
       </button>
     </div>
 
@@ -76,20 +76,20 @@ const goHome = (): void => {
     <div class="hidden md:flex flex-1 justify-end gap-8">
       <div class="flex items-center gap-9">
         <button
-          @click="scrollToSection('services')"
           class="text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-colors duration-200"
+          @click="scrollToSection('services')"
         >
           {{ t('nav.services') }}
         </button>
         <button
-          @click="scrollToSection('about')"
           class="text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-colors duration-200"
+          @click="scrollToSection('about')"
         >
           {{ t('nav.about') }}
         </button>
         <button
-          @click="scrollToSection('contact')"
           class="text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-colors duration-200"
+          @click="scrollToSection('contact')"
         >
           {{ t('nav.contact') }}
         </button>
@@ -99,12 +99,18 @@ const goHome = (): void => {
         <ThemeToggle />
         <LanguageSwitcher />
         
-            <button
-              @click="goToMarketplace"
-              class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-10 px-4 bg-brand-dark dark:bg-brand-primary text-neutral-50 text-sm font-bold leading-normal tracking-[0.015em] hover:bg-brand-primary dark:hover:bg-brand-dark-primary transition-colors duration-300"
-            >
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 256 256">
-            <path d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z"></path>
+        <button
+          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-10 px-4 bg-brand-dark dark:bg-brand-primary text-neutral-50 text-sm font-bold leading-normal tracking-[0.015em] hover:bg-brand-primary dark:hover:bg-brand-dark-primary transition-colors duration-300"
+          @click="goToMarketplace"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            fill="currentColor"
+            viewBox="0 0 256 256"
+          >
+            <path d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z" />
           </svg>
           <span class="truncate">Marketplace</span>
         </button>
@@ -117,10 +123,15 @@ const goHome = (): void => {
       <button
         type="button"
         class="p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-brand-medium-dark-primary rounded-lg focus:outline-none transition-colors"
-        @click="toggleMenu"
         :aria-label="isMenuOpen ? 'Close menu' : 'Open menu'"
+        @click="toggleMenu"
       >
-        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
           <path
             v-if="!isMenuOpen"
             stroke-linecap="round"
@@ -154,20 +165,20 @@ const goHome = (): void => {
       >
         <div class="flex flex-col px-4 py-4 space-y-3">
           <button
-            @click="scrollToSection('services')"
             class="text-left text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-light-primary py-2 transition-colors font-medium"
+            @click="scrollToSection('services')"
           >
             {{ t('nav.services') }}
           </button>
           <button
-            @click="scrollToSection('about')"
             class="text-left text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-light-primary py-2 transition-colors font-medium"
+            @click="scrollToSection('about')"
           >
             {{ t('nav.about') }}
           </button>
           <button
-            @click="scrollToSection('contact')"
             class="text-left text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-light-primary py-2 transition-colors font-medium"
+            @click="scrollToSection('contact')"
           >
             {{ t('nav.contact') }}
           </button>
@@ -177,11 +188,17 @@ const goHome = (): void => {
           </div>
           
           <button
-            @click="goToMarketplace"
             class="flex min-w-[84px] w-full cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-10 px-4 bg-brand-dark dark:bg-brand-primary text-neutral-50 text-sm font-bold leading-normal tracking-[0.015em] hover:bg-brand-primary dark:hover:bg-brand-dark-primary transition-colors duration-300"
+            @click="goToMarketplace"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 256 256">
-              <path d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z"></path>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="18"
+              height="18"
+              fill="currentColor"
+              viewBox="0 0 256 256"
+            >
+              <path d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z" />
             </svg>
             <span class="truncate">Marketplace</span>
           </button>

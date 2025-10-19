@@ -18,13 +18,13 @@ const currentYear = new Date().getFullYear()
             src="/assets/logos/Logo-horizontal-degradê-branco-8.png"
             alt="Lecabe Logo"
             class="h-16 w-auto"
-          />
+          >
           <img
             v-else
             src="/assets/logos/Logo-horizontal-degradê -preto-8.png"
             alt="Lecabe Logo"
             class="h-16 w-auto"
-          />
+          >
           <p class="text-gray-600 dark:text-gray-400 text-sm max-w-xs text-center md:text-left">
             Transformando ideias em soluções digitais inovadoras.
           </p>
@@ -51,7 +51,11 @@ const currentYear = new Date().getFullYear()
           <!-- Social Media Icons with Primary Background -->
           <div class="flex flex-wrap gap-3">
             <!-- Twitter/X -->
-            <a href="#" aria-label="Twitter" class="group">
+            <a
+              href="#"
+              aria-label="Twitter"
+              class="group"
+            >
               <div class="w-10 h-10 rounded-full bg-brand-primary dark:bg-brand-light-primary flex items-center justify-center hover:bg-brand-dark-primary dark:hover:bg-brand-medium-primary transition-all duration-300 hover:scale-110">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +73,11 @@ const currentYear = new Date().getFullYear()
             </a>
 
             <!-- LinkedIn -->
-            <a href="#" aria-label="LinkedIn" class="group">
+            <a
+              href="#"
+              aria-label="LinkedIn"
+              class="group"
+            >
               <div class="w-10 h-10 rounded-full bg-brand-primary dark:bg-brand-light-primary flex items-center justify-center hover:bg-brand-dark-primary dark:hover:bg-brand-medium-primary transition-all duration-300 hover:scale-110">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -87,7 +95,11 @@ const currentYear = new Date().getFullYear()
             </a>
 
             <!-- Instagram -->
-            <a href="#" aria-label="Instagram" class="group">
+            <a
+              href="#"
+              aria-label="Instagram"
+              class="group"
+            >
               <div class="w-10 h-10 rounded-full bg-brand-primary dark:bg-brand-light-primary flex items-center justify-center hover:bg-brand-dark-primary dark:hover:bg-brand-medium-primary transition-all duration-300 hover:scale-110">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -105,7 +117,11 @@ const currentYear = new Date().getFullYear()
             </a>
 
             <!-- WhatsApp -->
-            <a href="#" aria-label="WhatsApp" class="group">
+            <a
+              href="#"
+              aria-label="WhatsApp"
+              class="group"
+            >
               <div class="w-10 h-10 rounded-full bg-brand-primary dark:bg-brand-light-primary flex items-center justify-center hover:bg-brand-dark-primary dark:hover:bg-brand-medium-primary transition-all duration-300 hover:scale-110">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

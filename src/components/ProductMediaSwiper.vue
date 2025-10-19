@@ -56,7 +56,7 @@ const isDirectVideo = (url: string): boolean => {
           :src="item.url"
           :alt="`${productName} - Imagem ${index + 1}`"
           class="w-full h-full object-cover"
-        />
+        >
 
         <!-- YouTube Video -->
         <iframe
@@ -67,7 +67,7 @@ const isDirectVideo = (url: string): boolean => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
           class="w-full h-full"
-        ></iframe>
+        />
 
         <!-- Direct Video -->
         <video
@@ -104,7 +104,9 @@ const isDirectVideo = (url: string): boolean => {
                 d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
               />
             </svg>
-            <p class="text-gray-600 dark:text-gray-400">Formato de vídeo não suportado</p>
+            <p class="text-gray-600 dark:text-gray-400">
+              Formato de vídeo não suportado
+            </p>
             <a
               :href="item.url"
               target="_blank"

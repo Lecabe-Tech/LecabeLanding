@@ -29,7 +29,7 @@ const iconSrc = computed(() => {
         :src="iconSrc" 
         :alt="`${name} logo`"
         class="w-full h-full object-contain"
-      />
+      >
     </div>
     <span class="text-gray-900 dark:text-white text-sm md:text-base font-semibold text-center leading-tight">
       {{ name }}

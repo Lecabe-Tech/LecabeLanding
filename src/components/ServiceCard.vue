@@ -67,7 +67,7 @@ const iconSrc = computed(() => {
         alt=""
         class="w-full h-full object-contain"
         aria-hidden="true"
-      />
+      >
     </div>
     
     <!-- Number badge in top-left corner -->
@@ -79,13 +79,13 @@ const iconSrc = computed(() => {
 
     <!-- Icon with corner background in top-right -->
     <div class="absolute top-0 right-0 w-28 h-28 overflow-hidden z-10">
-      <div class="corner-background"></div>
+      <div class="corner-background" />
       <div class="absolute top-4 right-4 w-14 h-14 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 icon-with-border">
         <img 
           :src="iconSrc" 
           :alt="`${title} icon`"
           class="w-full h-full object-contain"
-        />
+        >
       </div>
     </div>
 
@@ -93,7 +93,10 @@ const iconSrc = computed(() => {
     <h3 class="card-title relative z-10 mb-4 mt-8">
       {{ title }}
     </h3>
-    <p class="card-description relative z-10" style="line-height: 1.7">
+    <p
+      class="card-description relative z-10"
+      style="line-height: 1.7"
+    >
       {{ description }}
     </p>
   </div>

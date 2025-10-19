@@ -42,7 +42,7 @@ const openDemo = (): void => {
         :src="product.cover_image"
         :alt="product.name"
         class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-      />
+      >
       
       <!-- Badges -->
       <div class="absolute top-3 right-3 flex flex-col gap-2">
@@ -75,14 +75,14 @@ const openDemo = (): void => {
       <!-- Actions - Inline Buttons -->
       <div class="flex gap-2">
         <button
-          @click="viewDetails"
           class="flex-1 px-4 py-2.5 bg-brand-primary dark:bg-brand-light-primary text-white rounded-lg font-semibold text-sm hover:bg-brand-dark-primary dark:hover:bg-brand-medium-primary hover:scale-105 transition-all duration-300 shadow-md"
+          @click="viewDetails"
         >
           {{ t('marketplace.product.viewDetails') }}
         </button>
         <button
-          @click="openDemo"
           class="flex-1 px-4 py-2.5 bg-white dark:bg-brand-dark text-brand-primary dark:text-brand-light-primary border-2 border-brand-primary dark:border-brand-light-primary rounded-lg font-semibold text-sm hover:bg-brand-primary hover:text-white dark:hover:bg-brand-light-primary dark:hover:text-brand-dark transition-all duration-300"
+          @click="openDemo"
         >
           {{ t('marketplace.product.liveDemo') }}
         </button>
