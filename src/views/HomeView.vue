@@ -342,12 +342,12 @@ watch(() => window.location.hash, () => {
               width="full"
             />
 
-            <!-- Process Automation -->
+            <!-- Software Documentation -->
             <ServiceCard
               number="08"
-              icon="robot"
-              :title="t('services.items.automation.title')"
-              :description="t('services.items.automation.description')"
+              icon="documentation"
+              :title="t('services.items.documentation.title')"
+              :description="t('services.items.documentation.description')"
               :animation-delay="servicesSection.isVisible.value ? '1650' : '0'"
               width="full"
             />

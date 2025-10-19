@@ -53,9 +53,9 @@
         "title": "Automação de Processos",
         "description": "Automatizando tarefas repetitivas para otimizar operações e reduzir custos, otimizando seu fluxo de trabalho para desempenho máximo."
       },
-      "customSoftware": {
-        "title": "Desenvolvimento de Software Personalizado",
-        "description": "Construímos software personalizado adaptado aos seus requisitos específicos, garantindo integração perfeita e desempenho ideal, como uma peça de quebra-cabeça perfeitamente elaborada."
+      "documentation": {
+        "title": "Documentação de Software",
+        "description": "Criamos documentação técnica completa e clara para seus sistemas, facilitando manutenção, onboarding de equipe e garantindo continuidade do projeto."
       },
       "cloud": {
         "title": "Soluções em Nuvem",

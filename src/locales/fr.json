@@ -53,9 +53,9 @@
         "title": "Automatisation des Processus",
         "description": "Automatiser les tâches répétitives pour rationaliser les opérations et réduire les coûts, optimisant votre flux de travail pour des performances maximales."
       },
-      "customSoftware": {
-        "title": "Développement de Logiciels Personnalisés",
-        "description": "Nous créons des logiciels personnalisés adaptés à vos exigences spécifiques, garantissant une intégration transparente et des performances optimales, comme une pièce de puzzle parfaitement conçue."
+      "documentation": {
+        "title": "Documentation de Logiciels",
+        "description": "Nous créons une documentation technique complète et claire pour vos systèmes, facilitant la maintenance, l'intégration de l'équipe et assurant la continuité du projet."
       },
       "cloud": {
         "title": "Solutions Cloud",

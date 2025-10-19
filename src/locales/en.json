@@ -53,9 +53,9 @@
         "title": "Process Automation",
         "description": "Automating repetitive tasks to streamline operations and reduce costs, optimizing your workflow for peak performance."
       },
-      "customSoftware": {
-        "title": "Custom Software Development",
-        "description": "We build custom software tailored to your specific requirements, ensuring seamless integration and optimal performance, like a perfectly crafted puzzle piece."
+      "documentation": {
+        "title": "Software Documentation",
+        "description": "We create complete and clear technical documentation for your systems, facilitating maintenance, team onboarding, and ensuring project continuity."
       },
       "cloud": {
         "title": "Cloud Solutions",
