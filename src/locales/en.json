@@ -95,11 +95,11 @@
     }
   },
   "marketplace": {
-    "title": "Lecabe Products",
+    "title": "Products",
     "description": "Explore Lecabe's ready-to-integrate products that seamlessly fit into your processes. Purchase these products to adapt to your workflow or engage our services for custom integration.",
     "cta": "View Products",
     "page": {
-      "title": "Lecabe Products",
+      "title": "Products",
       "description": "Explore our selection of ready-to-integrate software products. Professional solutions that accelerate your development and add value to your business."
     },
     "loading": "Loading products...",

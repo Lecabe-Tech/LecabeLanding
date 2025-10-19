@@ -95,11 +95,11 @@
     }
   },
   "marketplace": {
-    "title": "Produtos Lecabe",
+    "title": "Produtos",
     "description": "Explore os produtos da Lecabe prontos para integração que se encaixam perfeitamente aos seus processos. Adquira estes produtos para adaptar ao seu fluxo de trabalho ou contrate nossos serviços para integração personalizada.",
     "cta": "Ver Produtos",
     "page": {
-      "title": "Produtos Lecabe",
+      "title": "Produtos",
       "description": "Explore nossa seleção de produtos de software prontos para integração. Soluções profissionais que aceleram seu desenvolvimento e agregam valor ao seu negócio."
     },
     "loading": "Carregando produtos...",
