@@ -133,7 +133,7 @@ const goHome = (): void => {
           <span class="truncate">Produtos</span>
         </button>
       </div>
-    </div>
+    </nav>
 
     <!-- Mobile menu button -->
     <div class="flex md:hidden items-center gap-2">
@@ -230,7 +230,7 @@ const goHome = (): void => {
             <span class="truncate">Produtos</span>
           </button>
         </div>
-      </div>
+      </nav>
     </Transition>
   </header>
 </template>
