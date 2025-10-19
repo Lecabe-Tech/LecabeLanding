@@ -188,6 +188,17 @@
     "whatsapp": "WhatsApp",
     "email": "E-mail",
     "phone": "Téléphone"
+  },
+  "common": {
+    "backToHome": "Retour à l'accueil"
+  },
+  "privacy": {
+    "title": "Politique de Confidentialité",
+    "lastUpdated": "Dernière mise à jour"
+  },
+  "terms": {
+    "title": "Conditions d'Utilisation",
+    "lastUpdated": "Dernière mise à jour"
   }
 }
 

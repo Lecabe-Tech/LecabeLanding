@@ -188,6 +188,17 @@
     "whatsapp": "WhatsApp",
     "email": "Email",
     "phone": "Phone"
+  },
+  "common": {
+    "backToHome": "Back to Home"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated"
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated"
   }
 }
 

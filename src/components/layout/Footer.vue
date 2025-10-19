@@ -34,18 +34,18 @@ const currentYear = new Date().getFullYear()
         <div class="flex flex-col gap-6">
           <!-- Links -->
           <div class="flex flex-col gap-3">
-            <a
-              href="#"
+            <router-link
+              to="/politica-de-privacidade"
               class="text-gray-600 dark:text-gray-400 hover:text-brand-primary dark:hover:text-brand-light-primary transition-colors duration-200 text-base font-medium"
             >
               {{ t('footer.privacyPolicy') }}
-            </a>
-            <a
-              href="#"
+            </router-link>
+            <router-link
+              to="/termos-de-servico"
               class="text-gray-600 dark:text-gray-400 hover:text-brand-primary dark:hover:text-brand-light-primary transition-colors duration-200 text-base font-medium"
             >
               {{ t('footer.termsOfService') }}
-            </a>
+            </router-link>
           </div>
 
           <!-- Social Media Icons with Primary Background -->
