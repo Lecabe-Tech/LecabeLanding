@@ -20,7 +20,7 @@ const { t } = useI18n()
  * Navigate to product details
  */
 const viewDetails = (): void => {
-  router.push(`/marketplace/${props.product.id}`)
+  router.push(`/produtos/${props.product.id}`)
 }
 
 /**
