@@ -133,12 +133,16 @@ const isDirectVideo = (url: string): boolean => {
 .product-media-swiper :deep(.swiper-button-prev) {
   color: #fff;
   background: linear-gradient(135deg, rgba(79, 82, 255, 0.95), rgba(60, 63, 187, 0.95));
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   border-radius: 12px;
   backdrop-filter: blur(8px);
   box-shadow: 0 4px 12px rgba(79, 82, 255, 0.4);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
 }
 
 .product-media-swiper :deep(.swiper-button-next:hover),
@@ -150,8 +154,8 @@ const isDirectVideo = (url: string): boolean => {
 
 .product-media-swiper :deep(.swiper-button-next::after),
 .product-media-swiper :deep(.swiper-button-prev::after) {
-  font-size: 20px;
-  font-weight: 900;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 /* Position adjustments for better visibility */
