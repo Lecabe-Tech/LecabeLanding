@@ -118,15 +118,26 @@
     opacity: 0;
   }
 
-  /* Timeline-specific animations */
+  /* Timeline-specific animations - optimized for mobile */
   .timeline-slide-in-right {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(30px);
   }
 
   .timeline-slide-in-left {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-30px);
+  }
+
+  /* Mobile-specific optimizations */
+  @media (max-width: 768px) {
+    .timeline-slide-in-right {
+      transform: translateX(15px);
+    }
+
+    .timeline-slide-in-left {
+      transform: translateX(-15px);
+    }
   }
 }
 

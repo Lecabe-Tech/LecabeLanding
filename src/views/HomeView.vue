@@ -33,7 +33,8 @@ const formErrors = ref({
 const hasFormErrors = ref(false)
 
 // Scroll animations for sections
-const heroSection = useScrollAnimation()
+// Hero section appears immediately to avoid blank screen on mobile
+const heroSection = useScrollAnimation({}, true)
 const aboutSection = useScrollAnimation()
 const servicesSection = useScrollAnimation()
 const technologiesSection = useScrollAnimation()
@@ -41,12 +42,13 @@ const timelineSection = useScrollAnimation()
 const marketplaceSection = useScrollAnimation()
 const contactSection = useScrollAnimation()
 
-// Timeline steps individual animations with high threshold
-const timelineStep1 = useScrollAnimation({ threshold: 0.7 })
-const timelineStep2 = useScrollAnimation({ threshold: 0.7 })
-const timelineStep3 = useScrollAnimation({ threshold: 0.7 })
-const timelineStep4 = useScrollAnimation({ threshold: 0.7 })
-const timelineStep5 = useScrollAnimation({ threshold: 0.7 })
+// Timeline steps individual animations - mobile optimized threshold
+const isMobile = typeof window !== 'undefined' && window.innerWidth < 768
+const timelineStep1 = useScrollAnimation({ threshold: isMobile ? 0.3 : 0.6 })
+const timelineStep2 = useScrollAnimation({ threshold: isMobile ? 0.3 : 0.6 })
+const timelineStep3 = useScrollAnimation({ threshold: isMobile ? 0.3 : 0.6 })
+const timelineStep4 = useScrollAnimation({ threshold: isMobile ? 0.3 : 0.6 })
+const timelineStep5 = useScrollAnimation({ threshold: isMobile ? 0.3 : 0.6 })
 
 /**
  * Scroll to contact section

@@ -25,23 +25,23 @@ export default {
         'sans': ['Axiforma', 'Inter', 'system-ui', 'sans-serif'],
       },
       animation: {
-        'fade-in-up': 'fadeInUp 0.8s ease-out',
-        'fade-in': 'fadeIn 0.8s ease-out',
-        'fade-in-down': 'fadeInDown 0.8s ease-out',
-        'slide-in-left': 'slideInLeft 0.8s ease-out',
-        'slide-in-right': 'slideInRight 0.8s ease-out',
-        'slide-in-bottom': 'slideInBottom 0.8s ease-out',
-        'scale-in': 'scaleIn 0.6s ease-out',
+        'fade-in-up': 'fadeInUp 0.5s ease-out',
+        'fade-in': 'fadeIn 0.5s ease-out',
+        'fade-in-down': 'fadeInDown 0.5s ease-out',
+        'slide-in-left': 'slideInLeft 0.5s ease-out',
+        'slide-in-right': 'slideInRight 0.5s ease-out',
+        'slide-in-bottom': 'slideInBottom 0.5s ease-out',
+        'scale-in': 'scaleIn 0.4s ease-out',
         'gradient-rotate': 'gradientRotate 3s linear infinite',
         'float': 'float 3s ease-in-out infinite',
       },
       keyframes: {
         fadeInUp: {
-          '0%': { opacity: '0', transform: 'translateY(40px)' },
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
         fadeInDown: {
-          '0%': { opacity: '0', transform: 'translateY(-40px)' },
+          '0%': { opacity: '0', transform: 'translateY(-20px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
         fadeIn: {
@@ -49,19 +49,19 @@ export default {
           '100%': { opacity: '1' },
         },
         slideInLeft: {
-          '0%': { opacity: '0', transform: 'translateX(-40px)' },
+          '0%': { opacity: '0', transform: 'translateX(-20px)' },
           '100%': { opacity: '1', transform: 'translateX(0)' },
         },
         slideInRight: {
-          '0%': { opacity: '0', transform: 'translateX(40px)' },
+          '0%': { opacity: '0', transform: 'translateX(20px)' },
           '100%': { opacity: '1', transform: 'translateX(0)' },
         },
         slideInBottom: {
-          '0%': { opacity: '0', transform: 'translateY(40px)' },
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
         scaleIn: {
-          '0%': { opacity: '0', transform: 'scale(0.95)' },
+          '0%': { opacity: '0', transform: 'scale(0.98)' },
           '100%': { opacity: '1', transform: 'scale(1)' },
         },
         gradientRotate: {
