@@ -33,8 +33,14 @@ export function useCategories() {
         categories.value = await fetchMockCategories()
       }
     } catch (e) {
-      error.value = 'Erro ao carregar categorias'
-      console.error('Error loading categories:', e)
+      // In production, don't show error to avoid giving impression of system failure
+      if (isProduction) {
+        console.warn('Categories API not available in production, hiding category section')
+        categories.value = [] // Empty categories array
+      } else {
+        error.value = 'Erro ao carregar categorias'
+        console.error('Error loading categories:', e)
+      }
     } finally {
       loading.value = false
     }

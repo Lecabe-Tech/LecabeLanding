@@ -38,17 +38,17 @@
         <div class="inline-block animate-spin rounded-full h-8 w-8 border-4 border-brand-primary border-t-transparent" />
       </div>
       
-      <!-- Error State -->
+      <!-- Error State - Only show in development -->
       <div
-        v-else-if="error"
+        v-else-if="error && !isProduction"
         class="text-center py-8 text-red-500"
       >
         {{ error }}
       </div>
       
-      <!-- Categories Swiper -->
+      <!-- Categories Swiper - Only show if categories are available -->
       <swiper
-        v-else
+        v-else-if="categories.length > 0"
         :modules="modules"
         :slides-per-view="'auto'"
         :space-between="16"
@@ -96,6 +96,10 @@ import 'swiper/css/free-mode'
 
 const { t } = useI18n()
 const { categories, loading, error, loadCategories } = useCategories()
+
+// Environment check
+const environment = import.meta.env.VITE_ENVIRONMENT || 'development'
+const isProduction = environment === 'prod' || environment === 'production'
 
 // Swiper modules
 const modules = [FreeMode]
