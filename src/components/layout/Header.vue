@@ -117,6 +117,13 @@ const isActive = (sectionId: string): boolean => {
 }
 
 /**
+ * Check if produtos page is active
+ */
+const isProdutosActive = (): boolean => {
+  return route.path.startsWith('/produtos')
+}
+
+/**
  * Setup scroll listener
  */
 onMounted(() => {
@@ -198,7 +205,10 @@ onUnmounted(() => {
         <!-- Produtos Button -->
         <button
           :class="[
-            'text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary focus:ring-offset-2 px-2 py-1 pb-1 border-b-2 border-transparent'
+            'text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary focus:ring-offset-2 px-2 py-1 pb-1 border-b-2',
+            isProdutosActive() 
+              ? 'border-brand-primary dark:border-brand-light-primary text-brand-primary dark:text-brand-light-primary' 
+              : 'border-transparent'
           ]"
           :aria-label="t('nav.goToProducts') || 'Ir para Produtos'"
           @click="goToMarketplace"
