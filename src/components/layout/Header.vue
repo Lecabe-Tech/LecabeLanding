@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+import { ref, onMounted, onUnmounted } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { useThemeStore } from '@/stores/theme'
 import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
@@ -8,8 +8,10 @@ import ThemeToggle from '@/components/ThemeToggle.vue'
 
 const { t } = useI18n()
 const router = useRouter()
+const route = useRoute()
 const themeStore = useThemeStore()
 const isMenuOpen = ref(false)
+const activeSection = ref('')
 
 /**
  * Toggle mobile menu visibility
@@ -53,12 +55,69 @@ const goHome = (): void => {
   router.push('/')
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }
+
+/**
+ * Track active section on scroll
+ */
+const trackActiveSection = (): void => {
+  // Only track on home page
+  if (route.path !== '/') {
+    activeSection.value = ''
+    return
+  }
+
+  const sections = ['services', 'about', 'contact']
+  const scrollPosition = window.scrollY + 150 // Offset for header height
+
+  // Check if at top of page
+  if (window.scrollY < 100) {
+    activeSection.value = ''
+    return
+  }
+
+  // Find current section
+  for (const sectionId of sections) {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      const rect = element.getBoundingClientRect()
+      const elementTop = rect.top + window.scrollY
+      const elementBottom = elementTop + rect.height
+
+      if (scrollPosition >= elementTop && scrollPosition < elementBottom) {
+        activeSection.value = sectionId
+        return
+      }
+    }
+  }
+}
+
+/**
+ * Check if a section is active
+ */
+const isActive = (sectionId: string): boolean => {
+  return activeSection.value === sectionId
+}
+
+/**
+ * Setup scroll listener
+ */
+onMounted(() => {
+  window.addEventListener('scroll', trackActiveSection, { passive: true })
+  trackActiveSection() // Initial check
+})
+
+/**
+ * Cleanup scroll listener
+ */
+onUnmounted(() => {
+  window.removeEventListener('scroll', trackActiveSection)
+})
 </script>
 
 <template>
   <header
     role="banner"
-    class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 dark:border-brand-medium-dark-primary px-4 sm:px-6 lg:px-10 py-3 bg-white dark:bg-brand-dark transition-colors duration-300"
+    class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 dark:border-brand-medium-dark-primary px-4 sm:px-6 lg:px-10 py-3 bg-white dark:bg-brand-dark transition-colors duration-300 shadow-sm"
   >
     <!-- Logo -->
     <div class="flex items-center gap-4 text-gray-900 dark:text-white">
@@ -90,21 +149,36 @@ const goHome = (): void => {
     >
       <div class="flex items-center gap-9">
         <button
-          class="text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2 py-1"
+          :class="[
+            'text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2 py-1 pb-1 border-b-2',
+            isActive('services') 
+              ? 'border-brand-primary dark:border-brand-light-primary text-brand-primary dark:text-brand-light-primary' 
+              : 'border-transparent'
+          ]"
           :aria-label="`Navegar para ${t('nav.services')}`"
           @click="scrollToSection('services')"
         >
           {{ t('nav.services') }}
         </button>
         <button
-          class="text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2 py-1"
+          :class="[
+            'text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2 py-1 pb-1 border-b-2',
+            isActive('about') 
+              ? 'border-brand-primary dark:border-brand-light-primary text-brand-primary dark:text-brand-light-primary' 
+              : 'border-transparent'
+          ]"
           :aria-label="`Navegar para ${t('nav.about')}`"
           @click="scrollToSection('about')"
         >
           {{ t('nav.about') }}
         </button>
         <button
-          class="text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2 py-1"
+          :class="[
+            'text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2 py-1 pb-1 border-b-2',
+            isActive('contact') 
+              ? 'border-brand-primary dark:border-brand-light-primary text-brand-primary dark:text-brand-light-primary' 
+              : 'border-transparent'
+          ]"
           :aria-label="`Navegar para ${t('nav.contact')}`"
           @click="scrollToSection('contact')"
         >
@@ -188,21 +262,36 @@ const goHome = (): void => {
       >
         <div class="flex flex-col px-4 py-4 space-y-3">
           <button
-            class="text-left text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-light-primary py-2 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2"
+            :class="[
+              'text-left text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-light-primary py-2 transition-all font-medium focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2 border-l-4',
+              isActive('services')
+                ? 'border-brand-primary dark:border-brand-light-primary text-brand-primary dark:text-brand-light-primary bg-gray-50 dark:bg-brand-medium-dark-primary'
+                : 'border-transparent'
+            ]"
             :aria-label="`Navegar para ${t('nav.services')}`"
             @click="scrollToSection('services')"
           >
             {{ t('nav.services') }}
           </button>
           <button
-            class="text-left text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-light-primary py-2 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2"
+            :class="[
+              'text-left text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-light-primary py-2 transition-all font-medium focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2 border-l-4',
+              isActive('about')
+                ? 'border-brand-primary dark:border-brand-light-primary text-brand-primary dark:text-brand-light-primary bg-gray-50 dark:bg-brand-medium-dark-primary'
+                : 'border-transparent'
+            ]"
             :aria-label="`Navegar para ${t('nav.about')}`"
             @click="scrollToSection('about')"
           >
             {{ t('nav.about') }}
           </button>
           <button
-            class="text-left text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-light-primary py-2 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2"
+            :class="[
+              'text-left text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-light-primary py-2 transition-all font-medium focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2 border-l-4',
+              isActive('contact')
+                ? 'border-brand-primary dark:border-brand-light-primary text-brand-primary dark:text-brand-light-primary bg-gray-50 dark:bg-brand-medium-dark-primary'
+                : 'border-transparent'
+            ]"
             :aria-label="`Navegar para ${t('nav.contact')}`"
             @click="scrollToSection('contact')"
           >
