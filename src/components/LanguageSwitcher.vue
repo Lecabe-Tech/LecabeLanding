@@ -3,6 +3,14 @@ import { ref, onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useLocaleStore } from '@/stores/locale'
 
+interface Props {
+  direction?: 'left' | 'right'
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  direction: 'right'
+})
+
 const { locale } = useI18n()
 const localeStore = useLocaleStore()
 const isOpen = ref(false)
@@ -82,7 +90,10 @@ onUnmounted(() => {
     >
       <div
         v-if="isOpen"
-        class="absolute right-0 mt-2 w-48 bg-white dark:bg-brand-medium-dark-primary rounded-lg shadow-lg py-1 z-50"
+        :class="[
+          'absolute mt-2 w-48 bg-white dark:bg-brand-medium-dark-primary rounded-lg shadow-lg py-1 z-50',
+          props.direction === 'left' ? 'right-0' : 'left-0'
+        ]"
         @click.stop
       >
         <button
