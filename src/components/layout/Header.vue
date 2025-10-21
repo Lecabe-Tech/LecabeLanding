@@ -225,7 +225,7 @@ onUnmounted(() => {
           >
             <div
               v-if="isSettingsOpen"
-              class="absolute right-0 mt-2 w-64 bg-white dark:bg-brand-dark border border-gray-200 dark:border-brand-medium-dark-primary rounded-xl shadow-lg overflow-hidden z-50"
+              class="absolute right-0 mt-2 w-64 bg-white dark:bg-brand-dark border border-gray-200 dark:border-brand-medium-dark-primary rounded-xl shadow-lg z-50"
             >
               <div class="p-3 space-y-3">
                 <!-- Theme Toggle -->
