@@ -225,12 +225,13 @@ onUnmounted(() => {
           >
             <div
               v-if="isSettingsOpen"
-              class="absolute right-0 mt-2 w-64 bg-white dark:bg-brand-dark border border-gray-200 dark:border-brand-medium-dark-primary rounded-xl shadow-lg z-50"
+              class="absolute right-0 sm:right-0 mt-2 w-64 max-w-[calc(100vw-2rem)] sm:max-w-none bg-white dark:bg-brand-dark border border-gray-200 dark:border-brand-medium-dark-primary rounded-xl shadow-lg z-50"
+              :class="{ 'left-auto': true }"
             >
               <div class="p-3 space-y-3">
                 <!-- Theme Toggle -->
-                <div class="flex items-center justify-between">
-                  <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Tema</span>
+                <div class="flex items-center justify-between gap-3">
+                  <span class="text-sm font-medium text-gray-700 dark:text-gray-300 whitespace-nowrap">Tema</span>
                   <ThemeToggle />
                 </div>
 
@@ -238,8 +239,8 @@ onUnmounted(() => {
                 <div class="border-t border-gray-200 dark:border-brand-medium-dark-primary" />
 
                 <!-- Language Switcher -->
-                <div class="flex items-center justify-between">
-                  <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Idioma</span>
+                <div class="flex items-center justify-between gap-3">
+                  <span class="text-sm font-medium text-gray-700 dark:text-gray-300 whitespace-nowrap">Idioma</span>
                   <LanguageSwitcher direction="left" />
                 </div>
               </div>
