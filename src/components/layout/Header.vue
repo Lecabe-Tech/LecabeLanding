@@ -66,7 +66,7 @@ const trackActiveSection = (): void => {
     return
   }
 
-  const sections = ['about', 'services', 'contact']
+  const sections = ['services', 'contact']
   const scrollPosition = window.scrollY + 150 // Offset for header height
 
   // Check if at top of page
@@ -148,18 +148,6 @@ onUnmounted(() => {
       aria-label="Navegação principal"
     >
       <div class="flex items-center gap-9">
-        <button
-          :class="[
-            'text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary focus:ring-offset-2 px-2 py-1 pb-1 border-b-2',
-            isActive('about') 
-              ? 'border-brand-primary dark:border-brand-light-primary text-brand-primary dark:text-brand-light-primary' 
-              : 'border-transparent'
-          ]"
-          :aria-label="`Navegar para ${t('nav.about')}`"
-          @click="scrollToSection('about')"
-        >
-          {{ t('nav.about') }}
-        </button>
         <button
           :class="[
             'text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary focus:ring-offset-2 px-2 py-1 pb-1 border-b-2',
@@ -261,18 +249,6 @@ onUnmounted(() => {
         aria-label="Menu mobile"
       >
         <div class="flex flex-col px-4 py-4 space-y-3">
-          <button
-            :class="[
-              'text-left text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-light-primary py-2 transition-all font-medium focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2 border-l-4',
-              isActive('about')
-                ? 'border-brand-primary dark:border-brand-light-primary text-brand-primary dark:text-brand-light-primary bg-gray-50 dark:bg-brand-medium-dark-primary'
-                : 'border-transparent'
-            ]"
-            :aria-label="`Navegar para ${t('nav.about')}`"
-            @click="scrollToSection('about')"
-          >
-            {{ t('nav.about') }}
-          </button>
           <button
             :class="[
               'text-left text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-light-primary py-2 transition-all font-medium focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2 border-l-4',
