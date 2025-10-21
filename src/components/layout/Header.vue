@@ -66,7 +66,7 @@ const trackActiveSection = (): void => {
     return
   }
 
-  const sections = ['services', 'about', 'contact']
+  const sections = ['about', 'services', 'contact']
   const scrollPosition = window.scrollY + 150 // Offset for header height
 
   // Check if at top of page
@@ -150,19 +150,7 @@ onUnmounted(() => {
       <div class="flex items-center gap-9">
         <button
           :class="[
-            'text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2 py-1 pb-1 border-b-2',
-            isActive('services') 
-              ? 'border-brand-primary dark:border-brand-light-primary text-brand-primary dark:text-brand-light-primary' 
-              : 'border-transparent'
-          ]"
-          :aria-label="`Navegar para ${t('nav.services')}`"
-          @click="scrollToSection('services')"
-        >
-          {{ t('nav.services') }}
-        </button>
-        <button
-          :class="[
-            'text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2 py-1 pb-1 border-b-2',
+            'text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary focus:ring-offset-2 px-2 py-1 pb-1 border-b-2',
             isActive('about') 
               ? 'border-brand-primary dark:border-brand-light-primary text-brand-primary dark:text-brand-light-primary' 
               : 'border-transparent'
@@ -174,7 +162,19 @@ onUnmounted(() => {
         </button>
         <button
           :class="[
-            'text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2 py-1 pb-1 border-b-2',
+            'text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary focus:ring-offset-2 px-2 py-1 pb-1 border-b-2',
+            isActive('services') 
+              ? 'border-brand-primary dark:border-brand-light-primary text-brand-primary dark:text-brand-light-primary' 
+              : 'border-transparent'
+          ]"
+          :aria-label="`Navegar para ${t('nav.services')}`"
+          @click="scrollToSection('services')"
+        >
+          {{ t('nav.services') }}
+        </button>
+        <button
+          :class="[
+            'text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary focus:ring-offset-2 px-2 py-1 pb-1 border-b-2',
             isActive('contact') 
               ? 'border-brand-primary dark:border-brand-light-primary text-brand-primary dark:text-brand-light-primary' 
               : 'border-transparent'
@@ -264,18 +264,6 @@ onUnmounted(() => {
           <button
             :class="[
               'text-left text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-light-primary py-2 transition-all font-medium focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2 border-l-4',
-              isActive('services')
-                ? 'border-brand-primary dark:border-brand-light-primary text-brand-primary dark:text-brand-light-primary bg-gray-50 dark:bg-brand-medium-dark-primary'
-                : 'border-transparent'
-            ]"
-            :aria-label="`Navegar para ${t('nav.services')}`"
-            @click="scrollToSection('services')"
-          >
-            {{ t('nav.services') }}
-          </button>
-          <button
-            :class="[
-              'text-left text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-light-primary py-2 transition-all font-medium focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2 border-l-4',
               isActive('about')
                 ? 'border-brand-primary dark:border-brand-light-primary text-brand-primary dark:text-brand-light-primary bg-gray-50 dark:bg-brand-medium-dark-primary'
                 : 'border-transparent'
@@ -284,6 +272,18 @@ onUnmounted(() => {
             @click="scrollToSection('about')"
           >
             {{ t('nav.about') }}
+          </button>
+          <button
+            :class="[
+              'text-left text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-light-primary py-2 transition-all font-medium focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2 border-l-4',
+              isActive('services')
+                ? 'border-brand-primary dark:border-brand-light-primary text-brand-primary dark:text-brand-light-primary bg-gray-50 dark:bg-brand-medium-dark-primary'
+                : 'border-transparent'
+            ]"
+            :aria-label="`Navegar para ${t('nav.services')}`"
+            @click="scrollToSection('services')"
+          >
+            {{ t('nav.services') }}
           </button>
           <button
             :class="[
