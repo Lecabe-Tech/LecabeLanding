@@ -92,7 +92,7 @@ onUnmounted(() => {
         v-if="isOpen"
         :class="[
           'absolute mt-2 w-48 bg-white dark:bg-brand-medium-dark-primary rounded-lg shadow-lg py-1 z-50',
-          props.direction === 'left' ? 'right-0' : 'left-0'
+          props.direction === 'left' ? 'left-0' : 'right-0'
         ]"
         @click.stop
       >
