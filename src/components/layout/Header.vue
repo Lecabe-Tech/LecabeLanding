@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+import { ref, onMounted, onUnmounted } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
 import { useI18n } from 'vue-i18n'
 import { useThemeStore } from '@/stores/theme'
 import LanguageSwitcher from '@/components/LanguageSwitcher.vue'
@@ -8,14 +8,34 @@ import ThemeToggle from '@/components/ThemeToggle.vue'
 
 const { t } = useI18n()
 const router = useRouter()
+const route = useRoute()
 const themeStore = useThemeStore()
 const isMenuOpen = ref(false)
+const activeSection = ref('')
+const isSettingsOpen = ref(false)
 
 /**
  * Toggle mobile menu visibility
  */
 const toggleMenu = (): void => {
   isMenuOpen.value = !isMenuOpen.value
+}
+
+/**
+ * Toggle settings dropdown
+ */
+const toggleSettings = (): void => {
+  isSettingsOpen.value = !isSettingsOpen.value
+}
+
+/**
+ * Close settings dropdown when clicking outside
+ */
+const closeSettings = (event: MouseEvent): void => {
+  const target = event.target as HTMLElement
+  if (!target.closest('.settings-dropdown')) {
+    isSettingsOpen.value = false
+  }
 }
 
 /**
@@ -53,12 +73,78 @@ const goHome = (): void => {
   router.push('/')
   window.scrollTo({ top: 0, behavior: 'smooth' })
 }
+
+/**
+ * Track active section on scroll
+ */
+const trackActiveSection = (): void => {
+  // Only track on home page
+  if (route.path !== '/') {
+    activeSection.value = ''
+    return
+  }
+
+  const sections = ['services', 'contact']
+  const scrollPosition = window.scrollY + 150 // Offset for header height
+
+  // Check if at top of page
+  if (window.scrollY < 100) {
+    activeSection.value = ''
+    return
+  }
+
+  // Find current section
+  for (const sectionId of sections) {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      const rect = element.getBoundingClientRect()
+      const elementTop = rect.top + window.scrollY
+      const elementBottom = elementTop + rect.height
+
+      if (scrollPosition >= elementTop && scrollPosition < elementBottom) {
+        activeSection.value = sectionId
+        return
+      }
+    }
+  }
+}
+
+/**
+ * Check if a section is active
+ */
+const isActive = (sectionId: string): boolean => {
+  return activeSection.value === sectionId
+}
+
+/**
+ * Check if produtos page is active
+ */
+const isProdutosActive = (): boolean => {
+  return route.path.startsWith('/produtos')
+}
+
+/**
+ * Setup scroll listener
+ */
+onMounted(() => {
+  window.addEventListener('scroll', trackActiveSection, { passive: true })
+  document.addEventListener('click', closeSettings)
+  trackActiveSection() // Initial check
+})
+
+/**
+ * Cleanup scroll listener
+ */
+onUnmounted(() => {
+  window.removeEventListener('scroll', trackActiveSection)
+  document.removeEventListener('click', closeSettings)
+})
 </script>
 
 <template>
   <header
     role="banner"
-    class="flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 dark:border-brand-medium-dark-primary px-4 sm:px-6 lg:px-10 py-3 bg-white dark:bg-brand-dark transition-colors duration-300"
+    class="sticky top-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-gray-200 dark:border-brand-medium-dark-primary px-4 sm:px-6 lg:px-10 py-3 bg-white dark:bg-brand-dark transition-colors duration-300 shadow-sm"
   >
     <!-- Logo -->
     <div class="flex items-center gap-4 text-gray-900 dark:text-white">
@@ -90,21 +176,24 @@ const goHome = (): void => {
     >
       <div class="flex items-center gap-9">
         <button
-          class="text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2 py-1"
+          :class="[
+            'text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary focus:ring-offset-2 px-2 py-1 pb-1 border-b-2',
+            isActive('services') 
+              ? 'border-brand-primary dark:border-brand-light-primary text-brand-primary dark:text-brand-light-primary' 
+              : 'border-transparent'
+          ]"
           :aria-label="`Navegar para ${t('nav.services')}`"
           @click="scrollToSection('services')"
         >
           {{ t('nav.services') }}
         </button>
         <button
-          class="text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2 py-1"
-          :aria-label="`Navegar para ${t('nav.about')}`"
-          @click="scrollToSection('about')"
-        >
-          {{ t('nav.about') }}
-        </button>
-        <button
-          class="text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2 py-1"
+          :class="[
+            'text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary focus:ring-offset-2 px-2 py-1 pb-1 border-b-2',
+            isActive('contact') 
+              ? 'border-brand-primary dark:border-brand-light-primary text-brand-primary dark:text-brand-light-primary' 
+              : 'border-transparent'
+          ]"
           :aria-label="`Navegar para ${t('nav.contact')}`"
           @click="scrollToSection('contact')"
         >
@@ -112,26 +201,73 @@ const goHome = (): void => {
         </button>
       </div>
 
-      <div class="flex items-center gap-3">
-        <ThemeToggle />
-        <LanguageSwitcher />
-        
+      <div class="flex items-center gap-9">
+        <!-- Produtos Button -->
         <button
-          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg h-10 px-4 bg-brand-dark dark:bg-brand-primary text-neutral-50 text-sm font-bold leading-normal tracking-[0.015em] hover:bg-brand-primary dark:hover:bg-brand-dark-primary transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-brand-light-primary"
+          :class="[
+            'text-gray-900 dark:text-white text-sm font-medium leading-normal hover:text-brand-primary dark:hover:text-brand-light-primary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary focus:ring-offset-2 px-2 py-1 pb-1 border-b-2',
+            isProdutosActive() 
+              ? 'border-brand-primary dark:border-brand-light-primary text-brand-primary dark:text-brand-light-primary' 
+              : 'border-transparent'
+          ]"
           :aria-label="t('nav.goToProducts') || 'Ir para Produtos'"
           @click="goToMarketplace"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="18"
-            height="18"
-            fill="currentColor"
-            viewBox="0 0 256 256"
-          >
-            <path d="M222.14,58.87A8,8,0,0,0,216,56H54.68L49.79,29.14A16,16,0,0,0,34.05,16H16a8,8,0,0,0,0,16h18L59.56,172.29a24,24,0,0,0,5.33,11.27,28,28,0,1,0,44.4,8.44h45.42A27.75,27.75,0,0,0,152,204a28,28,0,1,0,28-28H83.17a8,8,0,0,1-7.87-6.57L72.13,152h116a24,24,0,0,0,23.61-19.71l12.16-66.86A8,8,0,0,0,222.14,58.87ZM96,204a12,12,0,1,1-12-12A12,12,0,0,1,96,204Zm96,0a12,12,0,1,1-12-12A12,12,0,0,1,192,204Zm4-74.57A8,8,0,0,1,188.1,136H69.22L57.59,72H206.41Z" />
-          </svg>
-          <span class="truncate">Produtos</span>
+          {{ t('nav.products') || 'Produtos' }}
         </button>
+
+        <!-- Settings Dropdown -->
+        <div class="relative settings-dropdown">
+          <button
+            class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-brand-medium-dark-primary transition-colors focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary"
+            aria-label="Configurações"
+            @click="toggleSettings"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              fill="currentColor"
+              viewBox="0 0 256 256"
+              class="text-gray-700 dark:text-gray-300"
+            >
+              <path d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Zm88-29.84q.06-2.16,0-4.32l14.92-18.64a8,8,0,0,0,1.48-7.06,107.21,107.21,0,0,0-10.88-26.25,8,8,0,0,0-6-3.93l-23.72-2.64q-1.48-1.56-3-3L186,40.54a8,8,0,0,0-3.94-6,107.71,107.71,0,0,0-26.25-10.87,8,8,0,0,0-7.06,1.49L130.16,40Q128,40,125.84,40L107.2,25.11a8,8,0,0,0-7.06-1.48A107.6,107.6,0,0,0,73.89,34.51a8,8,0,0,0-3.93,6L67.32,64.27q-1.56,1.49-3,3L40.54,70a8,8,0,0,0-6,3.94,107.71,107.71,0,0,0-10.87,26.25,8,8,0,0,0,1.49,7.06L40,125.84Q40,128,40,130.16L25.11,148.8a8,8,0,0,0-1.48,7.06,107.21,107.21,0,0,0,10.88,26.25,8,8,0,0,0,6,3.93l23.72,2.64q1.49,1.56,3,3L70,215.46a8,8,0,0,0,3.94,6,107.71,107.71,0,0,0,26.25,10.87,8,8,0,0,0,7.06-1.49L125.84,216q2.16.06,4.32,0l18.64,14.92a8,8,0,0,0,7.06,1.48,107.21,107.21,0,0,0,26.25-10.88,8,8,0,0,0,3.93-6l2.64-23.72q1.56-1.48,3-3L215.46,186a8,8,0,0,0,6-3.94,107.71,107.71,0,0,0,10.87-26.25,8,8,0,0,0-1.49-7.06Zm-16.1-6.5a73.93,73.93,0,0,1,0,8.68,8,8,0,0,0,1.74,5.48l14.19,17.73a91.57,91.57,0,0,1-6.23,15L187,173.11a8,8,0,0,0-5.1,2.64,74.11,74.11,0,0,1-6.14,6.14,8,8,0,0,0-2.64,5.1l-2.51,22.58a91.32,91.32,0,0,1-15,6.23l-17.74-14.19a8,8,0,0,0-5-1.75h-.48a73.93,73.93,0,0,1-8.68,0,8.06,8.06,0,0,0-5.48,1.74L100.45,215.8a91.57,91.57,0,0,1-15-6.23L82.89,187a8,8,0,0,0-2.64-5.1,74.11,74.11,0,0,1-6.14-6.14,8,8,0,0,0-5.1-2.64L46.43,170.6a91.32,91.32,0,0,1-6.23-15l14.19-17.74a8,8,0,0,0,1.74-5.48,73.93,73.93,0,0,1,0-8.68,8,8,0,0,0-1.74-5.48L40.2,100.45a91.57,91.57,0,0,1,6.23-15L69,82.89a8,8,0,0,0,5.1-2.64,74.11,74.11,0,0,1,6.14-6.14A8,8,0,0,0,82.89,69L85.4,46.43a91.32,91.32,0,0,1,15-6.23l17.74,14.19a8,8,0,0,0,5.48,1.74,73.93,73.93,0,0,1,8.68,0,8.06,8.06,0,0,0,5.48-1.74L155.55,40.2a91.57,91.57,0,0,1,15,6.23L173.11,69a8,8,0,0,0,2.64,5.1,74.11,74.11,0,0,1,6.14,6.14,8,8,0,0,0,5.1,2.64l22.58,2.51a91.32,91.32,0,0,1,6.23,15l-14.19,17.74A8,8,0,0,0,199.87,123.66Z" />
+            </svg>
+          </button>
+
+          <!-- Dropdown Menu -->
+          <Transition
+            enter-active-class="transition ease-out duration-200"
+            enter-from-class="opacity-0 scale-95"
+            enter-to-class="opacity-100 scale-100"
+            leave-active-class="transition ease-in duration-150"
+            leave-from-class="opacity-100 scale-100"
+            leave-to-class="opacity-0 scale-95"
+          >
+            <div
+              v-if="isSettingsOpen"
+              class="absolute right-0 sm:right-0 mt-2 w-64 max-w-[calc(100vw-2rem)] sm:max-w-none bg-white dark:bg-brand-dark border border-gray-200 dark:border-brand-medium-dark-primary rounded-xl shadow-lg z-50"
+              :class="{ 'left-auto': true }"
+            >
+              <div class="p-3 space-y-3">
+                <!-- Theme Toggle -->
+                <div class="flex items-center justify-between gap-3">
+                  <span class="text-sm font-medium text-gray-700 dark:text-gray-300 whitespace-nowrap">Tema</span>
+                  <ThemeToggle />
+                </div>
+
+                <!-- Divider -->
+                <div class="border-t border-gray-200 dark:border-brand-medium-dark-primary" />
+
+                <!-- Language Switcher -->
+                <div class="flex items-center justify-between gap-3">
+                  <span class="text-sm font-medium text-gray-700 dark:text-gray-300 whitespace-nowrap">Idioma</span>
+                  <LanguageSwitcher direction="left" />
+                </div>
+              </div>
+            </div>
+          </Transition>
+        </div>
       </div>
     </nav>
 
@@ -188,21 +324,24 @@ const goHome = (): void => {
       >
         <div class="flex flex-col px-4 py-4 space-y-3">
           <button
-            class="text-left text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-light-primary py-2 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2"
+            :class="[
+              'text-left text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-light-primary py-2 transition-all font-medium focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2 border-l-4',
+              isActive('services')
+                ? 'border-brand-primary dark:border-brand-light-primary text-brand-primary dark:text-brand-light-primary bg-gray-50 dark:bg-brand-medium-dark-primary'
+                : 'border-transparent'
+            ]"
             :aria-label="`Navegar para ${t('nav.services')}`"
             @click="scrollToSection('services')"
           >
             {{ t('nav.services') }}
           </button>
           <button
-            class="text-left text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-light-primary py-2 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2"
-            :aria-label="`Navegar para ${t('nav.about')}`"
-            @click="scrollToSection('about')"
-          >
-            {{ t('nav.about') }}
-          </button>
-          <button
-            class="text-left text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-light-primary py-2 transition-colors font-medium focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2"
+            :class="[
+              'text-left text-gray-700 dark:text-gray-300 hover:text-brand-primary dark:hover:text-brand-light-primary py-2 transition-all font-medium focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded px-2 border-l-4',
+              isActive('contact')
+                ? 'border-brand-primary dark:border-brand-light-primary text-brand-primary dark:text-brand-light-primary bg-gray-50 dark:bg-brand-medium-dark-primary'
+                : 'border-transparent'
+            ]"
             :aria-label="`Navegar para ${t('nav.contact')}`"
             @click="scrollToSection('contact')"
           >
