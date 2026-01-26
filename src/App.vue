@@ -21,7 +21,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-brand-light dark:bg-brand-dark flex flex-col transition-colors duration-300">
+  <div class="min-h-screen flex flex-col transition-colors duration-300">
     <!-- Skip to main content link for keyboard navigation -->
     <a
       href="#main-content"

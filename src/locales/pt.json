@@ -4,18 +4,181 @@
     "about": "Sobre Nós",
     "contact": "Contato",
     "products": "Produtos",
+    "company": "Empresa",
     "getStarted": "Começar",
     "goHome": "Ir para página inicial",
     "goToProducts": "Ir para Produtos"
   },
+  "megamenu": {
+    "services": {
+      "title": "Nossos Serviços",
+      "subtitle": "Soluções completas para seu negócio",
+      "cta": "Ver todos os serviços",
+      "items": {
+        "software": {
+          "title": "Desenvolvimento de Software",
+          "description": "Soluções web e mobile sob medida"
+        },
+        "cloud": {
+          "title": "Soluções em Nuvem",
+          "description": "Infraestrutura escalável e segura"
+        },
+        "ux": {
+          "title": "Design UX",
+          "description": "Interfaces intuitivas e modernas"
+        },
+        "ai": {
+          "title": "Inteligência Artificial",
+          "description": "Automação e machine learning"
+        }
+      }
+    },
+    "products": {
+      "title": "Nossos Produtos",
+      "subtitle": "Soluções prontas para seu negócio",
+      "cta": "Explorar catálogo completo",
+      "tags": {
+        "new": "Novo",
+        "popular": "Popular"
+      },
+      "items": {
+        "erp": {
+          "title": "Lecabe ERP",
+          "description": "Sistema integrado de gestão empresarial"
+        },
+        "crm": {
+          "title": "Lecabe CRM",
+          "description": "Gestão de relacionamento com clientes"
+        },
+        "analytics": {
+          "title": "Lecabe Analytics",
+          "description": "Business intelligence e dashboards"
+        },
+        "commerce": {
+          "title": "Lecabe Commerce",
+          "description": "Plataforma completa de e-commerce"
+        }
+      }
+    },
+    "company": {
+      "title": "Sobre a Lecabe",
+      "subtitle": "Conheça mais sobre nossa empresa",
+      "cta": "Entrar em contato",
+      "items": {
+        "overview": {
+          "title": "A Empresa",
+          "description": "Missão, visão e nossa história"
+        },
+        "about": {
+          "title": "Nossa História",
+          "description": "Como começamos e nossos valores"
+        },
+        "team": {
+          "title": "Nosso Time",
+          "description": "Conheça quem faz acontecer"
+        },
+        "culture": {
+          "title": "Cultura",
+          "description": "Ambiente e benefícios"
+        },
+        "careers": {
+          "title": "Carreiras",
+          "description": "Vagas e oportunidades"
+        }
+      }
+    }
+  },
   "hero": {
-    "title": "Criando Produtos que se Encaixam nos Seus Processos",
-    "subtitle": "Na Lecabe, desenvolvemos soluções de software personalizadas que se encaixam perfeitamente nos seus processos de negócio. Construímos produtos que se encaixam perfeitamente, como peças de um quebra-cabeça, impulsionando a eficiência e melhorando a experiência do usuário. Nossa equipe se dedica a entender suas necessidades únicas e entregar soluções personalizadas com cuidado e precisão.",
-    "cta": "Explore Nossos Serviços"
+    "title": "Software Sob Medida que Acelera Seu Negócio",
+    "subtitle": "Desenvolvemos soluções de software personalizadas que se integram perfeitamente aos seus processos. Do conceito ao deploy, cada projeto é único — construído com expertise técnica e atenção aos detalhes que seu negócio merece.",
+    "cta": "Iniciar Meu Projeto",
+    "ctaSecondary": "Ver Nosso Processo",
+    "trustedBy": "Empresas que confiam na Lecabe"
   },
   "about": {
-    "title": "Sobre Nós",
-    "content": "A Lecabe é uma empresa de software especializada em criar produtos que se encaixam perfeitamente nos seus processos de negócio, onde inovação e cuidado meticuloso estão no coração de cada projeto. Somos especializados em criar soluções de software personalizadas, adaptadas para se encaixarem perfeitamente como as peças de um quebra-cabeça único. Nossa abordagem está enraizada em entender suas necessidades específicas e entregar soluções com precisão e excelência. Acreditamos em criar software que não apenas atenda, mas supere as expectativas, garantindo um ajuste perfeito para seus objetivos de negócio."
+    "title": "Excelência Técnica e Compromisso com Resultados",
+    "content": "A Lecabe é especializada em transformar desafios de negócio em soluções tecnológicas de alto impacto. Com mais de 5 anos de experiência, entregamos projetos que combinam expertise técnica com profundo entendimento dos seus processos. Cada linha de código é pensada para gerar valor real e resultados mensuráveis.",
+    "differentiators": {
+      "family": {
+        "title": "Comunicação Direta",
+        "description": "Relacionamento próximo e transparente com acesso direto à equipe técnica"
+      },
+      "custom": {
+        "title": "100% Personalizado",
+        "description": "Cada projeto é único, desenvolvido especificamente para suas necessidades"
+      },
+      "partnership": {
+        "title": "Parceria Contínua",
+        "description": "Acompanhamos seu projeto do início ao fim, e além"
+      }
+    }
+  },
+  "metrics": {
+    "title": "Nossos Números",
+    "projects": {
+      "value": "10+",
+      "label": "Projetos Entregues"
+    },
+    "satisfaction": {
+      "value": "100%",
+      "label": "Satisfação dos Clientes"
+    },
+    "support": {
+      "value": "7/7",
+      "label": "Atendimento Dias/Semana"
+    },
+    "experience": {
+      "value": "5+",
+      "label": "Anos de Experiência"
+    }
+  },
+  "testimonials": {
+    "title": "O Que Nossos Clientes Dizem",
+    "items": [
+      {
+        "quote": "A Lecabe entendeu exatamente o que precisávamos e entregou além das expectativas. O software transformou nossos processos internos.",
+        "author": "Carlos Silva",
+        "role": "Diretor de Operações",
+        "company": "LogiTech Solutions"
+      },
+      {
+        "quote": "Profissionalismo e atenção aos detalhes. A equipe da Lecabe é parceira de verdade, sempre disponível para ajustar e melhorar.",
+        "author": "Ana Martins",
+        "role": "CEO",
+        "company": "Inova Retail"
+      },
+      {
+        "quote": "Reduzimos 40% do tempo em processos manuais após a implementação. Excelente custo-benefício e suporte impecável.",
+        "author": "Roberto Costa",
+        "role": "Gerente de TI",
+        "company": "Grupo Fernandes"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "items": [
+      {
+        "question": "Quanto custa desenvolver um software personalizado?",
+        "answer": "O investimento varia conforme a complexidade do projeto. Oferecemos uma consultoria inicial gratuita para entender suas necessidades e apresentar um orçamento detalhado, sem compromisso."
+      },
+      {
+        "question": "Quanto tempo leva para desenvolver um projeto?",
+        "answer": "Projetos simples podem ser entregues em 4-8 semanas. Projetos mais complexos seguem nossa metodologia ágil com entregas incrementais, permitindo que você veja resultados desde as primeiras semanas."
+      },
+      {
+        "question": "Vocês oferecem suporte após a entrega?",
+        "answer": "Sim! Oferecemos planos de manutenção e suporte contínuo. Nossa equipe está disponível para ajustes, melhorias e resolução de problemas com tempo de resposta garantido."
+      },
+      {
+        "question": "Trabalham com quais tecnologias?",
+        "answer": "Dominamos as principais tecnologias do mercado: Vue.js, React, Node.js, Python, PHP, bancos de dados SQL e NoSQL, além de cloud (AWS, Azure). Escolhemos a melhor stack para cada projeto."
+      },
+      {
+        "question": "Como funciona o processo de desenvolvimento?",
+        "answer": "Seguimos 5 etapas: Descoberta (entender seu negócio), Requisitos (documentar necessidades), Design (prototipar soluções), Desenvolvimento (construir com qualidade) e Implantação (entregar e suportar)."
+      }
+    ]
   },
   "services": {
     "title": "Nossos Serviços",
@@ -194,6 +357,828 @@
   },
   "common": {
     "backToHome": "Voltar ao Início"
+  },
+  "servicesPages": {
+    "overview": {
+      "meta": {
+        "title": "Serviços | Lecabe - Soluções Completas de Tecnologia",
+        "description": "Descubra nossos serviços de tecnologia: desenvolvimento de software personalizado, soluções em nuvem, design UX/UI e inteligência artificial."
+      },
+      "hero": {
+        "title": "Serviços Completos de Tecnologia",
+        "subtitle": "Transformamos seus desafios em soluções digitais de alto impacto",
+        "cta": "Fale com um Especialista"
+      },
+      "subtitle": "Explore Nossos Serviços",
+      "description": "Oferecemos um conjunto completo de serviços de tecnologia para acelerar seu negócio digital",
+      "viewService": "Explorar Serviço"
+    },
+    "software": {
+      "meta": {
+        "title": "Desenvolvimento de Software | Lecabe",
+        "description": "Desenvolvemos aplicações web e mobile personalizadas com as melhores tecnologias do mercado. Soluções sob medida para seu negócio."
+      },
+      "hero": {
+        "title": "Desenvolvimento de Software Personalizado",
+        "subtitle": "Transformamos suas ideias em soluções digitais robustas e escaláveis",
+        "cta": "Solicitar Orçamento"
+      },
+      "overview": {
+        "title": "Software Sob Medida para Seu Negócio",
+        "content": "Desenvolvemos aplicações web e mobile com foco em performance, escalabilidade e experiência do usuário. Nossa equipe domina as tecnologias mais modernas do mercado para entregar soluções que realmente fazem diferença."
+      },
+      "features": {
+        "title": "O Que Oferecemos",
+        "web": {
+          "title": "Aplicações Web",
+          "description": "SPAs, PWAs e dashboards complexos com Vue.js, React e TypeScript"
+        },
+        "mobile": {
+          "title": "Apps Mobile",
+          "description": "Aplicativos nativos iOS e Android ou híbridos com React Native"
+        },
+        "api": {
+          "title": "APIs RESTful",
+          "description": "Backends robustos com Node.js, Python ou PHP"
+        },
+        "database": {
+          "title": "Banco de Dados",
+          "description": "Modelagem e otimização SQL e NoSQL"
+        },
+        "integration": {
+          "title": "Integrações",
+          "description": "Conexão com sistemas legados e APIs de terceiros"
+        }
+      },
+      "process": {
+        "title": "Nosso Processo de Desenvolvimento",
+        "discovery": {
+          "title": "Descoberta",
+          "description": "Entendemos profundamente seu negócio, usuários e objetivos"
+        },
+        "design": {
+          "title": "Design",
+          "description": "Criamos protótipos interativos para validar a solução"
+        },
+        "development": {
+          "title": "Desenvolvimento",
+          "description": "Construímos com código limpo, testes e documentação"
+        },
+        "testing": {
+          "title": "Testes",
+          "description": "QA rigoroso em múltiplos dispositivos e cenários"
+        },
+        "launch": {
+          "title": "Lançamento",
+          "description": "Deploy seguro com monitoramento e suporte contínuo"
+        }
+      },
+      "techStack": {
+        "title": "Tecnologias Utilizadas",
+        "description": "Trabalhamos com as tecnologias mais modernas e confiáveis do mercado"
+      },
+      "packages": {
+        "title": "Modelos de Trabalho",
+        "mvp": {
+          "name": "MVP",
+          "description": "Ideal para validar sua ideia rapidamente",
+          "features": [
+            "Até 5 telas/funcionalidades principais",
+            "Design responsivo",
+            "Integração com até 2 APIs",
+            "Deploy em produção",
+            "1 mês de suporte"
+          ]
+        },
+        "complete": {
+          "name": "Projeto Completo",
+          "description": "Solução robusta e escalável para seu negócio",
+          "features": [
+            "Funcionalidades ilimitadas",
+            "Design system completo",
+            "Integrações complexas",
+            "Testes automatizados",
+            "CI/CD configurado",
+            "3 meses de suporte"
+          ]
+        },
+        "squad": {
+          "name": "Squad Dedicado",
+          "description": "Equipe exclusiva trabalhando no seu projeto",
+          "features": [
+            "Time completo dedicado",
+            "Sprints semanais/quinzenais",
+            "Participação em planning",
+            "Evolução contínua",
+            "Suporte ilimitado"
+          ]
+        }
+      },
+      "faq": {
+        "title": "Perguntas Frequentes",
+        "q1": {
+          "question": "Quanto tempo leva para desenvolver um software?",
+          "answer": "Um MVP pode ser desenvolvido em 4-8 semanas. Projetos mais complexos variam de 3-6 meses dependendo do escopo. Trabalhamos com metodologia ágil, então você vê resultados desde as primeiras semanas."
+        },
+        "q2": {
+          "question": "Vocês fazem tanto web quanto mobile?",
+          "answer": "Sim! Desenvolvemos aplicações web (Vue.js, React), mobile nativo (iOS/Android) e híbrido (React Native). Podemos criar soluções multiplataforma ou focar em uma plataforma específica."
+        },
+        "q3": {
+          "question": "Como funciona o processo de mudanças durante o desenvolvimento?",
+          "answer": "Trabalhamos com sprints ágeis, permitindo ajustes e melhorias contínuas. Mudanças pequenas são incorporadas naturalmente. Mudanças significativas de escopo são avaliadas em conjunto."
+        },
+        "q4": {
+          "question": "O código-fonte fica com a minha empresa?",
+          "answer": "Sim, 100%! Todo o código desenvolvido é propriedade da sua empresa. Entregamos repositório completo com documentação e instruções para manutenção."
+        }
+      },
+      "cta": {
+        "title": "Pronto para Transformar Sua Ideia em Realidade?",
+        "description": "Vamos conversar sobre seu projeto e encontrar a melhor solução",
+        "button": "Solicitar Orçamento"
+      }
+    },
+    "cloud": {
+      "meta": {
+        "title": "Soluções em Nuvem | Lecabe",
+        "description": "Migração, arquitetura e gestão de infraestrutura em nuvem. AWS, Azure e Google Cloud com segurança e escalabilidade."
+      },
+      "hero": {
+        "title": "Soluções em Nuvem Escaláveis e Seguras",
+        "subtitle": "Otimize custos e performance com infraestrutura moderna em nuvem",
+        "cta": "Avaliar Minha Infraestrutura"
+      },
+      "overview": {
+        "title": "Infraestrutura Cloud de Alta Performance",
+        "content": "Ajudamos empresas a migrar, otimizar e gerenciar suas aplicações em nuvem. Expertise em AWS, Azure e Google Cloud com foco em segurança, disponibilidade e redução de custos."
+      },
+      "features": {
+        "title": "Nossos Serviços de Cloud",
+        "infrastructure": {
+          "title": "Arquitetura Cloud",
+          "description": "Design de infraestrutura escalável e resiliente"
+        },
+        "migration": {
+          "title": "Migração para Cloud",
+          "description": "Transição segura de sistemas on-premise para nuvem"
+        },
+        "security": {
+          "title": "Segurança",
+          "description": "Implementação de melhores práticas de segurança cloud"
+        },
+        "monitoring": {
+          "title": "Monitoramento",
+          "description": "Observabilidade completa com alertas inteligentes"
+        },
+        "automation": {
+          "title": "Automação",
+          "description": "CI/CD e infraestrutura como código (IaC)"
+        }
+      },
+      "process": {
+        "title": "Processo de Implementação Cloud",
+        "assessment": {
+          "title": "Avaliação",
+          "description": "Análise da infraestrutura atual e necessidades"
+        },
+        "architecture": {
+          "title": "Arquitetura",
+          "description": "Design da solução cloud otimizada"
+        },
+        "migration": {
+          "title": "Migração",
+          "description": "Transição gradual com zero downtime"
+        },
+        "optimization": {
+          "title": "Otimização",
+          "description": "Ajuste fino de performance e custos"
+        },
+        "support": {
+          "title": "Suporte",
+          "description": "Monitoramento e gestão contínua"
+        }
+      },
+      "techStack": {
+        "title": "Plataformas e Ferramentas",
+        "description": "Expertise nas principais plataformas de cloud computing"
+      },
+      "packages": {
+        "title": "Planos de Cloud",
+        "migration": {
+          "name": "Migração Cloud",
+          "description": "Projeto único de migração para nuvem",
+          "features": [
+            "Avaliação completa da infraestrutura",
+            "Plano de migração detalhado",
+            "Execução da migração",
+            "Testes e validação",
+            "30 dias de suporte pós-migração"
+          ]
+        },
+        "managed": {
+          "name": "Cloud Gerenciado",
+          "description": "Gestão completa da sua infraestrutura cloud",
+          "features": [
+            "Monitoramento 24/7",
+            "Atualizações de segurança",
+            "Otimização de custos mensal",
+            "Backup automatizado",
+            "Suporte prioritário",
+            "Relatórios mensais"
+          ]
+        },
+        "enterprise": {
+          "name": "Enterprise Cloud",
+          "description": "Solução completa para grandes volumes",
+          "features": [
+            "Arquitetura multi-cloud",
+            "SLA personalizado",
+            "Equipe dedicada",
+            "Disaster recovery",
+            "Compliance avançado",
+            "Suporte 24/7"
+          ]
+        }
+      },
+      "faq": {
+        "title": "Perguntas Frequentes",
+        "q1": {
+          "question": "Quanto posso economizar migrando para cloud?",
+          "answer": "Empresas geralmente economizam 20-40% em custos de infraestrutura após migração otimizada. Além da economia direta, há ganhos em escalabilidade, disponibilidade e produtividade da equipe."
+        },
+        "q2": {
+          "question": "A migração causa interrupção nos serviços?",
+          "answer": "Não! Planejamos migrações com zero downtime. Usamos estratégias como blue-green deployment e migração gradual para garantir que seus serviços continuem disponíveis."
+        },
+        "q3": {
+          "question": "Qual cloud provider vocês recomendam?",
+          "answer": "Depende das suas necessidades. AWS é a mais completa, Azure integra bem com Microsoft, Google Cloud é forte em dados e ML. Avaliamos seu caso para recomendar a melhor opção."
+        },
+        "q4": {
+          "question": "Vocês gerenciam a cloud após a migração?",
+          "answer": "Sim! Oferecemos serviço de cloud gerenciado com monitoramento, otimização contínua, atualizações de segurança e suporte. Você foca no negócio, nós cuidamos da infraestrutura."
+        }
+      },
+      "cta": {
+        "title": "Pronto para Modernizar Sua Infraestrutura?",
+        "description": "Faça uma avaliação gratuita da sua infraestrutura atual",
+        "button": "Solicitar Avaliação"
+      }
+    },
+    "ux": {
+      "meta": {
+        "title": "Design UX/UI | Lecabe",
+        "description": "Design de interfaces intuitivas e experiências encantadoras. Research, protótipos e testes com usuários reais."
+      },
+      "hero": {
+        "title": "Design UX/UI que Encanta Usuários",
+        "subtitle": "Criamos interfaces intuitivas baseadas em pesquisa e dados reais",
+        "cta": "Avaliar Meu Produto"
+      },
+      "overview": {
+        "title": "Experiências Digitais que Convertem",
+        "content": "Combinamos pesquisa com usuários, design thinking e prototipagem iterativa para criar interfaces que seus usuários amam usar. Nosso processo é baseado em dados, testes e validação contínua."
+      },
+      "features": {
+        "title": "Nossos Serviços de UX/UI",
+        "research": {
+          "title": "UX Research",
+          "description": "Entrevistas, testes de usabilidade e análise comportamental"
+        },
+        "prototyping": {
+          "title": "Prototipagem",
+          "description": "Wireframes e protótipos interativos de alta fidelidade"
+        },
+        "testing": {
+          "title": "Testes com Usuários",
+          "description": "Validação com usuários reais antes do desenvolvimento"
+        },
+        "design-system": {
+          "title": "Design System",
+          "description": "Biblioteca de componentes reutilizáveis e documentada"
+        },
+        "accessibility": {
+          "title": "Acessibilidade",
+          "description": "Interfaces inclusivas seguindo WCAG 2.1"
+        }
+      },
+      "process": {
+        "title": "Processo de Design",
+        "research": {
+          "title": "Research",
+          "description": "Pesquisa com usuários e análise de mercado"
+        },
+        "wireframe": {
+          "title": "Wireframes",
+          "description": "Estruturação de fluxos e arquitetura de informação"
+        },
+        "prototype": {
+          "title": "Protótipo",
+          "description": "Design visual e interações de alta fidelidade"
+        },
+        "testing": {
+          "title": "Testes",
+          "description": "Validação com usuários reais e iteração"
+        },
+        "handoff": {
+          "title": "Handoff",
+          "description": "Entrega organizada para desenvolvimento"
+        }
+      },
+      "techStack": {
+        "title": "Ferramentas de Design",
+        "description": "Utilizamos as melhores ferramentas para design e prototipagem"
+      },
+      "packages": {
+        "title": "Pacotes de Design",
+        "audit": {
+          "name": "UX Audit",
+          "description": "Análise completa da experiência atual",
+          "features": [
+            "Análise heurística completa",
+            "Testes de usabilidade",
+            "Relatório com recomendações",
+            "Mapa de melhorias priorizadas",
+            "Apresentação dos resultados"
+          ]
+        },
+        "redesign": {
+          "name": "Redesign Completo",
+          "description": "Reformulação completa da interface",
+          "features": [
+            "Research com usuários",
+            "Wireframes de todos os fluxos",
+            "Design system completo",
+            "Protótipo interativo",
+            "Testes de usabilidade",
+            "Handoff para dev"
+          ]
+        },
+        "continuous": {
+          "name": "Design Contínuo",
+          "description": "Designer dedicado ao seu produto",
+          "features": [
+            "Disponibilidade mensal",
+            "Melhorias iterativas",
+            "A/B tests",
+            "Análise de métricas",
+            "Design system evolutivo",
+            "Suporte ao time de dev"
+          ]
+        }
+      },
+      "faq": {
+        "title": "Perguntas Frequentes",
+        "q1": {
+          "question": "Por que investir em UX/UI?",
+          "answer": "Bom design aumenta conversões em 200% e reduz custos de suporte em 50%. Usuários satisfeitos se tornam promotores da marca e retornam mais vezes. É investimento, não custo."
+        },
+        "q2": {
+          "question": "Quanto tempo leva um projeto de design?",
+          "answer": "Um UX Audit leva 1-2 semanas. Um redesign completo de 4-8 semanas dependendo da complexidade. Trabalhamos com sprints de design para entregas incrementais."
+        },
+        "q3": {
+          "question": "Vocês fazem testes com usuários reais?",
+          "answer": "Sim! Incluímos testes de usabilidade em todos os projetos. Recrutamos participantes do seu público-alvo e realizamos sessões moderadas para validar o design antes do desenvolvimento."
+        },
+        "q4": {
+          "question": "O que é Design System e preciso de um?",
+          "answer": "Design System é uma biblioteca de componentes reutilizáveis que acelera o desenvolvimento e garante consistência. Recomendamos para produtos médios/grandes ou com múltiplas plataformas."
+        }
+      },
+      "cta": {
+        "title": "Vamos Melhorar a Experiência dos Seus Usuários?",
+        "description": "Solicite um UX Audit gratuito do seu produto",
+        "button": "Solicitar UX Audit"
+      }
+    },
+    "ai": {
+      "meta": {
+        "title": "Inteligência Artificial | Lecabe",
+        "description": "Soluções de IA e Machine Learning personalizadas. Chatbots, automação, análise preditiva e visão computacional."
+      },
+      "hero": {
+        "title": "Inteligência Artificial que Impulsiona Resultados",
+        "subtitle": "Automatize processos e extraia insights com IA de última geração",
+        "cta": "Explorar Casos de Uso"
+      },
+      "overview": {
+        "title": "IA Aplicada ao Seu Negócio",
+        "content": "Implementamos soluções de inteligência artificial e machine learning que geram valor real. De chatbots inteligentes a análise preditiva, ajudamos sua empresa a aproveitar o poder da IA."
+      },
+      "features": {
+        "title": "Soluções de IA",
+        "ml-models": {
+          "title": "Modelos de ML",
+          "description": "Modelos customizados para previsão e classificação"
+        },
+        "nlp": {
+          "title": "Processamento de Linguagem",
+          "description": "Análise de sentimento, extração de dados e summarização"
+        },
+        "computer-vision": {
+          "title": "Visão Computacional",
+          "description": "Reconhecimento de imagens e análise visual"
+        },
+        "automation": {
+          "title": "Automação Inteligente",
+          "description": "RPA com IA para processos complexos"
+        },
+        "chatbots": {
+          "title": "Chatbots Avançados",
+          "description": "Assistentes conversacionais com LLMs"
+        }
+      },
+      "process": {
+        "title": "Processo de Implementação de IA",
+        "discovery": {
+          "title": "Descoberta",
+          "description": "Identificação de casos de uso e viabilidade"
+        },
+        "data": {
+          "title": "Preparação de Dados",
+          "description": "Coleta, limpeza e organização dos dados"
+        },
+        "modeling": {
+          "title": "Modelagem",
+          "description": "Treinamento e otimização de modelos"
+        },
+        "validation": {
+          "title": "Validação",
+          "description": "Testes rigorosos e ajuste fino"
+        },
+        "deploy": {
+          "title": "Deploy",
+          "description": "Implementação em produção com monitoramento"
+        }
+      },
+      "techStack": {
+        "title": "Stack de IA",
+        "description": "Tecnologias de ponta em inteligência artificial"
+      },
+      "packages": {
+        "title": "Pacotes de IA",
+        "poc": {
+          "name": "Prova de Conceito",
+          "description": "Valide a viabilidade da sua ideia de IA",
+          "features": [
+            "Análise de viabilidade",
+            "Dataset piloto",
+            "Modelo baseline",
+            "Métricas de performance",
+            "Relatório executivo",
+            "Roadmap de evolução"
+          ]
+        },
+        "implementation": {
+          "name": "Implementação Completa",
+          "description": "Solução de IA pronta para produção",
+          "features": [
+            "Modelo otimizado",
+            "Pipeline de dados",
+            "API para integração",
+            "Interface de gestão",
+            "Monitoramento de performance",
+            "3 meses de suporte"
+          ]
+        },
+        "optimization": {
+          "name": "Otimização Contínua",
+          "description": "Evolução constante dos modelos",
+          "features": [
+            "Retreinamento mensal",
+            "A/B testing de modelos",
+            "Expansão de features",
+            "Análise de drift",
+            "Relatórios de performance",
+            "Suporte dedicado"
+          ]
+        }
+      },
+      "faq": {
+        "title": "Perguntas Frequentes",
+        "q1": {
+          "question": "Minha empresa tem dados suficientes para IA?",
+          "answer": "Depende do caso de uso. Alguns modelos funcionam com poucos dados (few-shot learning), outros precisam de volumes maiores. Fazemos uma avaliação inicial para determinar viabilidade."
+        },
+        "q2": {
+          "question": "Quanto custa implementar uma solução de IA?",
+          "answer": "Uma PoC começa em valores acessíveis para validação. Implementações completas variam conforme complexidade. O ROI geralmente é atingido em 6-12 meses com automação de processos."
+        },
+        "q3": {
+          "question": "Como garantir que o modelo continua preciso?",
+          "answer": "Implementamos monitoramento contínuo de performance e retreinamento periódico. Detectamos drift (degradação) automaticamente e ajustamos o modelo conforme necessário."
+        },
+        "q4": {
+          "question": "Vocês usam modelos prontos ou custom?",
+          "answer": "Depende do caso. Para chatbots usamos LLMs como GPT-4 com fine-tuning. Para casos específicos, treinamos modelos customizados. Sempre buscamos o melhor custo-benefício."
+        }
+      },
+      "cta": {
+        "title": "Pronto para Implementar IA no Seu Negócio?",
+        "description": "Vamos identificar casos de uso de alto impacto para sua empresa",
+        "button": "Agendar Consultoria"
+      }
+    }
+  },
+  "companyPages": {
+    "overview": {
+      "meta": {
+        "title": "Sobre a Lecabe | Nossa História e Valores",
+        "description": "Conheça a Lecabe, nossa história, valores e como transformamos desafios em soluções tecnológicas inovadoras."
+      },
+      "hero": {
+        "title": "Transformando Ideias em Soluções Digitais",
+        "subtitle": "Somos uma software house especializada em criar produtos digitais únicos que aceleram negócios"
+      },
+      "stats": {
+        "founded": {
+          "value": "2019",
+          "label": "Fundada em"
+        },
+        "team": {
+          "value": "15+",
+          "label": "Profissionais"
+        },
+        "projects": {
+          "value": "50+",
+          "label": "Projetos Entregues"
+        },
+        "satisfaction": {
+          "value": "100%",
+          "label": "Satisfação"
+        }
+      },
+      "mission": {
+        "title": "Nossa Missão",
+        "content": "Desenvolver soluções tecnológicas que geram valor real para nossos clientes, combinando excelência técnica com profundo entendimento de negócio."
+      },
+      "vision": {
+        "title": "Nossa Visão",
+        "content": "Ser referência em desenvolvimento de software personalizado, reconhecida pela qualidade técnica e pelo impacto positivo nos negócios de nossos clientes."
+      },
+      "cta": {
+        "title": "Quer fazer parte do time?",
+        "description": "Estamos sempre em busca de talentos apaixonados por tecnologia",
+        "button": "Ver Vagas"
+      }
+    },
+    "about": {
+      "meta": {
+        "title": "Nossa História | Lecabe",
+        "description": "Conheça a história da Lecabe, nossos valores fundamentais e o que nos move a criar soluções excepcionais."
+      },
+      "hero": {
+        "title": "Nossa História",
+        "subtitle": "Como começamos e para onde estamos indo"
+      },
+      "story": {
+        "title": "Como Tudo Começou",
+        "content": "A Lecabe nasceu em 2019 da visão de criar uma software house diferente. Fundada por desenvolvedores apaixonados por tecnologia e negócios, nossa missão sempre foi clara: desenvolver software que realmente faz diferença.\n\nDesde o início, nos especializamos em entender profundamente os desafios dos nossos clientes antes de propor soluções. Essa abordagem consultiva nos permitiu construir relacionamentos duradouros e entregar projetos que superam expectativas.\n\nHoje, somos uma equipe multidisciplinar de desenvolvedores, designers e especialistas em produto, unidos pela paixão de transformar ideias em realidade digital."
+      },
+      "values": {
+        "title": "Nossos Valores",
+        "items": {
+          "excellence": {
+            "title": "Excelência Técnica",
+            "description": "Código limpo, arquitetura sólida e melhores práticas em cada linha"
+          },
+          "transparency": {
+            "title": "Transparência Total",
+            "description": "Comunicação clara e honesta em todas as etapas do projeto"
+          },
+          "partnership": {
+            "title": "Parceria Verdadeira",
+            "description": "Seu sucesso é nosso sucesso, estamos juntos do início ao fim"
+          },
+          "innovation": {
+            "title": "Inovação Contínua",
+            "description": "Sempre atualizados com as tecnologias e práticas mais modernas"
+          },
+          "impact": {
+            "title": "Foco em Impacto",
+            "description": "Cada funcionalidade deve gerar valor mensurável para o negócio"
+          },
+          "quality": {
+            "title": "Qualidade Inegociável",
+            "description": "Testes rigorosos e atenção aos detalhes em tudo que fazemos"
+          }
+        }
+      },
+      "principles": {
+        "title": "Como Trabalhamos",
+        "items": {
+          "understanding": {
+            "title": "Entendimento Profundo",
+            "description": "Antes de escrever uma linha de código, entendemos seu negócio, usuários e desafios"
+          },
+          "collaboration": {
+            "title": "Colaboração Ativa",
+            "description": "Você participa ativamente das decisões, fazemos o projeto junto"
+          },
+          "delivery": {
+            "title": "Entregas Incrementais",
+            "description": "Sprints ágeis com demonstrações frequentes, você vê evolução desde o dia 1"
+          },
+          "support": {
+            "title": "Suporte Contínuo",
+            "description": "Não desaparecemos após o deploy, estamos aqui para garantir seu sucesso"
+          }
+        }
+      }
+    },
+    "team": {
+      "meta": {
+        "title": "Nosso Time | Lecabe",
+        "description": "Conheça os profissionais por trás da Lecabe, nossos founders e equipe multidisciplinar."
+      },
+      "hero": {
+        "title": "Conheça Nosso Time",
+        "subtitle": "Profissionais apaixonados por tecnologia e resultados"
+      },
+      "founders": {
+        "title": "Founders",
+        "description": "Os visionários que fundaram a Lecabe"
+      },
+      "leadership": {
+        "title": "Liderança",
+        "description": "Experiência e expertise para guiar projetos complexos"
+      },
+      "developers": {
+        "title": "Desenvolvimento",
+        "description": "Engenheiros de software especializados"
+      },
+      "designers": {
+        "title": "Design",
+        "description": "Criadores de experiências memoráveis"
+      },
+      "joinTeam": {
+        "title": "Faça Parte do Time",
+        "description": "Estamos sempre buscando talentos excepcionais",
+        "button": "Ver Oportunidades"
+      }
+    },
+    "culture": {
+      "meta": {
+        "title": "Cultura e Ambiente | Lecabe",
+        "description": "Conheça a cultura da Lecabe, nosso ambiente de trabalho e os benefícios que oferecemos."
+      },
+      "hero": {
+        "title": "Nossa Cultura",
+        "subtitle": "Um ambiente onde tecnologia e pessoas prosperam juntas"
+      },
+      "intro": {
+        "title": "Ambiente de Trabalho",
+        "content": "Na Lecabe, acreditamos que grandes produtos nascem de times felizes e motivados. Criamos um ambiente colaborativo onde cada pessoa tem voz, autonomia para tomar decisões e oportunidades constantes de crescimento.\n\nNosso trabalho é remoto-first, valorizando resultados acima de horários fixos. Trabalhamos com tecnologias modernas, metodologias ágeis e incentivamos a experimentação e o aprendizado contínuo."
+      },
+      "pillars": {
+        "title": "Pilares da Nossa Cultura",
+        "items": {
+          "learning": {
+            "title": "Aprendizado Contínuo",
+            "description": "Budget para cursos, conferências e certificações"
+          },
+          "autonomy": {
+            "title": "Autonomia",
+            "description": "Confiança para tomar decisões e experimentar"
+          },
+          "balance": {
+            "title": "Work-Life Balance",
+            "description": "Flexibilidade de horários e trabalho remoto"
+          },
+          "diversity": {
+            "title": "Diversidade",
+            "description": "Time plural e inclusivo de diferentes backgrounds"
+          },
+          "transparency": {
+            "title": "Transparência",
+            "description": "Comunicação aberta sobre decisões e direção da empresa"
+          },
+          "impact": {
+            "title": "Impacto Real",
+            "description": "Trabalhe em projetos que fazem diferença"
+          }
+        }
+      },
+      "benefits": {
+        "title": "Benefícios",
+        "items": {
+          "remote": {
+            "title": "100% Remoto",
+            "description": "Trabalhe de onde quiser, quando quiser"
+          },
+          "equipment": {
+            "title": "Equipamento de Ponta",
+            "description": "MacBook ou PC de alta performance"
+          },
+          "health": {
+            "title": "Plano de Saúde",
+            "description": "Cobertura completa para você e família"
+          },
+          "pto": {
+            "title": "PTO Flexível",
+            "description": "Política flexível de férias e folgas"
+          },
+          "education": {
+            "title": "Budget de Educação",
+            "description": "Investimento anual em seu desenvolvimento"
+          },
+          "bonus": {
+            "title": "Bônus por Projeto",
+            "description": "Participação nos resultados dos projetos"
+          }
+        }
+      },
+      "workingHere": {
+        "title": "Como é Trabalhar na Lecabe",
+        "testimonials": [
+          {
+            "quote": "Ambiente colaborativo onde posso crescer tecnicamente e contribuir com ideias. A autonomia aqui é real.",
+            "author": "João Silva",
+            "role": "Senior Developer"
+          },
+          {
+            "quote": "Melhor decisão que tomei na carreira. Time incrível, projetos desafiadores e liberdade para inovar.",
+            "author": "Maria Santos",
+            "role": "Tech Lead"
+          }
+        ]
+      }
+    },
+    "careers": {
+      "meta": {
+        "title": "Carreiras | Trabalhe Conosco - Lecabe",
+        "description": "Faça parte do time Lecabe. Confira nossas vagas abertas e venha transformar ideias em realidade conosco."
+      },
+      "hero": {
+        "title": "Venha Trabalhar com a Gente",
+        "subtitle": "Faça parte de um time que está transformando o mercado de software"
+      },
+      "whyJoin": {
+        "title": "Por Que se Juntar à Lecabe?",
+        "items": {
+          "growth": {
+            "title": "Crescimento Acelerado",
+            "description": "Oportunidades constantes de aprender e evoluir na carreira"
+          },
+          "projects": {
+            "title": "Projetos Desafiadores",
+            "description": "Trabalhe com tecnologias modernas em projetos reais"
+          },
+          "team": {
+            "title": "Time de Alta Performance",
+            "description": "Aprenda com profissionais experientes e apaixonados"
+          },
+          "impact": {
+            "title": "Impacto Direto",
+            "description": "Veja suas contribuições fazendo diferença nos clientes"
+          }
+        }
+      },
+      "openings": {
+        "title": "Vagas Abertas",
+        "empty": {
+          "title": "Nenhuma vaga aberta no momento",
+          "description": "Mas estamos sempre em busca de talentos! Envie seu currículo mesmo assim."
+        },
+        "spontaneous": {
+          "title": "Candidatura Espontânea",
+          "description": "Não encontrou a vaga ideal? Envie seu currículo e entraremos em contato quando surgir uma oportunidade que combine com seu perfil.",
+          "button": "Enviar Currículo"
+        }
+      },
+      "process": {
+        "title": "Nosso Processo Seletivo",
+        "steps": {
+          "application": {
+            "title": "1. Candidatura",
+            "description": "Envie seu currículo e portfolio"
+          },
+          "screening": {
+            "title": "2. Triagem",
+            "description": "Análise do seu perfil e experiência"
+          },
+          "interview": {
+            "title": "3. Entrevista",
+            "description": "Bate-papo sobre experiências e expectativas"
+          },
+          "technical": {
+            "title": "4. Desafio Técnico",
+            "description": "Resolução de um problema real (remunerado)"
+          },
+          "offer": {
+            "title": "5. Proposta",
+            "description": "Se tudo der match, vem pro time!"
+          }
+        }
+      },
+      "cta": {
+        "title": "Pronto para Fazer Parte?",
+        "description": "Envie seu currículo e vamos conversar sobre oportunidades",
+        "button": "Candidatar-se"
+      }
+    }
   },
   "privacy": {
     "title": "Política de Privacidade",

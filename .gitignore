@@ -34,3 +34,5 @@ coverage
 playwright/
 .playwright-mcp/
 
+./Lecabe
+/Lecabe

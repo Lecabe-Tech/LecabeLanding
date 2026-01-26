@@ -24,6 +24,11 @@ export default {
         'axiforma': ['Axiforma', 'sans-serif'],
         'sans': ['Axiforma', 'Inter', 'system-ui', 'sans-serif'],
       },
+      fontSize: {
+        '8xl': ['6rem', { lineHeight: '1', letterSpacing: '-0.02em' }],
+        '9xl': ['8rem', { lineHeight: '1', letterSpacing: '-0.03em' }],
+        '10xl': ['10rem', { lineHeight: '1', letterSpacing: '-0.04em' }],
+      },
       animation: {
         'fade-in-up': 'fadeInUp 0.5s ease-out',
         'fade-in': 'fadeIn 0.5s ease-out',
@@ -34,6 +39,9 @@ export default {
         'scale-in': 'scaleIn 0.4s ease-out',
         'gradient-rotate': 'gradientRotate 3s linear infinite',
         'float': 'float 3s ease-in-out infinite',
+        'pulse-subtle': 'pulseSubtle 2s ease-in-out infinite',
+        'blob': 'blob 20s ease-in-out infinite',
+        'shimmer': 'shimmer 2s ease-in-out infinite',
       },
       keyframes: {
         fadeInUp: {
@@ -72,6 +80,20 @@ export default {
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-10px)' },
+        },
+        pulseSubtle: {
+          '0%, 100%': { boxShadow: '0 0 0 0 rgba(79, 82, 255, 0.4)' },
+          '50%': { boxShadow: '0 0 0 8px rgba(79, 82, 255, 0)' },
+        },
+        blob: {
+          '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
+          '25%': { transform: 'translate(20px, -30px) scale(1.05)' },
+          '50%': { transform: 'translate(-20px, 20px) scale(0.95)' },
+          '75%': { transform: 'translate(30px, 10px) scale(1.02)' },
+        },
+        shimmer: {
+          '0%': { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
         },
       },
     },
