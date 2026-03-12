@@ -3,23 +3,22 @@ import { defineStore } from 'pinia'
 
 /**
  * Store for language/locale management
- * Supports: Portuguese (pt), English (en), French (fr)
+ * Supports: Portuguese (pt), English (en)
  */
 export const useLocaleStore = defineStore('locale', () => {
   const currentLocale = ref(localStorage.getItem('locale') || 'pt')
-  
+
   /**
    * Available languages
    */
   const availableLocales = [
     { code: 'pt', name: 'Português', flag: '🇧🇷' },
-    { code: 'en', name: 'English', flag: '🇺🇸' },
-    { code: 'fr', name: 'Français', flag: '🇫🇷' }
+    { code: 'en', name: 'English', flag: '🇺🇸' }
   ]
 
   /**
    * Set the current locale
-   * @param locale - Language code (pt, en, fr)
+   * @param locale - Language code (pt, en)
    */
   const setLocale = (locale: string): void => {
     if (!availableLocales.find(l => l.code === locale)) {
