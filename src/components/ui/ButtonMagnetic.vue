@@ -9,9 +9,11 @@ interface Props {
   type?: 'button' | 'submit' | 'reset'
 }
 
-const props = withDefaults(defineProps<Props>(), {
+withDefaults(defineProps<Props>(), {
   variant: 'primary',
   size: 'md',
+  href: undefined,
+  to: undefined,
   type: 'button'
 })
 
@@ -76,10 +78,10 @@ const sizeClasses = {
 <template>
   <component
     :is="href ? 'a' : to ? 'router-link' : 'button'"
+    ref="buttonRef"
     :href="href"
     :to="to"
     :type="!href && !to ? type : undefined"
-    ref="buttonRef"
     class="btn-magnetic group relative overflow-hidden rounded-lg font-semibold transition-all duration-300 inline-flex items-center gap-2 shadow-lg hover:shadow-xl"
     :class="[variantClasses[variant], sizeClasses[size]]"
     :style="{
@@ -94,8 +96,19 @@ const sizeClasses = {
     </span>
 
     <span class="btn-icon relative z-10 transition-transform duration-300 group-hover:translate-x-1">
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+      <svg
+        class="w-5 h-5"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M13 7l5 5m0 0l-5 5m5-5H6"
+        />
       </svg>
     </span>
   </component>

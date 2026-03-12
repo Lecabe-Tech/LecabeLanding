@@ -46,14 +46,18 @@ const goBack = () => {
       <!-- Content -->
       <div class="prose prose-lg dark:prose-invert max-w-none">
         <section class="mb-8">
-          <h2 class="section-subtitle mb-4">1. Introdução</h2>
+          <h2 class="section-subtitle mb-4">
+            1. Introdução
+          </h2>
           <p class="section-description mb-4">
             A Lecabe ("nós", "nosso" ou "nossa") está comprometida em proteger sua privacidade. Esta Política de Privacidade explica como coletamos, usamos, divulgamos e protegemos suas informações quando você visita nosso site e utiliza nossos serviços.
           </p>
         </section>
 
         <section class="mb-8">
-          <h2 class="section-subtitle mb-4">2. Informações que Coletamos</h2>
+          <h2 class="section-subtitle mb-4">
+            2. Informações que Coletamos
+          </h2>
           <p class="section-description mb-4">
             Coletamos informações que você nos fornece diretamente:
           </p>
@@ -66,7 +70,9 @@ const goBack = () => {
         </section>
 
         <section class="mb-8">
-          <h2 class="section-subtitle mb-4">3. Como Usamos Suas Informações</h2>
+          <h2 class="section-subtitle mb-4">
+            3. Como Usamos Suas Informações
+          </h2>
           <p class="section-description mb-4">
             Utilizamos as informações coletadas para:
           </p>
@@ -81,7 +87,9 @@ const goBack = () => {
         </section>
 
         <section class="mb-8">
-          <h2 class="section-subtitle mb-4">4. Compartilhamento de Informações</h2>
+          <h2 class="section-subtitle mb-4">
+            4. Compartilhamento de Informações
+          </h2>
           <p class="section-description mb-4">
             Não vendemos suas informações pessoais. Podemos compartilhar suas informações apenas nas seguintes situações:
           </p>
@@ -94,21 +102,27 @@ const goBack = () => {
         </section>
 
         <section class="mb-8">
-          <h2 class="section-subtitle mb-4">5. Cookies e Tecnologias Similares</h2>
+          <h2 class="section-subtitle mb-4">
+            5. Cookies e Tecnologias Similares
+          </h2>
           <p class="section-description mb-4">
             Utilizamos cookies e tecnologias similares para melhorar sua experiência em nosso site. Você pode controlar o uso de cookies através das configurações do seu navegador.
           </p>
         </section>
 
         <section class="mb-8">
-          <h2 class="section-subtitle mb-4">6. Segurança de Dados</h2>
+          <h2 class="section-subtitle mb-4">
+            6. Segurança de Dados
+          </h2>
           <p class="section-description mb-4">
             Implementamos medidas de segurança técnicas e organizacionais apropriadas para proteger suas informações pessoais contra acesso não autorizado, alteração, divulgação ou destruição.
           </p>
         </section>
 
         <section class="mb-8">
-          <h2 class="section-subtitle mb-4">7. Seus Direitos</h2>
+          <h2 class="section-subtitle mb-4">
+            7. Seus Direitos
+          </h2>
           <p class="section-description mb-4">
             De acordo com a Lei Geral de Proteção de Dados (LGPD), você tem os seguintes direitos:
           </p>
@@ -122,28 +136,36 @@ const goBack = () => {
         </section>
 
         <section class="mb-8">
-          <h2 class="section-subtitle mb-4">8. Retenção de Dados</h2>
+          <h2 class="section-subtitle mb-4">
+            8. Retenção de Dados
+          </h2>
           <p class="section-description mb-4">
             Mantemos suas informações pessoais apenas pelo tempo necessário para cumprir os propósitos descritos nesta política, a menos que um período de retenção mais longo seja exigido ou permitido por lei.
           </p>
         </section>
 
         <section class="mb-8">
-          <h2 class="section-subtitle mb-4">9. Transferência Internacional de Dados</h2>
+          <h2 class="section-subtitle mb-4">
+            9. Transferência Internacional de Dados
+          </h2>
           <p class="section-description mb-4">
             Seus dados podem ser transferidos e mantidos em computadores localizados fora do Brasil. Garantimos que todas as transferências sejam realizadas de acordo com a LGPD e outras leis aplicáveis.
           </p>
         </section>
 
         <section class="mb-8">
-          <h2 class="section-subtitle mb-4">10. Alterações nesta Política</h2>
+          <h2 class="section-subtitle mb-4">
+            10. Alterações nesta Política
+          </h2>
           <p class="section-description mb-4">
             Podemos atualizar esta Política de Privacidade periodicamente. Notificaremos você sobre quaisquer alterações publicando a nova política nesta página e atualizando a data de "última atualização".
           </p>
         </section>
 
         <section class="mb-8">
-          <h2 class="section-subtitle mb-4">11. Contato</h2>
+          <h2 class="section-subtitle mb-4">
+            11. Contato
+          </h2>
           <p class="section-description mb-4">
             Se você tiver dúvidas sobre esta Política de Privacidade, entre em contato conosco:
           </p>

@@ -143,7 +143,7 @@ const navigateTo = (href: string) => {
           class="transition-transform duration-200"
           :class="{ 'rotate-180': activeMenu === 'services' }"
         >
-          <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/>
+          <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z" />
         </svg>
       </button>
 
@@ -165,8 +165,12 @@ const navigateTo = (href: string) => {
           <div class="p-6">
             <!-- Header -->
             <div class="mb-5">
-              <h3 class="font-bold text-gray-900 dark:text-white text-base mb-1">{{ t('megamenu.services.title') }}</h3>
-              <p class="text-sm text-gray-500 dark:text-gray-400">{{ t('megamenu.services.subtitle') }}</p>
+              <h3 class="font-bold text-gray-900 dark:text-white text-base mb-1">
+                {{ t('megamenu.services.title') }}
+              </h3>
+              <p class="text-sm text-gray-500 dark:text-gray-400">
+                {{ t('megamenu.services.subtitle') }}
+              </p>
             </div>
 
             <!-- Services List -->
@@ -178,25 +182,68 @@ const navigateTo = (href: string) => {
                 @click="navigateTo(service.href)"
               >
                 <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-primary/10 to-brand-primary/5 dark:from-brand-light-primary/10 dark:to-brand-light-primary/5 flex items-center justify-center flex-shrink-0 group-hover:from-brand-primary/20 group-hover:to-brand-primary/10 dark:group-hover:from-brand-light-primary/20 dark:group-hover:to-brand-light-primary/10 transition-all">
-                  <svg v-if="service.icon === 'code'" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256" class="text-brand-primary dark:text-brand-light-primary">
-                    <path d="M69.12,94.15,28.5,128l40.62,33.85a8,8,0,1,1-10.24,12.29l-48-40a8,8,0,0,1,0-12.29l48-40a8,8,0,0,1,10.24,12.3Zm176,27.7-48-40a8,8,0,1,0-10.24,12.3L227.5,128l-40.62,33.85a8,8,0,1,0,10.24,12.29l48-40a8,8,0,0,0,0-12.29Z"/>
+                  <svg
+                    v-if="service.icon === 'code'"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                    class="text-brand-primary dark:text-brand-light-primary"
+                  >
+                    <path d="M69.12,94.15,28.5,128l40.62,33.85a8,8,0,1,1-10.24,12.29l-48-40a8,8,0,0,1,0-12.29l48-40a8,8,0,0,1,10.24,12.3Zm176,27.7-48-40a8,8,0,1,0-10.24,12.3L227.5,128l-40.62,33.85a8,8,0,1,0,10.24,12.29l48-40a8,8,0,0,0,0-12.29Z" />
                   </svg>
-                  <svg v-else-if="service.icon === 'cloud'" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256" class="text-brand-primary dark:text-brand-light-primary">
-                    <path d="M160,40A88.09,88.09,0,0,0,81.29,88.67,64,64,0,1,0,72,216h88a88,88,0,0,0,0-176Z"/>
+                  <svg
+                    v-else-if="service.icon === 'cloud'"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                    class="text-brand-primary dark:text-brand-light-primary"
+                  >
+                    <path d="M160,40A88.09,88.09,0,0,0,81.29,88.67,64,64,0,1,0,72,216h88a88,88,0,0,0,0-176Z" />
                   </svg>
-                  <svg v-else-if="service.icon === 'design'" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256" class="text-brand-primary dark:text-brand-light-primary">
-                    <path d="M227.32,73.37,182.63,28.69a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H216a8,8,0,0,0,0-16H115.32l112-112A16,16,0,0,0,227.32,73.37Z"/>
+                  <svg
+                    v-else-if="service.icon === 'design'"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                    class="text-brand-primary dark:text-brand-light-primary"
+                  >
+                    <path d="M227.32,73.37,182.63,28.69a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H216a8,8,0,0,0,0-16H115.32l112-112A16,16,0,0,0,227.32,73.37Z" />
                   </svg>
-                  <svg v-else-if="service.icon === 'ai'" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256" class="text-brand-primary dark:text-brand-light-primary">
-                    <path d="M200,48H136V16a8,8,0,0,0-16,0V48H56A32,32,0,0,0,24,80V192a32,32,0,0,0,32,32H200a32,32,0,0,0,32-32V80A32,32,0,0,0,200,48Zm16,144a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V80A16,16,0,0,1,56,64H200a16,16,0,0,1,16,16Zm-36-56a12,12,0,1,1-12-12A12,12,0,0,1,180,136ZM88,136a12,12,0,1,1-12-12A12,12,0,0,1,88,136Z"/>
+                  <svg
+                    v-else-if="service.icon === 'ai'"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                    class="text-brand-primary dark:text-brand-light-primary"
+                  >
+                    <path d="M200,48H136V16a8,8,0,0,0-16,0V48H56A32,32,0,0,0,24,80V192a32,32,0,0,0,32,32H200a32,32,0,0,0,32-32V80A32,32,0,0,0,200,48Zm16,144a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V80A16,16,0,0,1,56,64H200a16,16,0,0,1,16,16Zm-36-56a12,12,0,1,1-12-12A12,12,0,0,1,180,136ZM88,136a12,12,0,1,1-12-12A12,12,0,0,1,88,136Z" />
                   </svg>
                 </div>
                 <div class="flex-1 min-w-0">
-                  <h4 class="font-semibold text-gray-900 dark:text-white text-sm mb-0.5 group-hover:text-brand-primary dark:group-hover:text-brand-light-primary transition-colors">{{ service.title }}</h4>
-                  <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">{{ service.description }}</p>
+                  <h4 class="font-semibold text-gray-900 dark:text-white text-sm mb-0.5 group-hover:text-brand-primary dark:group-hover:text-brand-light-primary transition-colors">
+                    {{ service.title }}
+                  </h4>
+                  <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+                    {{ service.description }}
+                  </p>
                 </div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 256 256" class="text-gray-400 group-hover:text-brand-primary dark:group-hover:text-brand-light-primary transition-colors opacity-0 group-hover:opacity-100 flex-shrink-0">
-                  <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  viewBox="0 0 256 256"
+                  class="text-gray-400 group-hover:text-brand-primary dark:group-hover:text-brand-light-primary transition-colors opacity-0 group-hover:opacity-100 flex-shrink-0"
+                >
+                  <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z" />
                 </svg>
               </button>
             </div>
@@ -208,8 +255,14 @@ const navigateTo = (href: string) => {
                 @click="navigateTo('/servicos')"
               >
                 <span>{{ t('megamenu.services.cta') }}</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256">
-                  <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 256 256"
+                >
+                  <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z" />
                 </svg>
               </button>
             </div>
@@ -334,7 +387,7 @@ const navigateTo = (href: string) => {
           class="transition-transform duration-200"
           :class="{ 'rotate-180': activeMenu === 'company' }"
         >
-          <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/>
+          <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z" />
         </svg>
       </button>
 
@@ -356,8 +409,12 @@ const navigateTo = (href: string) => {
           <div class="p-6">
             <!-- Header -->
             <div class="mb-5">
-              <h3 class="font-bold text-gray-900 dark:text-white text-base mb-1">{{ t('megamenu.company.title') }}</h3>
-              <p class="text-sm text-gray-500 dark:text-gray-400">{{ t('megamenu.company.subtitle') }}</p>
+              <h3 class="font-bold text-gray-900 dark:text-white text-base mb-1">
+                {{ t('megamenu.company.title') }}
+              </h3>
+              <p class="text-sm text-gray-500 dark:text-gray-400">
+                {{ t('megamenu.company.subtitle') }}
+              </p>
             </div>
 
             <!-- Company List -->
@@ -369,28 +426,79 @@ const navigateTo = (href: string) => {
                 @click="navigateTo(item.href)"
               >
                 <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/10 to-purple-500/5 dark:from-purple-500/10 dark:to-purple-500/5 flex items-center justify-center flex-shrink-0 group-hover:from-purple-500/20 group-hover:to-purple-500/10 dark:group-hover:from-purple-500/20 dark:group-hover:to-purple-500/10 transition-all">
-                  <svg v-if="item.icon === 'info'" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256" class="text-purple-500">
-                    <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm16-40a8,8,0,0,1-8,8,16,16,0,0,1-16-16V128a8,8,0,0,1,0-16,16,16,0,0,1,16,16v40A8,8,0,0,1,144,176ZM112,84a12,12,0,1,1,12,12A12,12,0,0,1,112,84Z"/>
+                  <svg
+                    v-if="item.icon === 'info'"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                    class="text-purple-500"
+                  >
+                    <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm16-40a8,8,0,0,1-8,8,16,16,0,0,1-16-16V128a8,8,0,0,1,0-16,16,16,0,0,1,16,16v40A8,8,0,0,1,144,176ZM112,84a12,12,0,1,1,12,12A12,12,0,0,1,112,84Z" />
                   </svg>
-                  <svg v-else-if="item.icon === 'history'" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256" class="text-purple-500">
-                    <path d="M136,80v43.47l36.12,21.67a8,8,0,0,1-8.24,13.72l-40-24A8,8,0,0,1,120,128V80a8,8,0,0,1,16,0Zm-8-48A95.44,95.44,0,0,0,60.08,60.15C52.81,67.51,46.35,74.59,40,82V64a8,8,0,0,0-16,0v40a8,8,0,0,0,8,8H72a8,8,0,0,0,0-16H49.62C55.65,87.21,61.82,80.39,68.57,73.86a80,80,0,1,1-1.16,114.45,8,8,0,1,0-11.3,11.31A96,96,0,1,0,128,32Z"/>
+                  <svg
+                    v-else-if="item.icon === 'history'"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                    class="text-purple-500"
+                  >
+                    <path d="M136,80v43.47l36.12,21.67a8,8,0,0,1-8.24,13.72l-40-24A8,8,0,0,1,120,128V80a8,8,0,0,1,16,0Zm-8-48A95.44,95.44,0,0,0,60.08,60.15C52.81,67.51,46.35,74.59,40,82V64a8,8,0,0,0-16,0v40a8,8,0,0,0,8,8H72a8,8,0,0,0,0-16H49.62C55.65,87.21,61.82,80.39,68.57,73.86a80,80,0,1,1-1.16,114.45,8,8,0,1,0-11.3,11.31A96,96,0,1,0,128,32Z" />
                   </svg>
-                  <svg v-else-if="item.icon === 'team'" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256" class="text-purple-500">
-                    <path d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.63a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.71A8,8,0,0,1,250.14,206.7Z"/>
+                  <svg
+                    v-else-if="item.icon === 'team'"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                    class="text-purple-500"
+                  >
+                    <path d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.63a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.71A8,8,0,0,1,250.14,206.7Z" />
                   </svg>
-                  <svg v-else-if="item.icon === 'culture'" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256" class="text-purple-500">
-                    <path d="M178,40c-20.65,0-38.73,8.88-50,23.89C116.73,48.88,98.65,40,78,40a62.07,62.07,0,0,0-62,62c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,228.66,240,172,240,102A62.07,62.07,0,0,0,178,40ZM128,214.8C109.74,204.16,32,155.69,32,102A46.06,46.06,0,0,1,78,56c19.45,0,35.78,10.36,42.6,27a8,8,0,0,0,14.8,0c6.82-16.67,23.15-27,42.6-27a46.06,46.06,0,0,1,46,46C224,155.61,146.24,204.15,128,214.8Z"/>
+                  <svg
+                    v-else-if="item.icon === 'culture'"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                    class="text-purple-500"
+                  >
+                    <path d="M178,40c-20.65,0-38.73,8.88-50,23.89C116.73,48.88,98.65,40,78,40a62.07,62.07,0,0,0-62,62c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,228.66,240,172,240,102A62.07,62.07,0,0,0,178,40ZM128,214.8C109.74,204.16,32,155.69,32,102A46.06,46.06,0,0,1,78,56c19.45,0,35.78,10.36,42.6,27a8,8,0,0,0,14.8,0c6.82-16.67,23.15-27,42.6-27a46.06,46.06,0,0,1,46,46C224,155.61,146.24,204.15,128,214.8Z" />
                   </svg>
-                  <svg v-else-if="item.icon === 'careers'" xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 256 256" class="text-purple-500">
-                    <path d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm16,72h32a8,8,0,0,1,0,16H112a8,8,0,0,1,0-16Z"/>
+                  <svg
+                    v-else-if="item.icon === 'careers'"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    fill="currentColor"
+                    viewBox="0 0 256 256"
+                    class="text-purple-500"
+                  >
+                    <path d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm16,72h32a8,8,0,0,1,0,16H112a8,8,0,0,1,0-16Z" />
                   </svg>
                 </div>
                 <div class="flex-1 min-w-0">
-                  <h4 class="font-semibold text-gray-900 dark:text-white text-sm mb-0.5 group-hover:text-purple-500 transition-colors">{{ item.title }}</h4>
-                  <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">{{ item.description }}</p>
+                  <h4 class="font-semibold text-gray-900 dark:text-white text-sm mb-0.5 group-hover:text-purple-500 transition-colors">
+                    {{ item.title }}
+                  </h4>
+                  <p class="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+                    {{ item.description }}
+                  </p>
                 </div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 256 256" class="text-gray-400 group-hover:text-purple-500 transition-colors opacity-0 group-hover:opacity-100 flex-shrink-0">
-                  <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  viewBox="0 0 256 256"
+                  class="text-gray-400 group-hover:text-purple-500 transition-colors opacity-0 group-hover:opacity-100 flex-shrink-0"
+                >
+                  <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z" />
                 </svg>
               </button>
             </div>
@@ -402,8 +510,14 @@ const navigateTo = (href: string) => {
                 @click="navigateTo('#contact')"
               >
                 <span>{{ t('megamenu.company.cta') }}</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256">
-                  <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 256 256"
+                >
+                  <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z" />
                 </svg>
               </button>
             </div>

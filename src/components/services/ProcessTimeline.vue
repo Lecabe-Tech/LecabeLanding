@@ -39,7 +39,10 @@ const toggleStep = (index: number) => {
 
         <!-- Card de Conteúdo -->
         <div class="flex-1">
-          <GlassCard padding="md" class="h-full">
+          <GlassCard
+            padding="md"
+            class="h-full"
+          >
             <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-brand-primary dark:group-hover:text-brand-light-primary transition-colors duration-300">
               {{ step.title }}
             </h3>
@@ -48,9 +51,18 @@ const toggleStep = (index: number) => {
             </p>
 
             <div class="flex items-center justify-between">
-              <span v-if="step.duration" class="inline-flex items-center gap-2 text-sm text-brand-primary dark:text-brand-light-primary font-semibold">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256">
-                  <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/>
+              <span
+                v-if="step.duration"
+                class="inline-flex items-center gap-2 text-sm text-brand-primary dark:text-brand-light-primary font-semibold"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  viewBox="0 0 256 256"
+                >
+                  <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z" />
                 </svg>
                 {{ step.duration }}
               </span>
@@ -58,8 +70,8 @@ const toggleStep = (index: number) => {
               <!-- Botão Expandir Deliverables -->
               <button
                 v-if="step.deliverables && step.deliverables.length > 0"
-                @click="toggleStep(index)"
                 class="inline-flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-brand-primary dark:hover:text-brand-light-primary transition-colors duration-300 font-medium"
+                @click="toggleStep(index)"
               >
                 <span>{{ expandedStep === index ? 'Ocultar' : 'Ver' }} Entregas</span>
                 <svg
@@ -71,7 +83,7 @@ const toggleStep = (index: number) => {
                   class="transition-transform duration-300"
                   :class="expandedStep === index ? 'rotate-180' : ''"
                 >
-                  <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/>
+                  <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z" />
                 </svg>
               </button>
             </div>
@@ -100,7 +112,7 @@ const toggleStep = (index: number) => {
                       viewBox="0 0 256 256"
                       class="flex-shrink-0 text-brand-primary dark:text-brand-light-primary mt-0.5"
                     >
-                      <path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z"/>
+                      <path d="M173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34ZM232,128A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z" />
                     </svg>
                     <span>{{ deliverable }}</span>
                   </li>

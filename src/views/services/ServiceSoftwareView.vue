@@ -67,7 +67,7 @@ const processSteps = computed(() => {
 // Packages com dados do i18n
 const packages = computed(() => {
   if (!serviceData) return []
-  const servicesPages: any = tm('servicesPages')
+  const servicesPages = tm('servicesPages') as Record<string, Record<string, Record<string, { features?: string[] }>>>
   const serviceMessages = servicesPages?.[serviceId]
 
   return serviceData.packages.map(pkg => {
@@ -293,7 +293,10 @@ const handlePackageSelect = () => {
 
     <!-- Service Navigation -->
     <div class="max-w-7xl mx-auto px-6 md:px-12 py-16">
-      <ServiceNavigation :prev-service="prev" :next-service="next" />
+      <ServiceNavigation
+        :prev-service="prev"
+        :next-service="next"
+      />
     </div>
   </div>
 </template>

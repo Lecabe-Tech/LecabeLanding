@@ -83,7 +83,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <div id="service-metrics" class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+  <div
+    id="service-metrics"
+    class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6"
+  >
     <GlassCard
       v-for="(metric, index) in metrics"
       :key="index"
