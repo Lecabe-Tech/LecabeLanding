@@ -93,9 +93,9 @@ onUnmounted(() => {
     >
       <!-- Window Header -->
       <div class="flex items-center gap-2 mb-4 pb-3 border-b border-gray-700">
-        <div class="w-3 h-3 rounded-full bg-red-500"></div>
-        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+        <div class="w-3 h-3 rounded-full bg-red-500" />
+        <div class="w-3 h-3 rounded-full bg-yellow-500" />
+        <div class="w-3 h-3 rounded-full bg-green-500" />
         <span class="ml-3 text-gray-400 text-sm font-mono">app.ts</span>
       </div>
 
@@ -106,11 +106,14 @@ onUnmounted(() => {
 
       <!-- Background Grid -->
       <div class="absolute inset-0 opacity-10 pointer-events-none">
-        <div class="absolute inset-0" style="background-image: repeating-linear-gradient(0deg, transparent, transparent 35px, rgba(79, 82, 255, 0.3) 35px, rgba(79, 82, 255, 0.3) 36px), repeating-linear-gradient(90deg, transparent, transparent 35px, rgba(79, 82, 255, 0.3) 35px, rgba(79, 82, 255, 0.3) 36px);"></div>
+        <div
+          class="absolute inset-0"
+          style="background-image: repeating-linear-gradient(0deg, transparent, transparent 35px, rgba(79, 82, 255, 0.3) 35px, rgba(79, 82, 255, 0.3) 36px), repeating-linear-gradient(90deg, transparent, transparent 35px, rgba(79, 82, 255, 0.3) 35px, rgba(79, 82, 255, 0.3) 36px);"
+        />
       </div>
 
       <!-- Glow Effect -->
-      <div class="absolute -inset-1 bg-gradient-to-r from-brand-primary via-brand-alternative to-brand-primary opacity-20 blur-xl -z-10 rounded-2xl"></div>
+      <div class="absolute -inset-1 bg-gradient-to-r from-brand-primary via-brand-alternative to-brand-primary opacity-20 blur-xl -z-10 rounded-2xl" />
     </div>
 
     <!-- Floating Badges -->

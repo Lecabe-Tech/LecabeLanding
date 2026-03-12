@@ -69,7 +69,10 @@ const categoryLabels: Record<string, string> = {
 
 <template>
   <div class="space-y-8">
-    <div v-for="(techs, category) in groupedTechs" :key="category">
+    <div
+      v-for="(techs, category) in groupedTechs"
+      :key="category"
+    >
       <h3
         v-if="Object.keys(groupedTechs).length > 1"
         class="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-4"
@@ -103,7 +106,7 @@ const categoryLabels: Record<string, string> = {
                 {{ techDescriptions[tech.name] }}
                 <!-- Arrow -->
                 <div class="absolute top-full left-1/2 -translate-x-1/2 -mt-px">
-                  <div class="border-4 border-transparent border-t-gray-900 dark:border-t-gray-800"></div>
+                  <div class="border-4 border-transparent border-t-gray-900 dark:border-t-gray-800" />
                 </div>
               </div>
             </div>

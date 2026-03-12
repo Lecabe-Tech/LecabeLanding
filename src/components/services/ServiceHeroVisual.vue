@@ -140,9 +140,9 @@ onUnmounted(() => {
     >
       <!-- Window Header -->
       <div class="flex items-center gap-2 mb-4 pb-3 border-b border-gray-700">
-        <div class="w-3 h-3 rounded-full bg-red-500"></div>
-        <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-        <div class="w-3 h-3 rounded-full bg-green-500"></div>
+        <div class="w-3 h-3 rounded-full bg-red-500" />
+        <div class="w-3 h-3 rounded-full bg-yellow-500" />
+        <div class="w-3 h-3 rounded-full bg-green-500" />
         <span class="ml-3 text-gray-400 text-sm font-mono">application.js</span>
       </div>
 
@@ -153,11 +153,14 @@ onUnmounted(() => {
 
       <!-- Background Grid -->
       <div class="absolute inset-0 opacity-10 pointer-events-none">
-        <div class="absolute inset-0" style="background-image: repeating-linear-gradient(0deg, transparent, transparent 35px, rgba(79, 82, 255, 0.3) 35px, rgba(79, 82, 255, 0.3) 36px), repeating-linear-gradient(90deg, transparent, transparent 35px, rgba(79, 82, 255, 0.3) 35px, rgba(79, 82, 255, 0.3) 36px);"></div>
+        <div
+          class="absolute inset-0"
+          style="background-image: repeating-linear-gradient(0deg, transparent, transparent 35px, rgba(79, 82, 255, 0.3) 35px, rgba(79, 82, 255, 0.3) 36px), repeating-linear-gradient(90deg, transparent, transparent 35px, rgba(79, 82, 255, 0.3) 35px, rgba(79, 82, 255, 0.3) 36px);"
+        />
       </div>
 
       <!-- Glow Effect -->
-      <div class="absolute -inset-1 bg-gradient-to-r from-brand-primary via-brand-alternative to-brand-primary opacity-20 blur-xl -z-10 rounded-2xl"></div>
+      <div class="absolute -inset-1 bg-gradient-to-r from-brand-primary via-brand-alternative to-brand-primary opacity-20 blur-xl -z-10 rounded-2xl" />
     </div>
 
     <!-- Cloud: Network Visualization -->
@@ -169,9 +172,15 @@ onUnmounted(() => {
       }"
     >
       <!-- Network Nodes -->
-      <svg class="w-full h-full absolute inset-0" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        class="w-full h-full absolute inset-0"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <!-- Connections -->
-        <g v-for="(node, i) in cloudNodes" :key="`line-${i}`">
+        <g
+          v-for="(node, i) in cloudNodes"
+          :key="`line-${i}`"
+        >
           <line
             v-if="node.connected && cloudNodes[0]"
             :x1="`${cloudNodes[0].x}%`"
@@ -207,8 +216,15 @@ onUnmounted(() => {
       <!-- Central Icon -->
       <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div class="w-20 h-20 rounded-2xl bg-emerald-500/20 backdrop-blur-sm flex items-center justify-center border border-emerald-500/30">
-          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" viewBox="0 0 256 256" class="text-emerald-400">
-            <path d="M160,40A88.09,88.09,0,0,0,81.29,88.67,64,64,0,1,0,72,216h88a88,88,0,0,0,0-176Z"/>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            fill="currentColor"
+            viewBox="0 0 256 256"
+            class="text-emerald-400"
+          >
+            <path d="M160,40A88.09,88.09,0,0,0,81.29,88.67,64,64,0,1,0,72,216h88a88,88,0,0,0,0-176Z" />
           </svg>
         </div>
       </div>
@@ -225,23 +241,39 @@ onUnmounted(() => {
       <!-- Design Frames Animation -->
       <div class="relative h-full flex items-center justify-center">
         <!-- Wireframe -->
-        <div class="absolute inset-8 bg-gray-800/50 rounded-lg border-2 border-dashed border-gray-600 animate-pulse" style="animation-duration: 3s;"></div>
+        <div
+          class="absolute inset-8 bg-gray-800/50 rounded-lg border-2 border-dashed border-gray-600 animate-pulse"
+          style="animation-duration: 3s;"
+        />
 
         <!-- Prototype -->
-        <div class="absolute inset-12 bg-gray-700/50 rounded-lg border border-gray-500 animate-pulse" style="animation-duration: 3s; animation-delay: 1s;"></div>
+        <div
+          class="absolute inset-12 bg-gray-700/50 rounded-lg border border-gray-500 animate-pulse"
+          style="animation-duration: 3s; animation-delay: 1s;"
+        />
 
         <!-- Final Design -->
-        <div class="absolute inset-16 bg-gradient-to-br from-purple-500/30 to-pink-500/30 rounded-lg border border-purple-400/50 animate-pulse backdrop-blur-sm" style="animation-duration: 3s; animation-delay: 2s;">
-          <div class="absolute top-3 left-3 right-3 h-2 bg-purple-400/40 rounded-full"></div>
-          <div class="absolute top-7 left-3 right-3 h-8 bg-purple-400/30 rounded"></div>
-          <div class="absolute top-20 left-3 right-3 bottom-3 bg-purple-400/20 rounded"></div>
+        <div
+          class="absolute inset-16 bg-gradient-to-br from-purple-500/30 to-pink-500/30 rounded-lg border border-purple-400/50 animate-pulse backdrop-blur-sm"
+          style="animation-duration: 3s; animation-delay: 2s;"
+        >
+          <div class="absolute top-3 left-3 right-3 h-2 bg-purple-400/40 rounded-full" />
+          <div class="absolute top-7 left-3 right-3 h-8 bg-purple-400/30 rounded" />
+          <div class="absolute top-20 left-3 right-3 bottom-3 bg-purple-400/20 rounded" />
         </div>
       </div>
 
       <!-- Figma Icon -->
       <div class="absolute bottom-6 right-6 w-12 h-12 rounded-xl bg-purple-500/20 backdrop-blur-sm flex items-center justify-center border border-purple-500/30">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256" class="text-purple-400">
-          <path d="M213.66,82.34l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM160,51.31,188.69,80H160ZM200,216H56V40h88V88a8,8,0,0,0,8,8h48V216Z"/>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          fill="currentColor"
+          viewBox="0 0 256 256"
+          class="text-purple-400"
+        >
+          <path d="M213.66,82.34l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM160,51.31,188.69,80H160ZM200,216H56V40h88V88a8,8,0,0,0,8,8h48V216Z" />
         </svg>
       </div>
     </div>
@@ -255,38 +287,174 @@ onUnmounted(() => {
       }"
     >
       <!-- Neural Network Visualization -->
-      <svg class="w-full h-full absolute inset-0" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        class="w-full h-full absolute inset-0"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <!-- Layer 1 -->
-        <circle cx="20%" cy="30%" r="8" fill="rgba(249, 115, 22, 0.6)" class="animate-pulse" />
-        <circle cx="20%" cy="50%" r="8" fill="rgba(249, 115, 22, 0.6)" class="animate-pulse" style="animation-delay: 0.2s;" />
-        <circle cx="20%" cy="70%" r="8" fill="rgba(249, 115, 22, 0.6)" class="animate-pulse" style="animation-delay: 0.4s;" />
+        <circle
+          cx="20%"
+          cy="30%"
+          r="8"
+          fill="rgba(249, 115, 22, 0.6)"
+          class="animate-pulse"
+        />
+        <circle
+          cx="20%"
+          cy="50%"
+          r="8"
+          fill="rgba(249, 115, 22, 0.6)"
+          class="animate-pulse"
+          style="animation-delay: 0.2s;"
+        />
+        <circle
+          cx="20%"
+          cy="70%"
+          r="8"
+          fill="rgba(249, 115, 22, 0.6)"
+          class="animate-pulse"
+          style="animation-delay: 0.4s;"
+        />
 
         <!-- Layer 2 -->
-        <circle cx="50%" cy="20%" r="10" fill="rgba(249, 115, 22, 0.8)" class="animate-pulse" style="animation-delay: 0.3s;" />
-        <circle cx="50%" cy="40%" r="10" fill="rgba(249, 115, 22, 0.8)" class="animate-pulse" style="animation-delay: 0.5s;" />
-        <circle cx="50%" cy="60%" r="10" fill="rgba(249, 115, 22, 0.8)" class="animate-pulse" style="animation-delay: 0.7s;" />
-        <circle cx="50%" cy="80%" r="10" fill="rgba(249, 115, 22, 0.8)" class="animate-pulse" style="animation-delay: 0.9s;" />
+        <circle
+          cx="50%"
+          cy="20%"
+          r="10"
+          fill="rgba(249, 115, 22, 0.8)"
+          class="animate-pulse"
+          style="animation-delay: 0.3s;"
+        />
+        <circle
+          cx="50%"
+          cy="40%"
+          r="10"
+          fill="rgba(249, 115, 22, 0.8)"
+          class="animate-pulse"
+          style="animation-delay: 0.5s;"
+        />
+        <circle
+          cx="50%"
+          cy="60%"
+          r="10"
+          fill="rgba(249, 115, 22, 0.8)"
+          class="animate-pulse"
+          style="animation-delay: 0.7s;"
+        />
+        <circle
+          cx="50%"
+          cy="80%"
+          r="10"
+          fill="rgba(249, 115, 22, 0.8)"
+          class="animate-pulse"
+          style="animation-delay: 0.9s;"
+        />
 
         <!-- Layer 3 -->
-        <circle cx="80%" cy="30%" r="8" fill="rgba(239, 68, 68, 0.6)" class="animate-pulse" style="animation-delay: 0.6s;" />
-        <circle cx="80%" cy="50%" r="8" fill="rgba(239, 68, 68, 0.6)" class="animate-pulse" style="animation-delay: 0.8s;" />
-        <circle cx="80%" cy="70%" r="8" fill="rgba(239, 68, 68, 0.6)" class="animate-pulse" style="animation-delay: 1s;" />
+        <circle
+          cx="80%"
+          cy="30%"
+          r="8"
+          fill="rgba(239, 68, 68, 0.6)"
+          class="animate-pulse"
+          style="animation-delay: 0.6s;"
+        />
+        <circle
+          cx="80%"
+          cy="50%"
+          r="8"
+          fill="rgba(239, 68, 68, 0.6)"
+          class="animate-pulse"
+          style="animation-delay: 0.8s;"
+        />
+        <circle
+          cx="80%"
+          cy="70%"
+          r="8"
+          fill="rgba(239, 68, 68, 0.6)"
+          class="animate-pulse"
+          style="animation-delay: 1s;"
+        />
 
         <!-- Connections -->
-        <g opacity="0.3" stroke="rgba(249, 115, 22, 0.4)" stroke-width="1">
-          <line x1="20%" y1="30%" x2="50%" y2="20%" />
-          <line x1="20%" y1="30%" x2="50%" y2="40%" />
-          <line x1="20%" y1="50%" x2="50%" y2="40%" />
-          <line x1="20%" y1="50%" x2="50%" y2="60%" />
-          <line x1="20%" y1="70%" x2="50%" y2="60%" />
-          <line x1="20%" y1="70%" x2="50%" y2="80%" />
+        <g
+          opacity="0.3"
+          stroke="rgba(249, 115, 22, 0.4)"
+          stroke-width="1"
+        >
+          <line
+            x1="20%"
+            y1="30%"
+            x2="50%"
+            y2="20%"
+          />
+          <line
+            x1="20%"
+            y1="30%"
+            x2="50%"
+            y2="40%"
+          />
+          <line
+            x1="20%"
+            y1="50%"
+            x2="50%"
+            y2="40%"
+          />
+          <line
+            x1="20%"
+            y1="50%"
+            x2="50%"
+            y2="60%"
+          />
+          <line
+            x1="20%"
+            y1="70%"
+            x2="50%"
+            y2="60%"
+          />
+          <line
+            x1="20%"
+            y1="70%"
+            x2="50%"
+            y2="80%"
+          />
 
-          <line x1="50%" y1="20%" x2="80%" y2="30%" />
-          <line x1="50%" y1="40%" x2="80%" y2="30%" />
-          <line x1="50%" y1="40%" x2="80%" y2="50%" />
-          <line x1="50%" y1="60%" x2="80%" y2="50%" />
-          <line x1="50%" y1="60%" x2="80%" y2="70%" />
-          <line x1="50%" y1="80%" x2="80%" y2="70%" />
+          <line
+            x1="50%"
+            y1="20%"
+            x2="80%"
+            y2="30%"
+          />
+          <line
+            x1="50%"
+            y1="40%"
+            x2="80%"
+            y2="30%"
+          />
+          <line
+            x1="50%"
+            y1="40%"
+            x2="80%"
+            y2="50%"
+          />
+          <line
+            x1="50%"
+            y1="60%"
+            x2="80%"
+            y2="50%"
+          />
+          <line
+            x1="50%"
+            y1="60%"
+            x2="80%"
+            y2="70%"
+          />
+          <line
+            x1="50%"
+            y1="80%"
+            x2="80%"
+            y2="70%"
+          />
         </g>
       </svg>
 

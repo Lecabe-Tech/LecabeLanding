@@ -187,7 +187,10 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="fixed inset-0 -z-10 overflow-hidden pointer-events-none" aria-hidden="true">
+  <div
+    class="fixed inset-0 -z-10 overflow-hidden pointer-events-none"
+    aria-hidden="true"
+  >
     <canvas
       ref="canvasRef"
       class="absolute inset-0 w-full h-full"

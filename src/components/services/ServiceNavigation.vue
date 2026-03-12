@@ -28,10 +28,12 @@ const { t } = useI18n()
         viewBox="0 0 256 256"
         class="text-brand-primary dark:text-brand-light-primary"
       >
-        <path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"/>
+        <path d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z" />
       </svg>
       <div>
-        <div class="text-xs text-gray-500 dark:text-gray-400 mb-1">Serviço Anterior</div>
+        <div class="text-xs text-gray-500 dark:text-gray-400 mb-1">
+          Serviço Anterior
+        </div>
         <div class="font-semibold text-gray-900 dark:text-white group-hover:text-brand-primary dark:group-hover:text-brand-light-primary transition-colors">
           {{ t(`megamenu.services.items.${prevService.id}.title`) }}
         </div>
@@ -46,7 +48,9 @@ const { t } = useI18n()
       class="flex items-center gap-3 group hover:gap-4 transition-all text-right"
     >
       <div>
-        <div class="text-xs text-gray-500 dark:text-gray-400 mb-1">Próximo Serviço</div>
+        <div class="text-xs text-gray-500 dark:text-gray-400 mb-1">
+          Próximo Serviço
+        </div>
         <div class="font-semibold text-gray-900 dark:text-white group-hover:text-brand-primary dark:group-hover:text-brand-light-primary transition-colors">
           {{ t(`megamenu.services.items.${nextService.id}.title`) }}
         </div>
@@ -59,7 +63,7 @@ const { t } = useI18n()
         viewBox="0 0 256 256"
         class="text-brand-primary dark:text-brand-light-primary"
       >
-        <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"/>
+        <path d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z" />
       </svg>
     </router-link>
     <div v-else />

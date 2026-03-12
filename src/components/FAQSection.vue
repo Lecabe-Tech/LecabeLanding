@@ -38,7 +38,6 @@ const isOpen = (index: number): boolean => {
     <div class="max-w-7xl mx-auto">
       <!-- Layout Side-by-Side: Header à esquerda + Accordion à direita -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-
         <!-- Lado Esquerdo - Header Sticky -->
         <div class="lg:col-span-4 lg:sticky lg:top-24">
           <div class="flex items-center gap-3 mb-4">
@@ -103,7 +102,7 @@ const isOpen = (index: number): boolean => {
                     class="transition-colors duration-300"
                     :class="[isOpen(index) ? 'text-brand-primary dark:text-brand-light-primary' : 'text-gray-400 dark:text-gray-500']"
                   >
-                    <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/>
+                    <path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z" />
                   </svg>
                 </span>
               </button>

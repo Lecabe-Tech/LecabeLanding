@@ -7,10 +7,12 @@ interface Props {
   href?: string
 }
 
-const props = withDefaults(defineProps<Props>(), {
+withDefaults(defineProps<Props>(), {
   variant: 'default',
   padding: 'md',
-  as: 'div'
+  as: 'div',
+  to: undefined,
+  href: undefined
 })
 
 const paddingClasses = {
@@ -33,7 +35,7 @@ const paddingClasses = {
     ]"
   >
     <!-- Glow Effect (only visible on hover) -->
-    <div class="glass-glow absolute -inset-[2px] rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-60 -z-10"></div>
+    <div class="glass-glow absolute -inset-[2px] rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-60 -z-10" />
 
     <!-- Content Slot -->
     <div class="relative z-10">

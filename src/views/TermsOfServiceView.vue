@@ -46,14 +46,18 @@ const goBack = () => {
       <!-- Content -->
       <div class="prose prose-lg dark:prose-invert max-w-none">
         <section class="mb-8">
-          <h2 class="section-subtitle mb-4">1. Aceitação dos Termos</h2>
+          <h2 class="section-subtitle mb-4">
+            1. Aceitação dos Termos
+          </h2>
           <p class="section-description mb-4">
             Ao acessar e usar os serviços da Lecabe, você concorda em cumprir e estar vinculado aos seguintes Termos de Serviço. Se você não concordar com alguma parte destes termos, não utilize nossos serviços.
           </p>
         </section>
 
         <section class="mb-8">
-          <h2 class="section-subtitle mb-4">2. Descrição dos Serviços</h2>
+          <h2 class="section-subtitle mb-4">
+            2. Descrição dos Serviços
+          </h2>
           <p class="section-description mb-4">
             A Lecabe fornece serviços de desenvolvimento de software, incluindo mas não limitado a:
           </p>
@@ -67,7 +71,9 @@ const goBack = () => {
         </section>
 
         <section class="mb-8">
-          <h2 class="section-subtitle mb-4">3. Registro e Conta</h2>
+          <h2 class="section-subtitle mb-4">
+            3. Registro e Conta
+          </h2>
           <p class="section-description mb-4">
             Para acessar determinados serviços, você pode precisar criar uma conta. Você concorda em:
           </p>
@@ -80,7 +86,9 @@ const goBack = () => {
         </section>
 
         <section class="mb-8">
-          <h2 class="section-subtitle mb-4">4. Propriedade Intelectual</h2>
+          <h2 class="section-subtitle mb-4">
+            4. Propriedade Intelectual
+          </h2>
           <p class="section-description mb-4">
             Todo o conteúdo, recursos e funcionalidades disponíveis através de nossos serviços são de propriedade da Lecabe ou de seus licenciadores e são protegidos por leis de direitos autorais, marcas registradas e outras leis de propriedade intelectual.
           </p>
@@ -90,7 +98,9 @@ const goBack = () => {
         </section>
 
         <section class="mb-8">
-          <h2 class="section-subtitle mb-4">5. Uso Aceitável</h2>
+          <h2 class="section-subtitle mb-4">
+            5. Uso Aceitável
+          </h2>
           <p class="section-description mb-4">
             Você concorda em não:
           </p>
@@ -105,14 +115,18 @@ const goBack = () => {
         </section>
 
         <section class="mb-8">
-          <h2 class="section-subtitle mb-4">6. Pagamentos e Reembolsos</h2>
+          <h2 class="section-subtitle mb-4">
+            6. Pagamentos e Reembolsos
+          </h2>
           <p class="section-description mb-4">
             Os termos de pagamento, preços e políticas de reembolso serão especificados em contratos ou propostas individuais para cada projeto ou produto. Reservamo-nos o direito de modificar preços a qualquer momento.
           </p>
         </section>
 
         <section class="mb-8">
-          <h2 class="section-subtitle mb-4">7. Garantias e Responsabilidades</h2>
+          <h2 class="section-subtitle mb-4">
+            7. Garantias e Responsabilidades
+          </h2>
           <p class="section-description mb-4">
             Nossos serviços são fornecidos "como estão" e "conforme disponíveis". Embora nos esforcemos para fornecer serviços de alta qualidade, não garantimos que nossos serviços serão ininterruptos, seguros ou livres de erros.
           </p>
@@ -122,42 +136,54 @@ const goBack = () => {
         </section>
 
         <section class="mb-8">
-          <h2 class="section-subtitle mb-4">8. Limitação de Responsabilidade</h2>
+          <h2 class="section-subtitle mb-4">
+            8. Limitação de Responsabilidade
+          </h2>
           <p class="section-description mb-4">
             Na medida máxima permitida por lei, a Lecabe não será responsável por quaisquer danos indiretos, incidentais, especiais, consequenciais ou punitivos, ou qualquer perda de lucros ou receitas, incorridos direta ou indiretamente.
           </p>
         </section>
 
         <section class="mb-8">
-          <h2 class="section-subtitle mb-4">9. Confidencialidade</h2>
+          <h2 class="section-subtitle mb-4">
+            9. Confidencialidade
+          </h2>
           <p class="section-description mb-4">
             Ambas as partes concordam em manter confidenciais todas as informações proprietárias e sensíveis compartilhadas durante a prestação de serviços. Acordos de confidencialidade específicos podem ser estabelecidos para projetos individuais.
           </p>
         </section>
 
         <section class="mb-8">
-          <h2 class="section-subtitle mb-4">10. Rescisão</h2>
+          <h2 class="section-subtitle mb-4">
+            10. Rescisão
+          </h2>
           <p class="section-description mb-4">
             Podemos rescindir ou suspender seu acesso aos nossos serviços imediatamente, sem aviso prévio ou responsabilidade, por qualquer motivo, incluindo violação destes Termos de Serviço.
           </p>
         </section>
 
         <section class="mb-8">
-          <h2 class="section-subtitle mb-4">11. Modificações dos Termos</h2>
+          <h2 class="section-subtitle mb-4">
+            11. Modificações dos Termos
+          </h2>
           <p class="section-description mb-4">
             Reservamo-nos o direito de modificar ou substituir estes termos a qualquer momento. Se uma revisão for material, forneceremos aviso prévio de pelo menos 30 dias antes que os novos termos entrem em vigor.
           </p>
         </section>
 
         <section class="mb-8">
-          <h2 class="section-subtitle mb-4">12. Lei Aplicável</h2>
+          <h2 class="section-subtitle mb-4">
+            12. Lei Aplicável
+          </h2>
           <p class="section-description mb-4">
             Estes Termos serão regidos e interpretados de acordo com as leis do Brasil, sem considerar suas disposições sobre conflitos de leis. Qualquer disputa será resolvida nos tribunais competentes de São Paulo, Brasil.
           </p>
         </section>
 
         <section class="mb-8">
-          <h2 class="section-subtitle mb-4">13. Contato</h2>
+          <h2 class="section-subtitle mb-4">
+            13. Contato
+          </h2>
           <p class="section-description mb-4">
             Se você tiver dúvidas sobre estes Termos de Serviço, entre em contato conosco:
           </p>
@@ -168,7 +194,9 @@ const goBack = () => {
         </section>
 
         <section class="mb-8">
-          <h2 class="section-subtitle mb-4">14. Disposições Gerais</h2>
+          <h2 class="section-subtitle mb-4">
+            14. Disposições Gerais
+          </h2>
           <p class="section-description mb-4">
             Se qualquer disposição destes termos for considerada inválida ou inexequível, as demais disposições continuarão em pleno vigor e efeito. Estes Termos constituem o acordo completo entre você e a Lecabe em relação ao uso de nossos serviços.
           </p>

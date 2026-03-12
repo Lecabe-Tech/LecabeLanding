@@ -67,7 +67,7 @@ const processSteps = computed(() => {
 // Packages com dados do i18n
 const packages = computed(() => {
   if (!serviceData) return []
-  const servicesPages: any = tm('servicesPages')
+  const servicesPages = tm('servicesPages') as Record<string, Record<string, Record<string, { features?: string[] }>>>
   const serviceMessages = servicesPages?.[serviceId]
 
   return serviceData.packages.map(pkg => {
@@ -145,7 +145,7 @@ const handlePackageSelect = () => {
                 viewBox="0 0 256 256"
                 class="opacity-80"
               >
-                <path d="M160,40A88.09,88.09,0,0,0,81.29,88.67,64,64,0,1,0,72,216h88a88,88,0,0,0,0-176Z"/>
+                <path d="M160,40A88.09,88.09,0,0,0,81.29,88.67,64,64,0,1,0,72,216h88a88,88,0,0,0,0-176Z" />
               </svg>
             </div>
           </div>
@@ -309,7 +309,10 @@ const handlePackageSelect = () => {
 
     <!-- Service Navigation -->
     <div class="max-w-7xl mx-auto px-6 md:px-12 py-16">
-      <ServiceNavigation :prev-service="prev" :next-service="next" />
+      <ServiceNavigation
+        :prev-service="prev"
+        :next-service="next"
+      />
     </div>
   </div>
 </template>

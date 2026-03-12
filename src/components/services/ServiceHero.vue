@@ -12,11 +12,18 @@ interface Props {
 
 const props = defineProps<Props>()
 
+const emit = defineEmits<{
+  'cta-click': []
+}>()
+
 const gradientClass = computed(() => `bg-gradient-to-br ${props.gradient}`)
 </script>
 
 <template>
-  <section :class="gradientClass" class="relative py-20 md:py-28 overflow-hidden">
+  <section
+    :class="gradientClass"
+    class="relative py-20 md:py-28 overflow-hidden"
+  >
     <!-- Background decorativo -->
     <div class="absolute inset-0 opacity-10">
       <div class="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl" />
@@ -30,14 +37,20 @@ const gradientClass = computed(() => `bg-gradient-to-br ${props.gradient}`)
           <h1 class="text-4xl md:text-6xl lg:text-7xl font-black leading-tight mb-6 animate-fade-in-up">
             {{ title }}
           </h1>
-          <p class="text-lg md:text-xl lg:text-2xl mb-8 text-white/90 leading-relaxed animate-fade-in-up" style="animation-delay: 0.1s">
+          <p
+            class="text-lg md:text-xl lg:text-2xl mb-8 text-white/90 leading-relaxed animate-fade-in-up"
+            style="animation-delay: 0.1s"
+          >
             {{ subtitle }}
           </p>
-          <div class="animate-fade-in-up" style="animation-delay: 0.2s">
+          <div
+            class="animate-fade-in-up"
+            style="animation-delay: 0.2s"
+          >
             <ButtonMagnetic
               variant="secondary"
               size="lg"
-              @click="$emit('cta-click')"
+              @click="emit('cta-click')"
             >
               {{ ctaText }}
             </ButtonMagnetic>
@@ -45,7 +58,10 @@ const gradientClass = computed(() => `bg-gradient-to-br ${props.gradient}`)
         </div>
 
         <!-- Slot para visual/ilustração -->
-        <div class="animate-fade-in" style="animation-delay: 0.3s">
+        <div
+          class="animate-fade-in"
+          style="animation-delay: 0.3s"
+        >
           <slot name="visual">
             <!-- Placeholder visual se nenhum slot fornecido -->
             <div class="aspect-square bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center">
@@ -57,7 +73,7 @@ const gradientClass = computed(() => `bg-gradient-to-br ${props.gradient}`)
                 viewBox="0 0 256 256"
                 class="opacity-50"
               >
-                <path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-96,85.15L52.57,64H203.43ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z"/>
+                <path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48Zm-96,85.15L52.57,64H203.43ZM98.71,128,40,181.81V74.19Zm11.84,10.85,12,11.05a8,8,0,0,0,10.82,0l12-11.05,58,53.15H52.57ZM157.29,128,216,74.18V181.82Z" />
               </svg>
             </div>
           </slot>
