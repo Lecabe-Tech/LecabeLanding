@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
 import type { ProcessStep } from '@/types/service'
 import GlassCard from '@/components/ui/GlassCard.vue'
+
+const { t } = useI18n()
 
 interface Props {
   steps: ProcessStep[]
@@ -73,7 +76,7 @@ const toggleStep = (index: number) => {
                 class="inline-flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-brand-primary dark:hover:text-brand-light-primary transition-colors duration-300 font-medium"
                 @click="toggleStep(index)"
               >
-                <span>{{ expandedStep === index ? 'Ocultar' : 'Ver' }} Entregas</span>
+                <span>{{ expandedStep === index ? t('ui.hide') : t('ui.view') }} {{ t('ui.deliverables') }}</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -95,7 +98,7 @@ const toggleStep = (index: number) => {
                 class="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700"
               >
                 <p class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">
-                  Entregas desta fase:
+                  {{ t('ui.deliverablesPhase') }}
                 </p>
                 <ul class="space-y-2">
                   <li

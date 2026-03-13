@@ -132,7 +132,7 @@ onUnmounted(() => {
     <div class="flex items-center gap-4 text-gray-900 dark:text-white">
       <button
         class="flex items-center gap-2 hover:opacity-80 transition-opacity focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary rounded-lg"
-        :aria-label="t('nav.goHome') || 'Ir para página inicial'"
+        :aria-label="t('nav.goHome')"
         @click="goHome"
       >
         <img
@@ -168,7 +168,7 @@ onUnmounted(() => {
       <button
         type="button"
         class="p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-brand-medium-dark-primary rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary transition-colors"
-        :aria-label="isMenuOpen ? 'Fechar menu' : 'Abrir menu'"
+        :aria-label="isMenuOpen ? t('ui.closeMenu') : t('ui.openMenu')"
         :aria-expanded="isMenuOpen"
         aria-controls="mobile-menu"
         @click="toggleMenu"
@@ -211,7 +211,7 @@ onUnmounted(() => {
         id="mobile-menu"
         class="absolute top-full left-0 right-0 lg:hidden bg-white/95 dark:bg-brand-dark/95 backdrop-blur-xl border-b border-gray-200/50 dark:border-brand-medium-dark-primary/50 shadow-lg"
         role="navigation"
-        aria-label="Menu mobile"
+        :aria-label="t('ui.mobileMenu')"
       >
         <div class="flex flex-col px-4 py-4 space-y-3">
           <button
@@ -221,7 +221,7 @@ onUnmounted(() => {
                 ? 'border-brand-primary dark:border-brand-light-primary text-brand-primary dark:text-brand-light-primary bg-gray-50 dark:bg-brand-medium-dark-primary'
                 : 'border-transparent'
             ]"
-            :aria-label="`Navegar para ${t('nav.services')}`"
+            :aria-label="`${t('ui.navigateTo')} ${t('nav.services')}`"
             @click="scrollToSection('services')"
           >
             {{ t('nav.services') }}
@@ -233,7 +233,7 @@ onUnmounted(() => {
                 ? 'border-brand-primary dark:border-brand-light-primary text-brand-primary dark:text-brand-light-primary bg-gray-50 dark:bg-brand-medium-dark-primary'
                 : 'border-transparent'
             ]"
-            :aria-label="`Navegar para ${t('nav.contact')}`"
+            :aria-label="`${t('ui.navigateTo')} ${t('nav.contact')}`"
             @click="scrollToSection('contact')"
           >
             {{ t('nav.contact') }}

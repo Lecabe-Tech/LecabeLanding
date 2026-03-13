@@ -58,7 +58,7 @@ const goToTestimonial = (index: number) => {
             {{ t('testimonials.title') }}
           </h2>
           <p class="text-gray-600 dark:text-gray-400 mb-8">
-            Veja o que nossos clientes dizem sobre trabalhar conosco
+            {{ t('testimonials.subtitle') }}
           </p>
 
           <!-- Navegação -->

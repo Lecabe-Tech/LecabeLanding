@@ -11,7 +11,7 @@ const props = withDefaults(defineProps<Props>(), {
   direction: 'right'
 })
 
-const { locale } = useI18n()
+const { t, locale } = useI18n()
 const localeStore = useLocaleStore()
 const isOpen = ref(false)
 const dropdownRef = ref<HTMLElement | null>(null)
@@ -58,7 +58,7 @@ onUnmounted(() => {
     <button
       type="button"
       class="flex items-center gap-2 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-brand-medium-dark-primary transition-colors duration-200"
-      aria-label="Change language"
+      :aria-label="t('ui.changeLanguage')"
       @click.stop="toggleDropdown"
     >
       <span class="text-xl">{{ localeStore.getCurrentLocaleInfo().flag }}</span>

@@ -16,11 +16,11 @@ const toggleMenu = (): void => {
  * Handle contact action
  */
 const handleWhatsApp = (): void => {
-  window.open('https://wa.me/your-number', '_blank')
+  window.open('https://wa.me/5511994132821', '_blank')
 }
 
 const handleEmail = (): void => {
-  window.location.href = 'mailto:contact@lecabe.com'
+  window.location.href = 'mailto:contato@lecabe.com.br'
 }
 
 const handlePhone = (): void => {
@@ -36,7 +36,7 @@ const handlePhone = (): void => {
         type="checkbox"
         :checked="isOpen"
         class="absolute w-14 h-14 sm:w-16 sm:h-16 opacity-0 z-10 cursor-pointer"
-        aria-label="Toggle contact menu"
+        :aria-label="t('ui.toggleContact')"
         @change="toggleMenu"
       >
       <div

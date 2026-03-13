@@ -11,11 +11,11 @@ defineProps<Props>()
 </script>
 
 <template>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[200px]">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-auto">
     <GlassCard
       v-for="feature in features"
       :key="feature.id"
-      :class="feature.gridPosition || 'col-span-1 row-span-1'"
+      :class="feature.size === 'large' ? 'md:col-span-2' : 'col-span-1'"
       padding="md"
       as="div"
     >

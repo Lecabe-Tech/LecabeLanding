@@ -51,13 +51,13 @@ const isOpen = (index: number): boolean => {
             {{ t('faq.title') }}
           </h2>
           <p class="text-gray-600 dark:text-gray-400 mb-8">
-            Encontre respostas para as perguntas mais comuns sobre nossos serviços e processos
+            {{ t('faq.subtitle') }}
           </p>
 
           <!-- CTA -->
           <div class="bg-brand-primary/5 dark:bg-brand-light-primary/10 rounded-2xl p-6 border border-brand-primary/10 dark:border-brand-light-primary/20">
             <p class="text-gray-700 dark:text-gray-300 text-sm">
-              Ainda tem dúvidas? Nossa equipe está pronta para ajudar.
+              {{ t('faq.ctaText') }}
             </p>
           </div>
         </div>

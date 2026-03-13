@@ -161,10 +161,10 @@ const navigateTo = (path: string) => {
               </svg>
             </div>
             <h3 class="font-bold text-gray-900 dark:text-white mb-2 group-hover:text-purple-500 transition-colors">
-              Nossa História
+              {{ t('megamenu.company.items.about.title') }}
             </h3>
             <p class="text-sm text-gray-600 dark:text-gray-400">
-              Como começamos e nossos valores
+              {{ t('megamenu.company.items.about.description') }}
             </p>
           </button>
 
@@ -185,10 +185,10 @@ const navigateTo = (path: string) => {
               </svg>
             </div>
             <h3 class="font-bold text-gray-900 dark:text-white mb-2 group-hover:text-purple-500 transition-colors">
-              Nosso Time
+              {{ t('megamenu.company.items.team.title') }}
             </h3>
             <p class="text-sm text-gray-600 dark:text-gray-400">
-              Conheça quem faz acontecer
+              {{ t('megamenu.company.items.team.description') }}
             </p>
           </button>
 
@@ -209,10 +209,10 @@ const navigateTo = (path: string) => {
               </svg>
             </div>
             <h3 class="font-bold text-gray-900 dark:text-white mb-2 group-hover:text-purple-500 transition-colors">
-              Cultura
+              {{ t('megamenu.company.items.culture.title') }}
             </h3>
             <p class="text-sm text-gray-600 dark:text-gray-400">
-              Ambiente e benefícios
+              {{ t('megamenu.company.items.culture.description') }}
             </p>
           </button>
 
@@ -233,10 +233,10 @@ const navigateTo = (path: string) => {
               </svg>
             </div>
             <h3 class="font-bold text-gray-900 dark:text-white mb-2 group-hover:text-purple-500 transition-colors">
-              Carreiras
+              {{ t('megamenu.company.items.careers.title') }}
             </h3>
             <p class="text-sm text-gray-600 dark:text-gray-400">
-              Vagas e oportunidades
+              {{ t('megamenu.company.items.careers.description') }}
             </p>
           </button>
         </div>
