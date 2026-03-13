@@ -28,11 +28,7 @@ const codeLines = [
   'app.deploy({ uptime: "99.9%" });'
 ]
 
-// Cloud network nodes
-const cloudNodes = ref<Array<{ x: number; y: number; connected: boolean }>>([])
-
 let typingInterval: ReturnType<typeof setInterval> | null = null
-let networkInterval: ReturnType<typeof setInterval> | null = null
 
 const handleMouseMove = (event: MouseEvent) => {
   if (!visualRef.value) return
@@ -82,26 +78,6 @@ const startTypingAnimation = () => {
   }, 50)
 }
 
-const initCloudNetwork = () => {
-  // Inicializar nodes da rede cloud
-  cloudNodes.value = Array.from({ length: 6 }, (_, i) => ({
-    x: Math.random() * 100,
-    y: Math.random() * 100,
-    connected: i === 0
-  }))
-
-  // Animar conexões
-  networkInterval = setInterval(() => {
-    const disconnectedIndex = cloudNodes.value.findIndex(n => !n.connected)
-    if (disconnectedIndex !== -1) {
-      cloudNodes.value[disconnectedIndex].connected = true
-    } else {
-      cloudNodes.value.forEach(n => n.connected = false)
-      cloudNodes.value[0].connected = true
-    }
-  }, 800)
-}
-
 const metricsWithDelay = computed(() => {
   return props.metrics.map((metric, index) => ({
     text: metric,
@@ -112,14 +88,11 @@ const metricsWithDelay = computed(() => {
 onMounted(() => {
   if (props.serviceType === 'software') {
     startTypingAnimation()
-  } else if (props.serviceType === 'cloud') {
-    initCloudNetwork()
   }
 })
 
 onUnmounted(() => {
   if (typingInterval) clearInterval(typingInterval)
-  if (networkInterval) clearInterval(networkInterval)
 })
 </script>
 
@@ -163,307 +136,402 @@ onUnmounted(() => {
       <div class="absolute -inset-1 bg-gradient-to-r from-brand-primary via-brand-alternative to-brand-primary opacity-20 blur-xl -z-10 rounded-2xl" />
     </div>
 
-    <!-- Cloud: Network Visualization -->
+    <!-- Cloud: Infrastructure Monitor -->
     <div
       v-else-if="serviceType === 'cloud'"
-      class="visual-card bg-gradient-to-br from-emerald-900/20 to-teal-900/20 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-emerald-500/20 h-full relative overflow-hidden"
+      class="visual-card bg-gradient-to-br from-gray-900 to-gray-800 dark:from-gray-950 dark:to-gray-900 rounded-2xl shadow-2xl border border-emerald-500/20 h-full relative overflow-hidden"
       :style="{
-        transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`
+        transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`
       }"
     >
-      <!-- Network Nodes -->
-      <svg
-        class="w-full h-full absolute inset-0"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <!-- Connections -->
-        <g
-          v-for="(node, i) in cloudNodes"
-          :key="`line-${i}`"
-        >
-          <line
-            v-if="node.connected && cloudNodes[0]"
-            :x1="`${cloudNodes[0].x}%`"
-            :y1="`${cloudNodes[0].y}%`"
-            :x2="`${node.x}%`"
-            :y2="`${node.y}%`"
-            stroke="rgba(16, 185, 129, 0.4)"
-            stroke-width="2"
-            class="transition-all duration-500"
-          />
-        </g>
+      <!-- Window Header -->
+      <div class="flex items-center gap-2 px-5 py-3 border-b border-gray-700/60">
+        <div class="w-3 h-3 rounded-full bg-red-500" />
+        <div class="w-3 h-3 rounded-full bg-yellow-500" />
+        <div class="w-3 h-3 rounded-full bg-green-500" />
+        <span class="ml-3 text-gray-400 text-sm font-mono">infra-monitor</span>
+      </div>
 
-        <!-- Nodes -->
-        <circle
-          v-for="(node, i) in cloudNodes"
-          :key="`node-${i}`"
-          :cx="`${node.x}%`"
-          :cy="`${node.y}%`"
-          :r="node.connected ? '12' : '8'"
-          :fill="node.connected ? 'rgba(16, 185, 129, 0.8)' : 'rgba(100, 116, 139, 0.4)'"
-          class="transition-all duration-500"
-        >
-          <animate
-            v-if="node.connected"
-            attributeName="r"
-            values="12;16;12"
-            dur="2s"
-            repeatCount="indefinite"
-          />
-        </circle>
-      </svg>
+      <!-- Monitor Content -->
+      <div class="p-5 space-y-4">
+        <!-- Service Status Cards -->
+        <div class="grid grid-cols-3 gap-3">
+          <div class="bg-gray-800/60 rounded-lg p-3 border border-gray-700/40">
+            <div class="flex items-center gap-2 mb-1.5">
+              <div class="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+              <span class="text-gray-400 text-xs font-mono">AWS</span>
+            </div>
+            <div class="text-emerald-400 text-lg font-bold font-mono">
+              ON
+            </div>
+            <div class="text-gray-500 text-[10px] font-mono mt-0.5">
+              us-east-1
+            </div>
+          </div>
+          <div class="bg-gray-800/60 rounded-lg p-3 border border-gray-700/40">
+            <div class="flex items-center gap-2 mb-1.5">
+              <div class="w-2 h-2 rounded-full bg-green-400 animate-pulse" style="animation-delay: 0.3s;" />
+              <span class="text-gray-400 text-xs font-mono">Docker</span>
+            </div>
+            <div class="text-emerald-400 text-lg font-bold font-mono">
+              3/3
+            </div>
+            <div class="text-gray-500 text-[10px] font-mono mt-0.5">
+              containers
+            </div>
+          </div>
+          <div class="bg-gray-800/60 rounded-lg p-3 border border-gray-700/40">
+            <div class="flex items-center gap-2 mb-1.5">
+              <div class="w-2 h-2 rounded-full bg-green-400 animate-pulse" style="animation-delay: 0.6s;" />
+              <span class="text-gray-400 text-xs font-mono">n8n</span>
+            </div>
+            <div class="text-emerald-400 text-lg font-bold font-mono">
+              12
+            </div>
+            <div class="text-gray-500 text-[10px] font-mono mt-0.5">
+              workflows
+            </div>
+          </div>
+        </div>
 
-      <!-- Central Icon -->
-      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div class="w-20 h-20 rounded-2xl bg-emerald-500/20 backdrop-blur-sm flex items-center justify-center border border-emerald-500/30">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="40"
-            height="40"
-            fill="currentColor"
-            viewBox="0 0 256 256"
-            class="text-emerald-400"
-          >
-            <path d="M160,40A88.09,88.09,0,0,0,81.29,88.67,64,64,0,1,0,72,216h88a88,88,0,0,0,0-176Z" />
-          </svg>
+        <!-- Integration Flow -->
+        <div class="bg-gray-800/40 rounded-lg p-4 border border-gray-700/30">
+          <div class="flex items-center justify-between mb-3">
+            <span class="text-gray-400 text-xs font-mono">Integrações ativas</span>
+            <span class="text-emerald-400 text-xs font-mono">99.5% uptime</span>
+          </div>
+          <!-- Flow Lines -->
+          <div class="space-y-2.5">
+            <div class="flex items-center gap-2">
+              <div class="w-14 h-6 rounded bg-blue-500/20 border border-blue-500/30 flex items-center justify-center">
+                <span class="text-blue-400 text-[9px] font-mono">ERP</span>
+              </div>
+              <div class="flex-1 h-px bg-gradient-to-r from-blue-500/40 to-emerald-500/40 relative">
+                <div class="absolute top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-emerald-400 cloud-data-flow" />
+              </div>
+              <div class="w-14 h-6 rounded bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center">
+                <span class="text-emerald-400 text-[9px] font-mono">API</span>
+              </div>
+              <div class="flex-1 h-px bg-gradient-to-r from-emerald-500/40 to-purple-500/40 relative">
+                <div class="absolute top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-purple-400 cloud-data-flow" style="animation-delay: 0.5s;" />
+              </div>
+              <div class="w-14 h-6 rounded bg-purple-500/20 border border-purple-500/30 flex items-center justify-center">
+                <span class="text-purple-400 text-[9px] font-mono">CRM</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-2">
+              <div class="w-14 h-6 rounded bg-orange-500/20 border border-orange-500/30 flex items-center justify-center">
+                <span class="text-orange-400 text-[9px] font-mono">Sheets</span>
+              </div>
+              <div class="flex-1 h-px bg-gradient-to-r from-orange-500/40 to-emerald-500/40 relative">
+                <div class="absolute top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-emerald-400 cloud-data-flow" style="animation-delay: 1s;" />
+              </div>
+              <div class="w-14 h-6 rounded bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center">
+                <span class="text-emerald-400 text-[9px] font-mono">n8n</span>
+              </div>
+              <div class="flex-1 h-px bg-gradient-to-r from-emerald-500/40 to-cyan-500/40 relative">
+                <div class="absolute top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-cyan-400 cloud-data-flow" style="animation-delay: 1.5s;" />
+              </div>
+              <div class="w-14 h-6 rounded bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center">
+                <span class="text-cyan-400 text-[9px] font-mono">DB</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom: Logs + Uptime -->
+        <div class="grid grid-cols-2 gap-3">
+          <!-- Recent Deploys -->
+          <div class="bg-gray-800/40 rounded-lg p-3 border border-gray-700/30">
+            <div class="text-gray-400 text-xs font-mono mb-2">Deploy log</div>
+            <div class="space-y-1.5 text-[10px] font-mono">
+              <div class="flex items-center gap-1.5">
+                <div class="w-1.5 h-1.5 rounded-full bg-green-400" />
+                <span class="text-gray-400">api-v2.3.1</span>
+                <span class="text-gray-600 ml-auto">2m ago</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <div class="w-1.5 h-1.5 rounded-full bg-green-400" />
+                <span class="text-gray-400">worker-1.8.0</span>
+                <span class="text-gray-600 ml-auto">1h ago</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <div class="w-1.5 h-1.5 rounded-full bg-green-400" />
+                <span class="text-gray-400">web-4.1.2</span>
+                <span class="text-gray-600 ml-auto">3h ago</span>
+              </div>
+            </div>
+          </div>
+          <!-- Uptime Bars -->
+          <div class="bg-gray-800/40 rounded-lg p-3 border border-gray-700/30">
+            <div class="text-gray-400 text-xs font-mono mb-2">Uptime 30d</div>
+            <div class="flex items-end gap-[2px] h-12">
+              <div
+                v-for="i in 15"
+                :key="i"
+                class="flex-1 rounded-t"
+                :class="i === 9 ? 'bg-yellow-500/60' : 'bg-emerald-500/50'"
+                :style="{ height: i === 9 ? '70%' : `${85 + Math.random() * 15}%` }"
+              />
+            </div>
+            <div class="flex justify-between mt-1">
+              <span class="text-gray-600 text-[9px] font-mono">30d</span>
+              <span class="text-emerald-400 text-[9px] font-mono">99.5%</span>
+            </div>
+          </div>
         </div>
       </div>
+
+      <!-- Glow Effect -->
+      <div class="absolute -inset-1 bg-gradient-to-r from-emerald-500 via-teal-500 to-emerald-500 opacity-15 blur-xl -z-10 rounded-2xl" />
     </div>
 
-    <!-- UX: Design Frames -->
+    <!-- UX: Dashboard Preview -->
     <div
       v-else-if="serviceType === 'ux'"
-      class="visual-card bg-gradient-to-br from-purple-900/20 to-pink-900/20 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-purple-500/20 h-full relative overflow-hidden"
+      class="visual-card bg-gradient-to-br from-gray-900 to-gray-800 dark:from-gray-950 dark:to-gray-900 rounded-2xl shadow-2xl border border-purple-500/20 h-full relative overflow-hidden"
       :style="{
-        transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`
+        transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`
       }"
     >
-      <!-- Design Frames Animation -->
-      <div class="relative h-full flex items-center justify-center">
-        <!-- Wireframe -->
-        <div
-          class="absolute inset-8 bg-gray-800/50 rounded-lg border-2 border-dashed border-gray-600 animate-pulse"
-          style="animation-duration: 3s;"
-        />
+      <!-- Window Header -->
+      <div class="flex items-center gap-2 px-5 py-3 border-b border-gray-700/60">
+        <div class="w-3 h-3 rounded-full bg-red-500" />
+        <div class="w-3 h-3 rounded-full bg-yellow-500" />
+        <div class="w-3 h-3 rounded-full bg-green-500" />
+        <span class="ml-3 text-gray-400 text-sm font-mono">dashboard.app</span>
+      </div>
 
-        <!-- Prototype -->
-        <div
-          class="absolute inset-12 bg-gray-700/50 rounded-lg border border-gray-500 animate-pulse"
-          style="animation-duration: 3s; animation-delay: 1s;"
-        />
+      <!-- Dashboard Content -->
+      <div class="p-5 space-y-4">
+        <!-- Sidebar + Main Layout -->
+        <div class="flex gap-4 h-full">
+          <!-- Sidebar -->
+          <div class="w-10 flex-shrink-0 space-y-3 pt-1">
+            <div class="w-8 h-8 rounded-lg bg-purple-500/30 border border-purple-400/30" />
+            <div class="w-8 h-2 rounded bg-gray-700/60" />
+            <div class="w-8 h-2 rounded bg-gray-700/60" />
+            <div class="w-8 h-2 rounded bg-purple-400/40" />
+            <div class="w-8 h-2 rounded bg-gray-700/60" />
+          </div>
 
-        <!-- Final Design -->
-        <div
-          class="absolute inset-16 bg-gradient-to-br from-purple-500/30 to-pink-500/30 rounded-lg border border-purple-400/50 animate-pulse backdrop-blur-sm"
-          style="animation-duration: 3s; animation-delay: 2s;"
-        >
-          <div class="absolute top-3 left-3 right-3 h-2 bg-purple-400/40 rounded-full" />
-          <div class="absolute top-7 left-3 right-3 h-8 bg-purple-400/30 rounded" />
-          <div class="absolute top-20 left-3 right-3 bottom-3 bg-purple-400/20 rounded" />
+          <!-- Main Area -->
+          <div class="flex-1 space-y-4">
+            <!-- KPI Cards Row -->
+            <div class="grid grid-cols-3 gap-3">
+              <div class="bg-gray-800/60 rounded-lg p-3 border border-gray-700/40">
+                <div class="w-8 h-1.5 bg-gray-600 rounded mb-2" />
+                <div class="text-purple-400 text-lg font-bold font-mono">
+                  2.4k
+                </div>
+                <div class="w-10 h-1 bg-green-500/40 rounded-full mt-1" />
+              </div>
+              <div class="bg-gray-800/60 rounded-lg p-3 border border-gray-700/40">
+                <div class="w-8 h-1.5 bg-gray-600 rounded mb-2" />
+                <div class="text-pink-400 text-lg font-bold font-mono">
+                  89%
+                </div>
+                <div class="w-8 h-1 bg-pink-500/40 rounded-full mt-1" />
+              </div>
+              <div class="bg-gray-800/60 rounded-lg p-3 border border-gray-700/40">
+                <div class="w-8 h-1.5 bg-gray-600 rounded mb-2" />
+                <div class="text-purple-300 text-lg font-bold font-mono">
+                  $12k
+                </div>
+                <div class="w-12 h-1 bg-purple-500/40 rounded-full mt-1" />
+              </div>
+            </div>
+
+            <!-- Chart Area -->
+            <div class="bg-gray-800/40 rounded-lg p-4 border border-gray-700/30">
+              <div class="flex items-center justify-between mb-3">
+                <div class="w-20 h-2 bg-gray-600 rounded" />
+                <div class="flex gap-2">
+                  <div class="w-6 h-2 bg-purple-500/40 rounded" />
+                  <div class="w-6 h-2 bg-pink-500/40 rounded" />
+                </div>
+              </div>
+              <!-- Bar Chart -->
+              <div class="flex items-end gap-2 h-24">
+                <div
+                  class="flex-1 bg-purple-500/40 rounded-t animate-pulse"
+                  style="height: 60%; animation-duration: 2s;"
+                />
+                <div
+                  class="flex-1 bg-pink-500/30 rounded-t animate-pulse"
+                  style="height: 80%; animation-duration: 2s; animation-delay: 0.2s;"
+                />
+                <div
+                  class="flex-1 bg-purple-500/40 rounded-t animate-pulse"
+                  style="height: 45%; animation-duration: 2s; animation-delay: 0.4s;"
+                />
+                <div
+                  class="flex-1 bg-pink-500/30 rounded-t animate-pulse"
+                  style="height: 95%; animation-duration: 2s; animation-delay: 0.6s;"
+                />
+                <div
+                  class="flex-1 bg-purple-500/40 rounded-t animate-pulse"
+                  style="height: 70%; animation-duration: 2s; animation-delay: 0.8s;"
+                />
+                <div
+                  class="flex-1 bg-pink-500/30 rounded-t animate-pulse"
+                  style="height: 55%; animation-duration: 2s; animation-delay: 1s;"
+                />
+                <div
+                  class="flex-1 bg-purple-500/40 rounded-t animate-pulse"
+                  style="height: 85%; animation-duration: 2s; animation-delay: 1.2s;"
+                />
+              </div>
+            </div>
+
+            <!-- Bottom Row -->
+            <div class="grid grid-cols-2 gap-3">
+              <div class="bg-gray-800/40 rounded-lg p-3 border border-gray-700/30">
+                <div class="w-16 h-2 bg-gray-600 rounded mb-2" />
+                <div class="space-y-1.5">
+                  <div class="flex items-center gap-2">
+                    <div class="w-full h-2 bg-purple-500/30 rounded-full">
+                      <div
+                        class="h-2 bg-purple-500/60 rounded-full"
+                        style="width: 75%;"
+                      />
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <div class="w-full h-2 bg-pink-500/30 rounded-full">
+                      <div
+                        class="h-2 bg-pink-500/60 rounded-full"
+                        style="width: 50%;"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-gray-800/40 rounded-lg p-3 border border-gray-700/30 flex items-center justify-center">
+                <!-- Donut Chart -->
+                <svg
+                  viewBox="0 0 36 36"
+                  class="w-16 h-16"
+                >
+                  <circle
+                    cx="18"
+                    cy="18"
+                    r="15"
+                    fill="none"
+                    stroke="rgba(168,85,247,0.2)"
+                    stroke-width="3"
+                  />
+                  <circle
+                    cx="18"
+                    cy="18"
+                    r="15"
+                    fill="none"
+                    stroke="rgba(168,85,247,0.6)"
+                    stroke-width="3"
+                    stroke-dasharray="65 35"
+                    stroke-dashoffset="25"
+                    class="animate-spin"
+                    style="animation-duration: 8s;"
+                  />
+                  <circle
+                    cx="18"
+                    cy="18"
+                    r="15"
+                    fill="none"
+                    stroke="rgba(236,72,153,0.5)"
+                    stroke-width="3"
+                    stroke-dasharray="30 70"
+                    stroke-dashoffset="90"
+                    class="animate-spin"
+                    style="animation-duration: 12s; animation-direction: reverse;"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Figma Icon -->
-      <div class="absolute bottom-6 right-6 w-12 h-12 rounded-xl bg-purple-500/20 backdrop-blur-sm flex items-center justify-center border border-purple-500/30">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          fill="currentColor"
-          viewBox="0 0 256 256"
-          class="text-purple-400"
-        >
-          <path d="M213.66,82.34l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM160,51.31,188.69,80H160ZM200,216H56V40h88V88a8,8,0,0,0,8,8h48V216Z" />
-        </svg>
-      </div>
+      <!-- Glow Effect -->
+      <div class="absolute -inset-1 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 opacity-15 blur-xl -z-10 rounded-2xl" />
     </div>
 
-    <!-- AI: Neural Network -->
+    <!-- AI: Terminal / CMD -->
     <div
       v-else-if="serviceType === 'ai'"
-      class="visual-card bg-gradient-to-br from-orange-900/20 to-red-900/20 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-orange-500/20 h-full relative overflow-hidden"
+      class="visual-card bg-gradient-to-br from-gray-900 to-gray-800 dark:from-gray-950 dark:to-gray-900 rounded-2xl shadow-2xl border border-orange-500/20 h-full relative overflow-hidden"
       :style="{
-        transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`
+        transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`
       }"
     >
-      <!-- Neural Network Visualization -->
-      <svg
-        class="w-full h-full absolute inset-0"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <!-- Layer 1 -->
-        <circle
-          cx="20%"
-          cy="30%"
-          r="8"
-          fill="rgba(249, 115, 22, 0.6)"
-          class="animate-pulse"
-        />
-        <circle
-          cx="20%"
-          cy="50%"
-          r="8"
-          fill="rgba(249, 115, 22, 0.6)"
-          class="animate-pulse"
-          style="animation-delay: 0.2s;"
-        />
-        <circle
-          cx="20%"
-          cy="70%"
-          r="8"
-          fill="rgba(249, 115, 22, 0.6)"
-          class="animate-pulse"
-          style="animation-delay: 0.4s;"
-        />
+      <!-- Window Header -->
+      <div class="flex items-center gap-2 px-5 py-3 border-b border-gray-700/60">
+        <div class="w-3 h-3 rounded-full bg-red-500" />
+        <div class="w-3 h-3 rounded-full bg-yellow-500" />
+        <div class="w-3 h-3 rounded-full bg-green-500" />
+        <span class="ml-3 text-gray-400 text-sm font-mono">~ ai-training</span>
+      </div>
 
-        <!-- Layer 2 -->
-        <circle
-          cx="50%"
-          cy="20%"
-          r="10"
-          fill="rgba(249, 115, 22, 0.8)"
-          class="animate-pulse"
-          style="animation-delay: 0.3s;"
-        />
-        <circle
-          cx="50%"
-          cy="40%"
-          r="10"
-          fill="rgba(249, 115, 22, 0.8)"
-          class="animate-pulse"
-          style="animation-delay: 0.5s;"
-        />
-        <circle
-          cx="50%"
-          cy="60%"
-          r="10"
-          fill="rgba(249, 115, 22, 0.8)"
-          class="animate-pulse"
-          style="animation-delay: 0.7s;"
-        />
-        <circle
-          cx="50%"
-          cy="80%"
-          r="10"
-          fill="rgba(249, 115, 22, 0.8)"
-          class="animate-pulse"
-          style="animation-delay: 0.9s;"
-        />
-
-        <!-- Layer 3 -->
-        <circle
-          cx="80%"
-          cy="30%"
-          r="8"
-          fill="rgba(239, 68, 68, 0.6)"
-          class="animate-pulse"
-          style="animation-delay: 0.6s;"
-        />
-        <circle
-          cx="80%"
-          cy="50%"
-          r="8"
-          fill="rgba(239, 68, 68, 0.6)"
-          class="animate-pulse"
-          style="animation-delay: 0.8s;"
-        />
-        <circle
-          cx="80%"
-          cy="70%"
-          r="8"
-          fill="rgba(239, 68, 68, 0.6)"
-          class="animate-pulse"
-          style="animation-delay: 1s;"
-        />
-
-        <!-- Connections -->
-        <g
-          opacity="0.3"
-          stroke="rgba(249, 115, 22, 0.4)"
-          stroke-width="1"
-        >
-          <line
-            x1="20%"
-            y1="30%"
-            x2="50%"
-            y2="20%"
-          />
-          <line
-            x1="20%"
-            y1="30%"
-            x2="50%"
-            y2="40%"
-          />
-          <line
-            x1="20%"
-            y1="50%"
-            x2="50%"
-            y2="40%"
-          />
-          <line
-            x1="20%"
-            y1="50%"
-            x2="50%"
-            y2="60%"
-          />
-          <line
-            x1="20%"
-            y1="70%"
-            x2="50%"
-            y2="60%"
-          />
-          <line
-            x1="20%"
-            y1="70%"
-            x2="50%"
-            y2="80%"
-          />
-
-          <line
-            x1="50%"
-            y1="20%"
-            x2="80%"
-            y2="30%"
-          />
-          <line
-            x1="50%"
-            y1="40%"
-            x2="80%"
-            y2="30%"
-          />
-          <line
-            x1="50%"
-            y1="40%"
-            x2="80%"
-            y2="50%"
-          />
-          <line
-            x1="50%"
-            y1="60%"
-            x2="80%"
-            y2="50%"
-          />
-          <line
-            x1="50%"
-            y1="60%"
-            x2="80%"
-            y2="70%"
-          />
-          <line
-            x1="50%"
-            y1="80%"
-            x2="80%"
-            y2="70%"
-          />
-        </g>
-      </svg>
-
-      <!-- Data Flow Animation -->
-      <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div class="text-orange-400 text-lg font-mono font-semibold animate-pulse">
-          Training Model...
+      <!-- Terminal Content -->
+      <div class="ai-terminal p-5 font-mono text-sm leading-relaxed min-h-[250px] space-y-1">
+        <div class="text-gray-500">
+          $ python train_model.py --config prod.yaml
+        </div>
+        <div class="text-orange-400 mt-2">
+          [INFO] Loading dataset... <span class="text-green-400">OK</span>
+        </div>
+        <div class="text-orange-400">
+          [INFO] Preprocessing 48,291 samples...
+        </div>
+        <div class="text-gray-400">
+          ├── Tokenizing... <span class="text-green-400">done</span>
+        </div>
+        <div class="text-gray-400">
+          ├── Embedding vectors... <span class="text-green-400">done</span>
+        </div>
+        <div class="text-gray-400">
+          └── Validation split: 80/20
+        </div>
+        <div class="text-orange-400 mt-2">
+          [TRAIN] Epoch 1/10
+        </div>
+        <div class="text-gray-400">
+          loss: 0.4521 | acc: <span class="text-green-400">0.8234</span> | lr: 3e-4
+        </div>
+        <div class="text-orange-400">
+          [TRAIN] Epoch 2/10
+        </div>
+        <div class="text-gray-400">
+          loss: 0.2187 | acc: <span class="text-green-400">0.9102</span> | lr: 3e-4
+        </div>
+        <div class="text-orange-400">
+          [TRAIN] Epoch 3/10
+        </div>
+        <div class="text-gray-400">
+          loss: 0.1043 | acc: <span class="text-green-400">0.9578</span> | lr: 1e-4
+        </div>
+        <div class="text-orange-300 mt-2 flex items-center gap-1">
+          <span>[TRAIN] Epoch 4/10</span>
+          <span class="inline-block w-2 h-4 bg-orange-400 animate-pulse" />
         </div>
       </div>
+
+      <!-- Progress Bar at Bottom -->
+      <div class="absolute bottom-0 left-0 right-0 px-5 pb-4">
+        <div class="flex items-center justify-between text-xs text-gray-500 mb-1">
+          <span>Training progress</span>
+          <span class="text-orange-400">30%</span>
+        </div>
+        <div class="w-full h-1.5 bg-gray-800 rounded-full overflow-hidden">
+          <div
+            class="h-full bg-gradient-to-r from-orange-500 to-red-500 rounded-full ai-progress-bar"
+            style="width: 30%;"
+          />
+        </div>
+      </div>
+
+      <!-- Glow Effect -->
+      <div class="absolute -inset-1 bg-gradient-to-r from-orange-500 via-red-500 to-orange-500 opacity-15 blur-xl -z-10 rounded-2xl" />
     </div>
 
     <!-- Floating Metrics Badges - Padronizadas -->
@@ -523,12 +591,34 @@ onUnmounted(() => {
   }
 }
 
-.code-editor {
+.code-editor,
+.ai-terminal {
   scrollbar-width: none;
 }
 
-.code-editor::-webkit-scrollbar {
+.code-editor::-webkit-scrollbar,
+.ai-terminal::-webkit-scrollbar {
   display: none;
+}
+
+.cloud-data-flow {
+  animation: data-flow 2s ease-in-out infinite;
+}
+
+@keyframes data-flow {
+  0% { left: 0%; opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { left: 100%; opacity: 0; }
+}
+
+.ai-progress-bar {
+  animation: progress-pulse 2s ease-in-out infinite;
+}
+
+@keyframes progress-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
 }
 
 /* Responsive badges - mobile */

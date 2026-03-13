@@ -58,7 +58,7 @@ onMounted(() => {
         if (entry.isIntersecting && !hasAnimated.value) {
           hasAnimated.value = true
           metrics.forEach(m => {
-            const value = t(`metrics.${m.key}.value`)
+            const value = t(`metrics.items.${m.key}.value`)
             animateValue(m.key, value)
           })
         }
@@ -103,13 +103,13 @@ onMounted(() => {
                 </svg>
               </div>
               <span class="text-6xl md:text-7xl lg:text-8xl font-black text-white mb-3 tabular-nums leading-none">
-                {{ animatedValues['projects'] || t('metrics.projects.value') }}
+                {{ animatedValues['projects'] || t('metrics.items.projects.value') }}
               </span>
               <span class="text-white/90 text-lg md:text-xl font-semibold">
-                {{ t('metrics.projects.label') }}
+                {{ t('metrics.items.projects.label') }}
               </span>
               <p class="text-white/60 text-sm mt-2 max-w-xs">
-                Projetos entregues com sucesso para empresas de diversos setores
+                {{ t('metrics.items.projects.description') }}
               </p>
             </div>
           </div>
@@ -134,10 +134,10 @@ onMounted(() => {
                   </svg>
                 </div>
                 <span class="text-3xl md:text-4xl font-black text-gray-900 dark:text-white mb-1 tabular-nums">
-                  {{ animatedValues['satisfaction'] || t('metrics.satisfaction.value') }}
+                  {{ animatedValues['satisfaction'] || t('metrics.items.satisfaction.value') }}
                 </span>
                 <span class="text-gray-500 dark:text-gray-400 text-sm font-medium">
-                  {{ t('metrics.satisfaction.label') }}
+                  {{ t('metrics.items.satisfaction.label') }}
                 </span>
               </div>
             </GlassCard>
@@ -158,10 +158,10 @@ onMounted(() => {
                   </svg>
                 </div>
                 <span class="text-3xl md:text-4xl font-black text-gray-900 dark:text-white mb-1 tabular-nums">
-                  {{ animatedValues['support'] || t('metrics.support.value') }}
+                  {{ animatedValues['support'] || t('metrics.items.support.value') }}
                 </span>
                 <span class="text-gray-500 dark:text-gray-400 text-sm font-medium">
-                  {{ t('metrics.support.label') }}
+                  {{ t('metrics.items.support.label') }}
                 </span>
               </div>
             </GlassCard>
@@ -182,10 +182,10 @@ onMounted(() => {
                   </svg>
                 </div>
                 <span class="text-3xl md:text-4xl font-black text-gray-900 dark:text-white mb-1 tabular-nums">
-                  {{ animatedValues['experience'] || t('metrics.experience.value') }}
+                  {{ animatedValues['experience'] || t('metrics.items.experience.value') }}
                 </span>
                 <span class="text-gray-500 dark:text-gray-400 text-sm font-medium">
-                  {{ t('metrics.experience.label') }}
+                  {{ t('metrics.items.experience.label') }}
                 </span>
               </div>
             </GlassCard>

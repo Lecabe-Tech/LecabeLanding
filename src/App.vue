@@ -7,7 +7,7 @@ import Header from './components/layout/Header.vue'
 import Footer from './components/layout/Footer.vue'
 
 const themeStore = useThemeStore()
-const { locale } = useI18n()
+const { t, locale } = useI18n()
 
 // Initialize theme on mount
 onMounted(() => {
@@ -27,7 +27,7 @@ onMounted(() => {
       href="#main-content"
       class="skip-to-main"
     >
-      Pular para o conteúdo principal
+      {{ t('accessibility.skipToContent') }}
     </a>
     
     <Header />

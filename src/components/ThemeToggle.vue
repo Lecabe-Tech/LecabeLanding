@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { useThemeStore } from '@/stores/theme'
+import { useI18n } from 'vue-i18n'
 
+const { t } = useI18n()
 const themeStore = useThemeStore()
 
 /**
@@ -16,7 +18,7 @@ const toggleTheme = () => {
     <input
       type="checkbox"
       :checked="themeStore.isDark"
-      :aria-label="themeStore.isDark ? 'Switch to light mode' : 'Switch to dark mode'"
+      :aria-label="themeStore.isDark ? t('ui.switchToLight') : t('ui.switchToDark')"
       @change="toggleTheme"
     >
     <span class="slider">

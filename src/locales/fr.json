@@ -116,7 +116,7 @@
   "metrics": {
     "title": "Nos Chiffres",
     "projects": {
-      "value": "10+",
+      "value": "30+",
       "label": "Projets Livrés"
     },
     "satisfaction": {
@@ -128,7 +128,7 @@
       "label": "Support Jours/Semaine"
     },
     "experience": {
-      "value": "5+",
+      "value": "4+",
       "label": "Années d'Expérience"
     }
   },
@@ -898,11 +898,11 @@
           "label": "Fondée"
         },
         "team": {
-          "value": "10+",
+          "value": "8+",
           "label": "Professionnels"
         },
         "projects": {
-          "value": "15+",
+          "value": "30+",
           "label": "Projets Livrés"
         },
         "satisfaction": {

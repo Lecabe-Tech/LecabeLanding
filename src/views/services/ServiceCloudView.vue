@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useRouter } from 'vue-router'
 import { useScrollAnimation } from '@/composables/useScrollAnimation'
 import { useServices } from '@/composables/useServices'
 import { getServiceData } from '@/data/services'
@@ -17,7 +16,6 @@ import PricingCards from '@/components/services/PricingCards.vue'
 import FAQSection from '@/components/FAQSection.vue'
 
 const { t, tm } = useI18n()
-const router = useRouter()
 const { getAdjacentServices } = useServices()
 
 const serviceId = 'cloud'
@@ -36,12 +34,13 @@ const faqSection = useScrollAnimation()
 const ctaSection = useScrollAnimation()
 
 // Service Metrics
-const serviceMetrics = [
-  { value: '2PB+', label: 'Dados Migrados' },
-  { value: '50+', label: 'Clouds Gerenciadas' },
-  { value: '24/7', label: 'Monitoramento' },
-  { value: '99%', label: 'Zero Downtime' }
-]
+const serviceMetrics = computed(() => {
+  const items = tm(`servicesPages.${serviceId}.metrics.items`) as unknown[]
+  return items.map((_: unknown, i: number) => ({
+    value: t(`servicesPages.${serviceId}.metrics.items[${i}].value`),
+    label: t(`servicesPages.${serviceId}.metrics.items[${i}].label`)
+  }))
+})
 
 // Features com títulos do i18n
 const features = computed(() => {
@@ -101,12 +100,17 @@ const faqItems = computed(() => [
   }
 ])
 
+const whatsappUrl = computed(() => {
+  const message = encodeURIComponent(t(`servicesPages.${serviceId}.cta.whatsappMessage`))
+  return `https://wa.me/5511994132821?text=${message}`
+})
+
 const handleCTA = () => {
-  router.push({ path: '/', hash: '#contact' })
+  window.open(whatsappUrl.value, '_blank')
 }
 
 const handlePackageSelect = () => {
-  router.push({ path: '/', hash: '#contact' })
+  window.open(whatsappUrl.value, '_blank')
 }
 </script>
 
@@ -124,14 +128,14 @@ const handlePackageSelect = () => {
       <ServiceHero
         :title="t(`servicesPages.${serviceId}.hero.title`)"
         :subtitle="t(`servicesPages.${serviceId}.hero.subtitle`)"
-        cta-text="Avaliar Migração Gratuita"
+        :cta-text="t(`servicesPages.${serviceId}.hero.cta`)"
         :gradient="serviceData?.gradient || 'from-brand-primary to-brand-dark-primary'"
         @cta-click="handleCTA"
       >
         <template #visual>
           <ServiceHeroVisual
             service-type="cloud"
-            :metrics="['Multi-Cloud', 'Auto-scaling', '99.99% SLA', '24/7 Support']"
+            :metrics="[t(`servicesPages.${serviceId}.hero.visualMetrics[0]`), t(`servicesPages.${serviceId}.hero.visualMetrics[1]`), t(`servicesPages.${serviceId}.hero.visualMetrics[2]`), t(`servicesPages.${serviceId}.hero.visualMetrics[3]`)]"
           />
         </template>
         <template #visual-old>
@@ -180,10 +184,10 @@ const handlePackageSelect = () => {
       <div class="max-w-7xl mx-auto">
         <div class="text-center mb-12">
           <h2 class="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Infraestrutura Comprovada
+            {{ t(`servicesPages.${serviceId}.metrics.title`) }}
           </h2>
           <p class="text-lg text-gray-600 dark:text-gray-400">
-            Escalabilidade e confiabilidade para sua cloud
+            {{ t(`servicesPages.${serviceId}.metrics.subtitle`) }}
           </p>
         </div>
         <ServiceMetrics :metrics="serviceMetrics" />
@@ -299,9 +303,16 @@ const handlePackageSelect = () => {
           {{ t(`servicesPages.${serviceId}.cta.description`) }}
         </p>
         <button
-          class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-alternative dark:bg-brand-light-alternative text-white dark:text-brand-dark rounded-xl font-bold text-lg hover:bg-emerald-600 dark:hover:bg-emerald-500 hover:scale-105 transition-all shadow-lg"
+          class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-[#25D366] text-white rounded-xl font-bold text-lg hover:bg-[#1da851] hover:scale-105 transition-all shadow-lg"
           @click="handleCTA"
         >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="currentColor"
+            viewBox="0 0 256 256"
+          ><path d="M187.58,144.84l-32-16a8,8,0,0,0-8,.5l-14.69,9.8a40.55,40.55,0,0,1-16-16l9.8-14.69a8,8,0,0,0,.5-8l-16-32A8,8,0,0,0,104,64a40,40,0,0,0-40,40,88.1,88.1,0,0,0,88,88,40,40,0,0,0,40-40A8,8,0,0,0,187.58,144.84ZM152,176a72.08,72.08,0,0,1-72-72A24,24,0,0,1,99.29,80.46l11.48,23L101,118a8,8,0,0,0-.73,7.51,56.47,56.47,0,0,0,30.15,30.15A8,8,0,0,0,138,155l14.61-9.74,23,11.48A24,24,0,0,1,152,176ZM128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z" /></svg>
           {{ t(`servicesPages.${serviceId}.cta.button`) }}
         </button>
       </div>

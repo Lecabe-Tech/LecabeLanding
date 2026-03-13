@@ -2,6 +2,7 @@
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Navigation, Pagination, Autoplay } from 'swiper/modules'
 import type { ProductMedia } from '@/types/product'
+import { useI18n } from 'vue-i18n'
 
 // Import Swiper styles
 import 'swiper/css'
@@ -14,6 +15,8 @@ interface Props {
 }
 
 defineProps<Props>()
+
+const { t } = useI18n()
 
 // Swiper modules
 const modules = [Navigation, Pagination, Autoplay]
@@ -54,7 +57,7 @@ const isDirectVideo = (url: string): boolean => {
         <img
           v-if="item.type === 'image'"
           :src="item.url"
-          :alt="`${productName} - Imagem ${index + 1}`"
+          :alt="`${productName} - ${t('media.image')} ${index + 1}`"
           class="w-full h-full object-cover"
         >
 
@@ -62,7 +65,7 @@ const isDirectVideo = (url: string): boolean => {
         <iframe
           v-else-if="item.type === 'video' && isYouTubeVideo(item.url)"
           :src="item.url"
-          :title="`${productName} - Vídeo ${index + 1}`"
+          :title="`${productName} - ${t('media.video')} ${index + 1}`"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
@@ -76,7 +79,7 @@ const isDirectVideo = (url: string): boolean => {
           controls
           class="w-full h-full object-cover"
         >
-          Seu navegador não suporta a tag de vídeo.
+          {{ t('media.videoNotSupported') }}
         </video>
 
         <!-- Fallback for unknown video types -->
@@ -105,7 +108,7 @@ const isDirectVideo = (url: string): boolean => {
               />
             </svg>
             <p class="text-gray-600 dark:text-gray-400">
-              Formato de vídeo não suportado
+              {{ t('media.videoFormatNotSupported') }}
             </p>
             <a
               :href="item.url"
@@ -113,7 +116,7 @@ const isDirectVideo = (url: string): boolean => {
               rel="noopener noreferrer"
               class="mt-2 inline-block text-brand-primary dark:text-brand-light-primary hover:underline"
             >
-              Abrir em nova aba
+              {{ t('media.openInNewTab') }}
             </a>
           </div>
         </div>

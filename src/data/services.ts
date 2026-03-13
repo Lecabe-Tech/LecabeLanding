@@ -16,18 +16,10 @@ export const servicesData: Record<ServiceId, ServiceDetail> = {
       {
         id: 'web',
         icon: 'browser',
-        title: '', // From i18n
+        title: '',
         description: '',
         size: 'large',
         gridPosition: 'col-span-2 row-span-2'
-      },
-      {
-        id: 'mobile',
-        icon: 'mobile',
-        title: '',
-        description: '',
-        size: 'medium',
-        gridPosition: 'col-span-1 row-span-2'
       },
       {
         id: 'api',
@@ -42,7 +34,7 @@ export const servicesData: Record<ServiceId, ServiceDetail> = {
         icon: 'database',
         title: '',
         description: '',
-        size: 'small',
+        size: 'medium',
         gridPosition: 'col-span-1 row-span-1'
       },
       {
@@ -60,10 +52,10 @@ export const servicesData: Record<ServiceId, ServiceDetail> = {
         description: '',
         icon: 'search',
         deliverables: [
-          'Documento de requisitos funcionais e não-funcionais',
-          'Mapeamento de jornada do usuário',
-          'Arquitetura de solução proposta',
-          'Cronograma detalhado e estimativas'
+          'Mapeamento completo dos fluxos manuais',
+          'Cálculo de horas e custos atuais',
+          'Identificação de gargalos e erros recorrentes',
+          'Relatório com potencial de economia'
         ]
       },
       {
@@ -71,10 +63,10 @@ export const servicesData: Record<ServiceId, ServiceDetail> = {
         description: '',
         icon: 'design',
         deliverables: [
-          'Wireframes de baixa e alta fidelidade',
-          'Protótipos interativos navegáveis',
-          'Design system e guia de estilo',
-          'Especificações de UI/UX'
+          'Arquitetura da automação documentada',
+          'Mapa de integrações necessárias',
+          'Protótipo de interfaces de controle',
+          'Cronograma detalhado de implementação'
         ]
       },
       {
@@ -82,10 +74,10 @@ export const servicesData: Record<ServiceId, ServiceDetail> = {
         description: '',
         icon: 'code',
         deliverables: [
-          'Código fonte versionado (Git)',
-          'Arquitetura modular e escalável',
-          'Documentação técnica completa',
-          'Ambiente de staging configurado'
+          'Automação funcional em ambiente de staging',
+          'Integrações com sistemas existentes',
+          'Testes com dados reais',
+          'Validações frequentes com o cliente'
         ]
       },
       {
@@ -93,10 +85,10 @@ export const servicesData: Record<ServiceId, ServiceDetail> = {
         description: '',
         icon: 'test',
         deliverables: [
-          'Testes unitários e integração (>80% cobertura)',
-          'Testes E2E automatizados',
-          'Relatório de bugs e correções',
-          'Validação de performance e segurança'
+          'Testes em cenários reais de produção',
+          'Validação de edge cases e exceções',
+          'Relatório de performance e confiabilidade',
+          'Ajustes baseados em feedback da equipe'
         ]
       },
       {
@@ -105,21 +97,18 @@ export const servicesData: Record<ServiceId, ServiceDetail> = {
         icon: 'rocket',
         deliverables: [
           'Deploy em ambiente de produção',
-          'Monitoramento e logs configurados',
-          'Documentação de usuário final',
-          'Treinamento da equipe e suporte pós-lançamento'
+          'Monitoramento de automações ativo',
+          'Treinamento completo da equipe',
+          'Documentação operacional e suporte pós-entrega'
         ]
       }
     ],
     techStack: [
-      { name: 'Vue.js', category: 'frontend' },
-      { name: 'React', category: 'frontend' },
       { name: 'TypeScript', category: 'frontend' },
       { name: 'Node.js', category: 'backend' },
       { name: 'Python', category: 'backend' },
-      { name: 'PHP', category: 'backend' },
+      { name: 'n8n', category: 'backend' },
       { name: 'PostgreSQL', category: 'database' },
-      { name: 'MongoDB', category: 'database' },
       { name: 'Docker', category: 'devops' },
       { name: 'AWS', category: 'devops' }
     ],
@@ -138,13 +127,6 @@ export const servicesData: Record<ServiceId, ServiceDetail> = {
         price: 'Sob consulta',
         features: [],
         highlighted: true
-      },
-      {
-        id: 'squad',
-        name: '',
-        description: '',
-        price: 'Sob consulta',
-        features: []
       }
     ]
   },
@@ -166,32 +148,24 @@ export const servicesData: Record<ServiceId, ServiceDetail> = {
         gridPosition: 'col-span-2 row-span-2'
       },
       {
-        id: 'migration',
-        icon: 'cloud-migration',
-        title: '',
-        description: '',
-        size: 'medium',
-        gridPosition: 'col-span-1 row-span-2'
-      },
-      {
-        id: 'security',
-        icon: 'shield',
-        title: '',
-        description: '',
-        size: 'medium',
-        gridPosition: 'col-span-1 row-span-1'
-      },
-      {
         id: 'monitoring',
         icon: 'monitoring',
         title: '',
         description: '',
-        size: 'small',
+        size: 'medium',
         gridPosition: 'col-span-1 row-span-1'
       },
       {
         id: 'automation',
         icon: 'automation',
+        title: '',
+        description: '',
+        size: 'medium',
+        gridPosition: 'col-span-1 row-span-1'
+      },
+      {
+        id: 'security',
+        icon: 'shield',
         title: '',
         description: '',
         size: 'small',
@@ -204,10 +178,10 @@ export const servicesData: Record<ServiceId, ServiceDetail> = {
         description: '',
         icon: 'assessment',
         deliverables: [
-          'Auditoria completa da infraestrutura atual',
-          'Análise de custos e otimizações possíveis',
-          'Mapeamento de dependências e riscos',
-          'Roadmap de migração personalizado'
+          'Inventário completo de sistemas e integrações',
+          'Mapa de fluxos de dados entre sistemas',
+          'Identificação de sistemas isolados',
+          'Relatório de oportunidades de integração'
         ]
       },
       {
@@ -215,10 +189,10 @@ export const servicesData: Record<ServiceId, ServiceDetail> = {
         description: '',
         icon: 'architecture',
         deliverables: [
-          'Arquitetura cloud otimizada e escalável',
-          'Diagrama de rede e segurança',
-          'Estratégia de alta disponibilidade',
-          'Plano de disaster recovery'
+          'Arquitetura de integração documentada',
+          'Diagrama de fluxo de dados',
+          'Estratégia de APIs e webhooks',
+          'Plano de segurança e compliance'
         ]
       },
       {
@@ -226,8 +200,8 @@ export const servicesData: Record<ServiceId, ServiceDetail> = {
         description: '',
         icon: 'migration',
         deliverables: [
+          'Integrações implementadas e testadas',
           'Migração incremental sem downtime',
-          'Testes de carga e performance',
           'Rollback plan documentado',
           'Dados migrados e validados'
         ]
@@ -238,7 +212,7 @@ export const servicesData: Record<ServiceId, ServiceDetail> = {
         icon: 'optimization',
         deliverables: [
           'Auto-scaling configurado',
-          'Redução de custos até 40%',
+          'Custos otimizados (redução de 30-50%)',
           'Performance tuning aplicado',
           'Relatório de otimizações implementadas'
         ]
@@ -248,22 +222,19 @@ export const servicesData: Record<ServiceId, ServiceDetail> = {
         description: '',
         icon: 'support',
         deliverables: [
-          'Monitoramento 24/7 ativo',
+          'Monitoramento 24/7 de integrações',
           'Alertas e dashboards configurados',
           'SLA garantido com penalidades',
-          'Suporte técnico especializado'
+          'Suporte proativo e preventivo'
         ]
       }
     ],
     techStack: [
       { name: 'AWS', category: 'devops' },
-      { name: 'Azure', category: 'devops' },
-      { name: 'Google Cloud', category: 'devops' },
       { name: 'Docker', category: 'devops' },
-      { name: 'Kubernetes', category: 'devops' },
-      { name: 'Terraform', category: 'devops' },
-      { name: 'Jenkins', category: 'devops' },
-      { name: 'GitLab CI', category: 'devops' }
+      { name: 'n8n', category: 'devops' },
+      { name: 'Vercel', category: 'devops' },
+      { name: 'PostgreSQL', category: 'database' }
     ],
     packages: [
       {
@@ -280,13 +251,6 @@ export const servicesData: Record<ServiceId, ServiceDetail> = {
         price: 'Mensal',
         features: [],
         highlighted: true
-      },
-      {
-        id: 'enterprise',
-        name: '',
-        description: '',
-        price: 'Sob consulta',
-        features: []
       }
     ]
   },
@@ -313,7 +277,7 @@ export const servicesData: Record<ServiceId, ServiceDetail> = {
         title: '',
         description: '',
         size: 'medium',
-        gridPosition: 'col-span-1 row-span-2'
+        gridPosition: 'col-span-1 row-span-1'
       },
       {
         id: 'testing',
@@ -321,22 +285,6 @@ export const servicesData: Record<ServiceId, ServiceDetail> = {
         title: '',
         description: '',
         size: 'medium',
-        gridPosition: 'col-span-1 row-span-1'
-      },
-      {
-        id: 'design-system',
-        icon: 'design-system',
-        title: '',
-        description: '',
-        size: 'small',
-        gridPosition: 'col-span-1 row-span-1'
-      },
-      {
-        id: 'accessibility',
-        icon: 'accessibility',
-        title: '',
-        description: '',
-        size: 'small',
         gridPosition: 'col-span-1 row-span-1'
       }
     ],
@@ -346,10 +294,10 @@ export const servicesData: Record<ServiceId, ServiceDetail> = {
         description: '',
         icon: 'research',
         deliverables: [
-          'Pesquisa com usuários (entrevistas e surveys)',
-          'Análise de concorrência e benchmarking',
+          'Entrevistas com operadores e gestores',
+          'Mapeamento de jornada do usuário',
           'Personas e cenários de uso',
-          'Mapa de jornada do usuário (User Journey)'
+          'Relatório de necessidades e dores'
         ]
       },
       {
@@ -357,10 +305,10 @@ export const servicesData: Record<ServiceId, ServiceDetail> = {
         description: '',
         icon: 'wireframe',
         deliverables: [
-          'Wireframes de baixa fidelidade',
           'Arquitetura de informação',
+          'Wireframes de baixa e alta fidelidade',
           'Fluxos de navegação',
-          'Wireframes de alta fidelidade'
+          'Hierarquia de informações e métricas'
         ]
       },
       {
@@ -369,8 +317,8 @@ export const servicesData: Record<ServiceId, ServiceDetail> = {
         icon: 'prototype',
         deliverables: [
           'Protótipos interativos no Figma',
-          'Micro-interações e animações',
-          'Design system completo',
+          'Design de dashboards e painéis',
+          'Design system documentado',
           'Componentes reutilizáveis'
         ]
       },
@@ -379,10 +327,10 @@ export const servicesData: Record<ServiceId, ServiceDetail> = {
         description: '',
         icon: 'test-users',
         deliverables: [
-          'Testes de usabilidade com usuários reais',
-          'Testes A/B de interfaces',
+          'Testes de usabilidade com operadores reais',
           'Relatório de insights e melhorias',
-          'Iterações baseadas em feedback'
+          'Iterações baseadas em feedback',
+          'Validação de métricas de usabilidade'
         ]
       },
       {
@@ -391,19 +339,15 @@ export const servicesData: Record<ServiceId, ServiceDetail> = {
         icon: 'handoff',
         deliverables: [
           'Arquivos Figma organizados para dev',
-          'Documentação de componentes',
-          'Especificações de interação e estados',
+          'Documentação de componentes e estados',
+          'Especificações de interação',
           'Suporte durante implementação'
         ]
       }
     ],
     techStack: [
       { name: 'Figma', category: 'frontend' },
-      { name: 'Adobe XD', category: 'frontend' },
-      { name: 'Sketch', category: 'frontend' },
-      { name: 'Miro', category: 'frontend' },
-      { name: 'Notion', category: 'frontend' },
-      { name: 'Maze', category: 'frontend' }
+      { name: 'Miro', category: 'frontend' }
     ],
     packages: [
       {
@@ -420,13 +364,6 @@ export const servicesData: Record<ServiceId, ServiceDetail> = {
         price: 'Sob consulta',
         features: [],
         highlighted: true
-      },
-      {
-        id: 'continuous',
-        name: '',
-        description: '',
-        price: 'Mensal',
-        features: []
       }
     ]
   },
@@ -440,8 +377,8 @@ export const servicesData: Record<ServiceId, ServiceDetail> = {
     icon: 'ai',
     features: [
       {
-        id: 'ml-models',
-        icon: 'ml',
+        id: 'automation',
+        icon: 'automation',
         title: '',
         description: '',
         size: 'large',
@@ -453,22 +390,6 @@ export const servicesData: Record<ServiceId, ServiceDetail> = {
         title: '',
         description: '',
         size: 'medium',
-        gridPosition: 'col-span-1 row-span-2'
-      },
-      {
-        id: 'computer-vision',
-        icon: 'vision',
-        title: '',
-        description: '',
-        size: 'medium',
-        gridPosition: 'col-span-1 row-span-1'
-      },
-      {
-        id: 'automation',
-        icon: 'automation',
-        title: '',
-        description: '',
-        size: 'small',
         gridPosition: 'col-span-1 row-span-1'
       },
       {
@@ -476,7 +397,7 @@ export const servicesData: Record<ServiceId, ServiceDetail> = {
         icon: 'chatbot',
         title: '',
         description: '',
-        size: 'small',
+        size: 'medium',
         gridPosition: 'col-span-1 row-span-1'
       }
     ],
@@ -484,12 +405,23 @@ export const servicesData: Record<ServiceId, ServiceDetail> = {
       {
         title: '',
         description: '',
+        icon: 'search',
+        deliverables: [
+          'Mapeamento de oportunidades de IA na operação',
+          'Priorização por impacto no negócio',
+          'Análise de viabilidade técnica',
+          'Relatório executivo com ROI estimado'
+        ]
+      },
+      {
+        title: '',
+        description: '',
         icon: 'data',
         deliverables: [
-          'Análise exploratória de dados (EDA)',
+          'Auditoria de qualidade dos dados',
           'Pipeline de coleta e limpeza de dados',
-          'Feature engineering e seleção',
-          'Dataset balanceado e validado'
+          'Estruturação de datasets',
+          'Recomendações de melhoria de dados'
         ]
       },
       {
@@ -497,10 +429,10 @@ export const servicesData: Record<ServiceId, ServiceDetail> = {
         description: '',
         icon: 'model',
         deliverables: [
-          'Seleção de arquitetura de modelo adequada',
-          'Baseline model implementado',
-          'Experimentos documentados (MLflow)',
-          'Comparação de múltiplos modelos'
+          'MVP de IA funcional',
+          'Métricas de performance documentadas',
+          'Comparação com abordagens alternativas',
+          'Relatório de viabilidade para escala'
         ]
       },
       {
@@ -508,21 +440,10 @@ export const servicesData: Record<ServiceId, ServiceDetail> = {
         description: '',
         icon: 'training',
         deliverables: [
-          'Modelo treinado com hiperparâmetros otimizados',
-          'Cross-validation aplicada',
-          'Curvas de aprendizado e métricas',
-          'Modelo versionado (MLflow/DVC)'
-        ]
-      },
-      {
-        title: '',
-        description: '',
-        icon: 'validation',
-        deliverables: [
-          'Testes em dados de validação e teste',
-          'Análise de erros e edge cases',
-          'Métricas de performance (accuracy, F1, etc)',
-          'Relatório de validação técnica'
+          'Modelo otimizado em produção',
+          'API de inferência funcionando',
+          'Integração com sistemas do cliente',
+          'Monitoramento de performance ativo'
         ]
       },
       {
@@ -530,21 +451,18 @@ export const servicesData: Record<ServiceId, ServiceDetail> = {
         description: '',
         icon: 'deploy',
         deliverables: [
-          'API de inferência em produção (FastAPI)',
-          'Monitoramento de drift e performance',
-          'Documentação de uso e limitações',
-          'Pipeline de retreinamento automatizado'
+          'Monitoramento de drift e accuracy',
+          'Retreinamento automatizado',
+          'Expansão para novos casos de uso',
+          'Relatórios mensais de impacto'
         ]
       }
     ],
     techStack: [
       { name: 'Python', category: 'backend' },
-      { name: 'TensorFlow', category: 'backend' },
-      { name: 'PyTorch', category: 'backend' },
-      { name: 'scikit-learn', category: 'backend' },
       { name: 'OpenAI API', category: 'backend' },
-      { name: 'Hugging Face', category: 'backend' },
       { name: 'LangChain', category: 'backend' },
+      { name: 'n8n', category: 'backend' },
       { name: 'FastAPI', category: 'backend' }
     ],
     packages: [
@@ -562,13 +480,6 @@ export const servicesData: Record<ServiceId, ServiceDetail> = {
         price: 'Sob consulta',
         features: [],
         highlighted: true
-      },
-      {
-        id: 'optimization',
-        name: '',
-        description: '',
-        price: 'Sob consulta',
-        features: []
       }
     ]
   }

@@ -5,31 +5,31 @@
     "contact": "Contact",
     "products": "Products",
     "company": "Company",
-    "getStarted": "Get Started",
+    "getStarted": "Get in Touch",
     "goHome": "Go to home page",
     "goToProducts": "Go to Products"
   },
   "megamenu": {
     "services": {
       "title": "Our Services",
-      "subtitle": "Complete solutions for your business",
+      "subtitle": "Automation and AI for your business",
       "cta": "View all services",
       "items": {
         "software": {
-          "title": "Software Development",
-          "description": "Custom web and mobile solutions"
+          "title": "Custom Automation",
+          "description": "Tailored solutions for your manual workflows"
         },
         "cloud": {
-          "title": "Cloud Solutions",
-          "description": "Scalable and secure infrastructure"
+          "title": "Infrastructure & Integration",
+          "description": "Connected and scalable cloud systems"
         },
         "ux": {
-          "title": "UX Design",
-          "description": "Intuitive and modern interfaces"
+          "title": "Interfaces & Dashboards",
+          "description": "Control panels and intuitive interfaces"
         },
         "ai": {
-          "title": "Artificial Intelligence",
-          "description": "Automation and machine learning"
+          "title": "AI Consulting",
+          "description": "Artificial intelligence strategy and implementation"
         }
       }
     },
@@ -61,21 +61,21 @@
       }
     },
     "company": {
-      "title": "About Lecabe",
-      "subtitle": "Learn more about our company",
-      "cta": "Get in touch",
+      "title": "The Company",
+      "subtitle": "Meet the team behind the solutions",
+      "cta": "Learn more about us",
       "items": {
         "overview": {
           "title": "Overview",
-          "description": "Get to know Lecabe and our mission"
+          "description": "Our mission and journey"
         },
         "about": {
-          "title": "About Us",
-          "description": "Our history and values"
+          "title": "Our Story",
+          "description": "How we started and our values"
         },
         "team": {
           "title": "Our Team",
-          "description": "Meet who makes it happen"
+          "description": "Meet the people behind it all"
         },
         "culture": {
           "title": "Culture",
@@ -83,814 +83,867 @@
         },
         "careers": {
           "title": "Careers",
-          "description": "Join our team"
+          "description": "Open positions and opportunities"
         }
       }
     }
   },
   "hero": {
-    "title": "Custom Software that Accelerates Your Business",
-    "subtitle": "We develop custom software solutions that integrate seamlessly into your processes. From concept to deployment, each project is unique — built with technical expertise and attention to detail that your business deserves.",
-    "cta": "Start My Project",
-    "ctaSecondary": "See Our Process",
-    "trustedBy": "Companies that trust Lecabe"
+    "title": "Automate what your company still does manually",
+    "subtitle": "We build custom solutions to eliminate manual processes, reduce operational costs and accelerate results — with or without artificial intelligence.",
+    "cta": "Schedule a free assessment",
+    "ctaSecondary": "View our services",
+    "trustedBy": "Companies that have automated with us"
   },
   "about": {
-    "title": "Technical Excellence and Commitment to Results",
-    "content": "Lecabe specializes in transforming business challenges into high-impact technology solutions. With over 5 years of experience, we deliver projects that combine technical expertise with deep understanding of your processes. Every line of code is designed to generate real value and measurable results.",
+    "title": "Why Lecabe?",
+    "content": "We specialize in identifying operational bottlenecks and turning them into automated workflows. Every solution we deliver is custom-built for your company's reality — no generic tools that don't fit your process.",
     "differentiators": {
       "family": {
-        "title": "Direct Communication",
-        "description": "Close and transparent relationship with direct access to the technical team"
+        "title": "Hands-on partnership",
+        "description": "We work as an extension of your team. We understand your business before proposing any solution."
       },
       "custom": {
-        "title": "100% Customized",
-        "description": "Each project is unique, developed specifically for your needs"
+        "title": "Tailored solutions",
+        "description": "No off-the-shelf software. Every automation is designed for your specific workflow."
       },
       "partnership": {
-        "title": "Continuous Partnership",
-        "description": "We follow your project from start to finish, and beyond"
+        "title": "Measurable results",
+        "description": "We're committed to real impact: fewer hours spent, fewer errors, greater speed."
       }
     }
   },
   "metrics": {
-    "title": "Our Numbers",
-    "projects": {
-      "value": "10+",
-      "label": "Delivered Projects"
-    },
-    "satisfaction": {
-      "value": "100%",
-      "label": "Client Satisfaction"
-    },
-    "support": {
-      "value": "7/7",
-      "label": "Support Days/Week"
-    },
-    "experience": {
-      "value": "5+",
-      "label": "Years of Experience"
+    "title": "Results that speak for themselves",
+    "subtitle": "Real numbers from companies that transformed their operations",
+    "items": {
+      "projects": {
+        "value": "30+",
+        "label": "Automations delivered",
+        "description": "Successfully delivered projects for companies across multiple industries"
+      },
+      "satisfaction": {
+        "value": "100%",
+        "label": "Client satisfaction"
+      },
+      "support": {
+        "value": "24/7",
+        "label": "Ongoing support"
+      },
+      "experience": {
+        "value": "4+",
+        "label": "Years of experience"
+      }
     }
   },
   "testimonials": {
-    "title": "What Our Clients Say",
+    "title": "What our clients say",
+    "subtitle": "Real results from companies that automated with Lecabe",
     "items": [
       {
-        "quote": "Lecabe understood exactly what we needed and delivered beyond expectations. The software transformed our internal processes.",
-        "author": "Carlos Silva",
-        "role": "Operations Director",
-        "company": "LogiTech Solutions"
+        "quote": "Lecabe automated our invoicing process that used to take 3 days per month. Now it runs in minutes, error-free. ROI came in the first month.",
+        "author": "Carlos Mendes",
+        "role": "CFO",
+        "company": "LogiTech Distribution"
       },
       {
-        "quote": "Professionalism and attention to detail. The Lecabe team is a true partner, always available to adjust and improve.",
-        "author": "Ana Martins",
+        "quote": "We had spreadsheets for everything. Lecabe's team mapped our processes and built an integrated system that saves 20 hours per week.",
+        "author": "Ana Oliveira",
+        "role": "COO",
+        "company": "NovaSaúde Clinics"
+      },
+      {
+        "quote": "Their AI consulting helped us prioritize what actually made sense to automate. It wasn't just technology — it was business strategy.",
+        "author": "Ricardo Santos",
         "role": "CEO",
-        "company": "Inova Retail"
-      },
-      {
-        "quote": "We reduced 40% of manual process time after implementation. Excellent cost-benefit and impeccable support.",
-        "author": "Roberto Costa",
-        "role": "IT Manager",
-        "company": "Fernandes Group"
+        "company": "BR Supply Chain"
       }
     ]
   },
   "faq": {
     "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to the most common questions about our services and processes",
+    "ctaText": "Still have questions? Our team is ready to help.",
     "items": [
       {
-        "question": "How much does custom software development cost?",
-        "answer": "The investment varies according to project complexity. We offer a free initial consultation to understand your needs and present a detailed quote, with no obligation."
+        "question": "What kind of processes do you automate?",
+        "answer": "We automate any repetitive manual workflow: invoicing, reports, approvals, system integrations, notifications, data processing, client onboarding, and more. If your team does it manually and repeatedly, we can probably automate it."
       },
       {
-        "question": "How long does it take to develop a project?",
-        "answer": "Simple projects can be delivered in 4-8 weeks. More complex projects follow our agile methodology with incremental deliveries, allowing you to see results from the first weeks."
+        "question": "Do I need technical knowledge to work with you?",
+        "answer": "No. Our process starts with a comprehensive assessment where we map your current workflows in business language. You explain what you need, and we handle all the technical work."
       },
       {
-        "question": "Do you offer support after delivery?",
-        "answer": "Yes! We offer maintenance and continuous support plans. Our team is available for adjustments, improvements, and problem resolution with guaranteed response time."
+        "question": "Do all automations use artificial intelligence?",
+        "answer": "Not necessarily. Many processes are automated with integrations, APIs and business rules — without AI. We use artificial intelligence only when it adds real value, such as document analysis, data classification or intelligent customer service."
       },
       {
-        "question": "What technologies do you work with?",
-        "answer": "We master the main technologies in the market: Vue.js, React, Node.js, Python, PHP, SQL and NoSQL databases, plus cloud (AWS, Azure). We choose the best stack for each project."
+        "question": "How long does it take to implement an automation?",
+        "answer": "It depends on complexity. Simple automations can be ready in 2 to 4 weeks. More complex projects with multiple integrations take 2 to 3 months. We always provide a clear timeline before starting."
       },
       {
-        "question": "How does the development process work?",
-        "answer": "We follow 5 stages: Discovery (understand your business), Requirements (document needs), Design (prototype solutions), Development (build with quality), and Deployment (deliver and support)."
+        "question": "How does post-delivery support work?",
+        "answer": "We offer ongoing support and monitoring of automations in production. If your process changes, we adjust the solution. Our plans include preventive maintenance and system evolution."
       }
     ]
   },
   "services": {
-    "title": "Our Services",
-    "subtitle": "Comprehensive Software Solutions",
-    "description": "From concept to deployment, we offer a full suite of software development services to meet your business needs, ensuring each piece fits perfectly into your overall strategy.",
+    "title": "What we do",
+    "subtitle": "Complete solutions to automate your operations",
+    "description": "From analyzing your processes to delivering production-ready automation, we handle everything so your team can focus on what matters.",
     "items": {
       "customSoftware": {
-        "title": "Custom Software Development",
-        "description": "We build custom software tailored to your specific requirements, ensuring seamless integration and optimal performance, like a perfectly crafted puzzle piece."
+        "title": "Custom Automation",
+        "description": "We build tailored systems to eliminate manual, repetitive processes from your operations."
       },
       "cloud": {
-        "title": "Cloud Solutions",
-        "description": "Leverage the power of the cloud with our scalable and secure cloud solutions, designed to enhance agility and reduce costs, fitting seamlessly into your digital infrastructure."
+        "title": "Infrastructure & Integration",
+        "description": "We connect your systems, APIs and tools in a scalable cloud infrastructure."
       },
       "ux": {
-        "title": "User Experience Design",
-        "description": "Our UX design experts create intuitive and engaging user experiences that drive customer satisfaction and loyalty, ensuring every interaction is a positive piece of the user journey."
+        "title": "Interfaces & Dashboards",
+        "description": "We create control panels and intuitive interfaces to monitor your automations in real time."
       },
       "maintenance": {
-        "title": "Maintenance and Support",
-        "description": "We provide continuous technical support and preventive maintenance to ensure your systems work perfectly, maintaining stability and performance."
+        "title": "Support & Evolution",
+        "description": "We monitor, maintain and evolve your automations as your business grows."
       },
       "ai": {
-        "title": "Artificial Intelligence",
-        "description": "Implementing AI and machine learning to drive innovation and efficiency, adding a layer of intelligence to your solutions."
+        "title": "AI Consulting",
+        "description": "We analyze your operations and identify where artificial intelligence can generate the most impact."
       },
       "uiux": {
-        "title": "UI/UX Design",
-        "description": "Creating intuitive and engaging user interfaces and experiences, ensuring a seamless and enjoyable user journey."
+        "title": "User Experience",
+        "description": "We ensure your team adopts new tools easily, with no learning curve."
       },
       "qa": {
-        "title": "Quality Assurance",
-        "description": "Ensuring the highest quality and reliability of your software through rigorous testing, guaranteeing a dependable and robust solution."
+        "title": "Quality & Testing",
+        "description": "We validate every automation to ensure it works accurately in real-world scenarios."
       },
       "automation": {
-        "title": "Process Automation",
-        "description": "Automating repetitive tasks to streamline operations and reduce costs, optimizing your workflow for peak performance."
+        "title": "System Integration",
+        "description": "We connect ERPs, CRMs, spreadsheets and any tool your company already uses."
       },
       "documentation": {
-        "title": "Software Documentation",
-        "description": "We create complete and clear technical documentation for your systems, facilitating maintenance, team onboarding, and ensuring project continuity."
-      },
-      "cloud": {
-        "title": "Cloud Solutions",
-        "description": "Leverage the power of the cloud with our scalable and secure cloud solutions, designed to enhance agility and reduce costs, fitting seamlessly into your digital infrastructure."
-      },
-      "ux": {
-        "title": "User Experience Design",
-        "description": "Our UX design experts create intuitive and engaging user experiences that drive customer satisfaction and loyalty, ensuring every interaction is a positive piece of the user journey."
+        "title": "Documentation & Training",
+        "description": "We deliver clear documentation and training so your team can operate independently."
       }
     }
   },
   "technologies": {
-    "title": "Our Technologies"
+    "title": "Technologies we use",
+    "subtitle": "Modern tools for robust automations",
+    "categories": {
+      "frontend": "Interfaces",
+      "backend": "Backend",
+      "database": "Database",
+      "devops": "Infrastructure"
+    }
   },
   "timeline": {
-    "title": "Software Development Timeline",
-    "step": "Step",
+    "title": "How we work",
+    "subtitle": "Our process for turning manual workflows into automations",
+    "duration": "1-2 weeks",
+    "techMore": "+more",
     "steps": {
       "discovery": {
-        "title": "Discovery",
-        "description": "Initial project scoping and understanding business goals, laying the foundation for a cohesive solution."
+        "title": "Assessment",
+        "description": "We map your current processes, identify bottlenecks and calculate potential savings through automation."
       },
       "requirements": {
-        "title": "Requirements Gathering",
-        "description": "Detailed analysis and documentation of functional and non-functional requirements, ensuring every detail is considered."
+        "title": "Planning",
+        "description": "We define scope, prioritize highest-impact workflows and create the implementation timeline."
       },
       "design": {
-        "title": "Design & Prototyping",
-        "description": "Creating wireframes, mockups, and interactive prototypes to visualize the solution, bringing the vision to life."
+        "title": "Architecture",
+        "description": "We design the technical solution, required integrations and control interfaces."
       },
       "development": {
-        "title": "Development & Testing",
-        "description": "Agile development sprints with continuous testing and quality assurance, ensuring a robust and reliable final product."
+        "title": "Implementation",
+        "description": "We develop and test each automation, with frequent check-ins with your team."
       },
       "deployment": {
-        "title": "Deployment & Support",
-        "description": "Seamless deployment to production environment with ongoing maintenance and support, providing long-term care and attention."
+        "title": "Activation & Support",
+        "description": "We deploy to production, monitor results and adjust as needed."
       }
     }
   },
   "marketplace": {
     "title": "Products",
-    "description": "Explore Lecabe's ready-to-integrate products that seamlessly fit into your processes. Purchase these products to adapt to your workflow or engage our services for custom integration.",
-    "cta": "View Products",
-    "page": {
-      "title": "Products",
-      "description": "Explore our selection of ready-to-integrate software products. Professional solutions that accelerate your development and add value to your business."
-    },
-    "loading": "Loading products...",
+    "description": "Ready-to-use solutions to accelerate your operations",
     "filters": {
-      "search": "Search",
-      "searchPlaceholder": "Search for products...",
+      "search": "Search product...",
       "category": "Category",
-      "allCategories": "All Categories",
-        "categories": {
-          "all": "All",
-          "wms": "WMS",
-          "ai": "AI",
-          "erp": "ERP",
-          "chatbots": "Chatbots",
-          "automation": "Automation",
-          "analytics": "Analytics",
-          "crm": "CRM",
-          "ecommerce": "E-commerce",
-          "mobile": "Mobile",
-          "web": "Web",
-          "cloud": "Cloud"
-        },
-      "sortBy": "Sort by",
-      "sort": {
-        "popular": "Most Popular",
-        "rating": "Highest Rated",
-        "priceAsc": "Lowest Price",
-        "priceDesc": "Highest Price"
+      "sortBy": {
+        "label": "Sort by",
+        "popularity": "Popularity",
+        "newest": "Newest",
+        "rating": "Highest rated"
       }
     },
+    "categories": {
+      "all": "All",
+      "wms": "WMS",
+      "ai": "AI",
+      "erp": "ERP",
+      "chatbots": "Chatbots",
+      "automation": "Automation",
+      "analytics": "Analytics",
+      "crm": "CRM",
+      "ecommerce": "E-commerce",
+      "mobile": "Mobile",
+      "web": "Web",
+      "cloud": "Cloud"
+    },
     "product": {
-      "viewDetails": "View Details",
-      "liveDemo": "Live Demo"
-    },
-    "emptyState": {
-      "title": "No products found",
-      "description": "Try adjusting your filters or search to find what you're looking for."
-    },
-    "allProductsLoaded": "All products have been loaded",
-    "detail": {
-      "notFound": "Product not found",
-      "backToMarketplace": "Back to Products",
-      "description": "Description",
-      "subscribers": "subscribers",
+      "viewDetails": "View details",
+      "liveDemo": "Live Demo",
+      "buyNow": "Buy Now",
+      "features": "Features",
+      "requirements": "Requirements",
+      "reviews": "Reviews",
       "sales": "sales",
-      "accessProduct": "Access Product",
-      "viewDemo": "View Live Demo",
-      "contact": "Contact Us",
-      "contactSubject": "Interest in product",
-      "contactMessage": "Hello, I would like to get more information about the product {productName}."
+      "subscribers": "subscribers"
+    },
+    "detail": {
+      "backToMarketplace": "Back to catalog",
+      "overview": "Overview",
+      "description": "Description",
+      "features": "Features",
+      "requirements": "Requirements",
+      "reviews": "Reviews",
+      "liveDemo": "Live Demo",
+      "buyNow": "Request",
+      "rating": "Rating",
+      "sales": "sales",
+      "subscribers": "subscribers"
     },
     "reviews": {
       "title": "Customer Reviews",
-      "basedOn": "{count} reviews",
-      "helpful": "Helpful",
-      "noReviews": "No reviews yet for this product.",
-      "loading": "Loading reviews..."
+      "basedOn": "Based on",
+      "reviewsCount": "reviews",
+      "writeReview": "Write a review",
+      "sortBy": "Sort by",
+      "mostRecent": "Most recent",
+      "highestRated": "Highest rated",
+      "verified": "Verified purchase"
+    },
+    "empty": {
+      "title": "No products found",
+      "description": "Try adjusting your search filters"
     }
   },
   "contact": {
-    "title": "Contact Us",
-    "subtitle": "Get in touch with our team",
-    "description": "We're here to answer your questions and discuss how we can help your business succeed, ensuring every piece of your digital strategy fits perfectly.",
+    "title": "Let's talk about automation?",
+    "subtitle": "Tell us about the processes you want to automate. We respond within 24 hours.",
     "form": {
-      "name": "Your name",
-      "email": "Your email address",
+      "name": "Full name",
+      "email": "Corporate email",
       "subject": "Subject",
-      "message": "Your message",
+      "message": "Describe the processes you'd like to automate",
       "language": "Preferred language",
+      "submit": "Send message",
+      "sending": "Sending...",
+      "subjects": {
+        "general": "I want to know more",
+        "budget": "Request a quote",
+        "support": "Technical support",
+        "partnership": "Partnership"
+      },
+      "errors": {
+        "nameRequired": "Name is required",
+        "emailInvalid": "Invalid email",
+        "subjectRequired": "Subject is required",
+        "languageRequired": "Language is required",
+        "minCharacters": "Minimum 20 characters"
+      },
       "languages": {
         "pt": "Português",
-        "en": "English",
-        "fr": "Français"
-      },
-      "submit": "Submit",
-      "success": "Message sent successfully!",
-      "error": "Error sending message. Please try again."
+        "en": "English"
+      }
+    },
+    "guaranteedResponse": "Guaranteed response",
+    "responseTime": "We get back to you within 24 business hours",
+    "success": {
+      "title": "Message sent!",
+      "message": "We received your message and will respond within 24 business hours."
+    },
+    "error": {
+      "title": "Error sending",
+      "message": "Please try again or contact us via WhatsApp."
+    },
+    "info": {
+      "title": "Other ways to reach us",
+      "email": "contact@lecabe.com",
+      "phone": "+55 (11) 99413-2821",
+      "address": "Aguaí, SP — Brazil",
+      "hours": "Mon-Fri: 9am to 6pm"
     }
   },
   "footer": {
+    "description": "Intelligent automation for companies that want to grow without increasing operational complexity.",
+    "services": "Services",
+    "company": "Company",
+    "legal": "Legal",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",
-    "copyright": "© 2024 Lecabe. All rights reserved."
+    "copyright": "Lecabe Tech. All rights reserved.",
+    "social": {
+      "title": "Social Media"
+    }
   },
-  "floating": {
-    "whatsapp": "WhatsApp",
-    "email": "Email",
-    "phone": "Phone"
+  "pricing": {
+    "recommended": "Recommended",
+    "choosePlan": "Choose Plan",
+    "choose": "Choose",
+    "features": "Features"
   },
-  "common": {
-    "backToHome": "Back to Home"
+  "media": {
+    "image": "Image",
+    "video": "Video",
+    "videoNotSupported": "Your browser does not support the video tag.",
+    "videoFormatNotSupported": "Video format not supported",
+    "openInNewTab": "Open in new tab"
+  },
+  "accessibility": {
+    "skipToContent": "Skip to main content"
+  },
+  "ui": {
+    "viewCards": "View Cards",
+    "comparePlans": "Compare Plans",
+    "hide": "Hide",
+    "view": "View",
+    "deliverables": "Deliverables",
+    "deliverablesPhase": "Deliverables for this phase:",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "mobileMenu": "Mobile menu",
+    "navigateTo": "Navigate to",
+    "contactForm": "Contact form",
+    "switchToLight": "Switch to light mode",
+    "switchToDark": "Switch to dark mode",
+    "changeLanguage": "Change language",
+    "toggleContact": "Toggle contact menu",
+    "productLabel": "Product"
+  },
+  "floatingActions": {
+    "whatsapp": "Chat on WhatsApp",
+    "email": "Send an email",
+    "phone": "Call now"
   },
   "servicesPages": {
-    "overview": {
-      "meta": {
-        "title": "Services | Lecabe - Complete Technology Solutions",
-        "description": "Discover our technology services: custom software development, cloud solutions, UX/UI design and artificial intelligence."
-      },
-      "hero": {
-        "title": "Complete Technology Services",
-        "subtitle": "We transform your challenges into high-impact digital solutions",
-        "cta": "Talk to a Specialist"
-      },
-      "subtitle": "Explore Our Services",
-      "description": "We offer a complete suite of technology services to accelerate your digital business",
-      "viewService": "Explore Service"
-    },
     "software": {
       "meta": {
-        "title": "Software Development | Lecabe",
-        "description": "We develop custom web and mobile applications with the best technologies in the market. Tailored solutions for your business."
+        "title": "Custom Automation | Lecabe",
+        "description": "We build tailored automations to eliminate manual processes and accelerate your operations."
       },
       "hero": {
-        "title": "Custom Software Development",
-        "subtitle": "We transform your ideas into robust and scalable digital solutions",
-        "cta": "Request Quote"
+        "title": "Eliminate manual processes with custom automation",
+        "subtitle": "We transform repetitive workflows into automated systems that save time, reduce errors and free your team to focus on what truly matters.",
+        "cta": "Schedule a free assessment",
+        "visualMetrics": ["Custom-built", "Integrations", "Zero errors", "Fast ROI"]
+      },
+      "metrics": {
+        "title": "Results from our automations",
+        "subtitle": "Real impact on our clients' operations",
+        "items": [
+          { "value": "30+", "label": "Automations delivered" },
+          { "value": "15h+", "label": "Average weekly savings" },
+          { "value": "99.5%", "label": "Automation uptime" },
+          { "value": "0", "label": "Manual errors" }
+        ]
       },
       "overview": {
-        "title": "Tailored Software for Your Business",
-        "content": "We develop web and mobile applications focused on performance, scalability and user experience. Our team masters the most modern technologies in the market to deliver solutions that truly make a difference."
+        "title": "Automation that adapts to your business",
+        "content": "Your company has unique processes — and deserves unique solutions. We don't use generic tools. We analyze your workflows, identify what can be automated and build systems that fit perfectly into your operations. From invoicing to onboarding, from reports to approvals: if it's manual and repetitive, we automate it."
       },
       "features": {
-        "title": "What We Offer",
+        "title": "What we automate",
         "web": {
-          "title": "Web Applications",
-          "description": "SPAs, PWAs and complex dashboards with Vue.js, React and TypeScript"
+          "title": "Web Systems",
+          "description": "Complete web platforms to manage and monitor your automations from anywhere, with secure real-time access."
         },
         "mobile": {
           "title": "Mobile Apps",
-          "description": "Native iOS and Android apps or hybrid with React Native"
+          "description": "Apps for your team to track automated processes from their phones, with notifications and approvals at their fingertips."
         },
         "api": {
-          "title": "RESTful APIs",
-          "description": "Robust backends with Node.js, Python or PHP"
+          "title": "APIs & Integrations",
+          "description": "We connect your existing systems — ERPs, CRMs, spreadsheets, emails — so data flows automatically between them."
         },
         "database": {
-          "title": "Database",
-          "description": "SQL and NoSQL modeling and optimization"
+          "title": "Data Processing",
+          "description": "Automations for data collection, transformation and consolidation that used to be done manually in spreadsheets."
         },
         "integration": {
-          "title": "Integrations",
-          "description": "Connection with legacy systems and third-party APIs"
+          "title": "Automated Workflows",
+          "description": "Workflows that execute automatically: approvals, notifications, status updates and escalation."
         }
       },
       "process": {
-        "title": "Our Development Process",
+        "title": "Our automation process",
         "discovery": {
-          "title": "Discovery",
-          "description": "We deeply understand your business, users and goals"
+          "title": "Process Assessment",
+          "description": "We map your current workflows, identify bottlenecks and calculate the time and cost that automation can save."
         },
         "design": {
-          "title": "Design",
-          "description": "We create interactive prototypes to validate the solution"
+          "title": "Solution Architecture",
+          "description": "We design the ideal automation: which systems to connect, what rules to apply and how the team will interact with the new workflow."
         },
         "development": {
-          "title": "Development",
-          "description": "We build with clean code, tests and documentation"
+          "title": "Development & Testing",
+          "description": "We build the solution with frequent check-ins. You follow every step and test before going to production."
         },
         "testing": {
-          "title": "Testing",
-          "description": "Rigorous QA across multiple devices and scenarios"
+          "title": "Real-World Validation",
+          "description": "We test the automation with real data from your business to ensure it works in all scenarios."
         },
         "launch": {
-          "title": "Launch",
-          "description": "Secure deployment with monitoring and continuous support"
+          "title": "Activation & Monitoring",
+          "description": "We deploy to production, train your team and monitor the first cycles to ensure stability."
         }
       },
       "techStack": {
-        "title": "Technologies Used",
-        "description": "We work with the most modern and reliable technologies in the market"
+        "title": "Technologies we use",
+        "description": "Modern tools for robust and scalable automations"
       },
       "packages": {
-        "title": "Work Models",
+        "title": "Automation Plans",
         "mvp": {
-          "name": "MVP",
-          "description": "Ideal to validate your idea quickly",
+          "name": "Single Automation",
+          "description": "Ideal for automating one specific workflow and validating results quickly.",
           "features": [
-            "Up to 5 main screens/features",
-            "Responsive design",
-            "Integration with up to 2 APIs",
-            "Production deployment",
-            "1 month of support"
+            "1 automated process",
+            "Integration with up to 3 systems",
+            "Monitoring dashboard",
+            "30 days of post-delivery support",
+            "Complete documentation",
+            "Team training"
           ]
         },
         "complete": {
-          "name": "Complete Project",
-          "description": "Robust and scalable solution for your business",
+          "name": "Full Automation",
+          "description": "For companies that want to automate multiple processes in an integrated way.",
           "features": [
-            "Unlimited features",
-            "Complete design system",
-            "Complex integrations",
-            "Automated tests",
-            "CI/CD configured",
-            "3 months of support"
-          ]
-        },
-        "squad": {
-          "name": "Dedicated Squad",
-          "description": "Exclusive team working on your project",
-          "features": [
-            "Full dedicated team",
-            "Weekly/biweekly sprints",
-            "Planning participation",
-            "Continuous evolution",
-            "Unlimited support"
+            "Up to 5 automated processes",
+            "Unlimited integrations",
+            "Centralized control panel",
+            "90 days of dedicated support",
+            "Performance reports",
+            "Complete training + documentation",
+            "Automation monitoring",
+            "Adjustments and enhancements included"
           ]
         }
       },
       "faq": {
-        "title": "Frequently Asked Questions",
+        "title": "Automation FAQs",
         "q1": {
-          "question": "How long does it take to develop software?",
-          "answer": "An MVP can be developed in 4-8 weeks. More complex projects range from 3-6 months depending on scope. We work with agile methodology, so you see results from the first weeks."
+          "question": "How long does it take to automate a process?",
+          "answer": "Simple automations take 2 to 4 weeks. More complex projects with multiple integrations take 2 to 3 months. We provide a detailed timeline after the assessment."
         },
         "q2": {
-          "question": "Do you do both web and mobile?",
-          "answer": "Yes! We develop web applications (Vue.js, React), native mobile (iOS/Android) and hybrid (React Native). We can create multi-platform solutions or focus on a specific platform."
+          "question": "Does it work with the systems I already use?",
+          "answer": "Yes. We integrate with any system that has an API or data export capability: ERPs, CRMs, Google Sheets, legacy systems, emails and more."
         },
         "q3": {
-          "question": "How does the change process work during development?",
-          "answer": "We work with agile sprints, allowing continuous adjustments and improvements. Small changes are incorporated naturally. Significant scope changes are evaluated together."
+          "question": "What if my process changes later?",
+          "answer": "Our automations are designed to be flexible. We adjust rules, workflows and integrations as your business evolves, without rebuilding from scratch."
         },
         "q4": {
-          "question": "Does the source code stay with my company?",
-          "answer": "Yes, 100%! All developed code is your company's property. We deliver complete repository with documentation and maintenance instructions."
+          "question": "Do I own the code?",
+          "answer": "Yes. All developed code is 100% yours. We deliver the repository, documentation and full access to the infrastructure."
         }
       },
       "cta": {
-        "title": "Ready to Transform Your Idea into Reality?",
-        "description": "Let's talk about your project and find the best solution",
-        "button": "Request Quote"
+        "title": "Ready to eliminate manual processes?",
+        "description": "Schedule a free assessment. We'll map your workflows and show you what can be automated.",
+        "button": "Schedule a free assessment",
+        "whatsappMessage": "Hi! I'm interested in custom automation. I'd like to schedule a free assessment."
       }
     },
     "cloud": {
       "meta": {
-        "title": "Cloud Solutions | Lecabe",
-        "description": "Migration, architecture and cloud infrastructure management. AWS, Azure and Google Cloud with security and scalability."
+        "title": "Infrastructure & Integration | Lecabe",
+        "description": "We connect your systems and build cloud infrastructure for your automations to run securely and at scale."
       },
       "hero": {
-        "title": "Scalable and Secure Cloud Solutions",
-        "subtitle": "Optimize costs and performance with modern cloud infrastructure",
-        "cta": "Assess My Infrastructure"
+        "title": "Your systems connected in an infrastructure that scales",
+        "subtitle": "We integrate ERPs, CRMs, APIs and everyday tools so your data flows automatically — with security, monitoring and high availability.",
+        "cta": "Request a free mapping",
+        "visualMetrics": ["AWS", "Integrations", "Docker", "n8n"]
+      },
+      "metrics": {
+        "title": "Infrastructure that connects everything",
+        "subtitle": "Integrated systems running securely and at scale",
+        "items": [
+          { "value": "20+", "label": "Integrations implemented" },
+          { "value": "30%", "label": "Average cost reduction" },
+          { "value": "24/7", "label": "Monitoring" },
+          { "value": "99.5%", "label": "Availability" }
+        ]
       },
       "overview": {
-        "title": "High Performance Cloud Infrastructure",
-        "content": "We help companies migrate, optimize and manage their cloud applications. Expertise in AWS, Azure and Google Cloud focused on security, availability and cost reduction."
+        "title": "Integration and infrastructure for automations",
+        "content": "Many companies operate with systems that don't talk to each other: the ERP doesn't connect with the CRM, reports are built manually and data is trapped in spreadsheets. We fix that by connecting your systems and hosting your automations in the cloud simply and reliably."
       },
       "features": {
-        "title": "Our Cloud Services",
+        "title": "What we deliver",
         "infrastructure": {
-          "title": "Cloud Architecture",
-          "description": "Design of scalable and resilient infrastructure"
-        },
-        "migration": {
-          "title": "Cloud Migration",
-          "description": "Safe transition from on-premise systems to cloud"
-        },
-        "security": {
-          "title": "Security",
-          "description": "Implementation of cloud security best practices"
+          "title": "Hosting & Deploy",
+          "description": "We set up and maintain your cloud environment (AWS, Vercel) so your automations run with stability and controlled costs."
         },
         "monitoring": {
           "title": "Monitoring",
-          "description": "Complete observability with intelligent alerts"
+          "description": "Automatic alerts and simple dashboards to track the health of your automations and integrations."
         },
         "automation": {
-          "title": "Automation",
-          "description": "CI/CD and infrastructure as code (IaC)"
+          "title": "System Integrations",
+          "description": "We connect APIs and systems so data flows between your tools without manual intervention — ERPs, CRMs, spreadsheets and more."
+        },
+        "security": {
+          "title": "Basic Security",
+          "description": "Security best practices: backups, access control and protection of your clients' data."
         }
       },
       "process": {
-        "title": "Cloud Implementation Process",
+        "title": "How we integrate your systems",
         "assessment": {
-          "title": "Assessment",
-          "description": "Analysis of current infrastructure and needs"
+          "title": "System Mapping",
+          "description": "We audit your current infrastructure, identify siloed systems and integration opportunities."
         },
         "architecture": {
-          "title": "Architecture",
-          "description": "Optimized cloud solution design"
+          "title": "Integration Architecture",
+          "description": "We design how your systems will connect: APIs, queues, webhooks and data flows."
         },
         "migration": {
-          "title": "Migration",
-          "description": "Gradual transition with zero downtime"
+          "title": "Implementation & Migration",
+          "description": "We execute integrations and migrations incrementally, with zero downtime for your operations."
         },
         "optimization": {
           "title": "Optimization",
-          "description": "Fine-tuning of performance and costs"
+          "description": "We fine-tune performance, costs and scalability so everything runs efficiently."
         },
         "support": {
-          "title": "Support",
-          "description": "Continuous monitoring and management"
+          "title": "Monitoring & Support",
+          "description": "We monitor integration health 24/7 and act proactively before any issues arise."
         }
       },
       "techStack": {
-        "title": "Platforms and Tools",
-        "description": "Expertise in major cloud computing platforms"
+        "title": "Infrastructure technologies",
+        "description": "Tools we use to host and integrate systems"
       },
       "packages": {
-        "title": "Cloud Plans",
+        "title": "Infrastructure Plans",
         "migration": {
-          "name": "Cloud Migration",
-          "description": "Single project for cloud migration",
+          "name": "Single Integration",
+          "description": "Connect specific systems or migrate to the cloud.",
           "features": [
-            "Complete infrastructure assessment",
-            "Detailed migration plan",
-            "Migration execution",
-            "Testing and validation",
-            "30 days post-migration support"
+            "Up to 3 system integrations",
+            "Cloud environment setup",
+            "Assisted data migration",
+            "Connectivity testing",
+            "Technical documentation",
+            "30 days of support"
           ]
         },
         "managed": {
-          "name": "Managed Cloud",
-          "description": "Complete management of your cloud infrastructure",
+          "name": "Managed Infrastructure",
+          "description": "We take care of your infrastructure so you can focus on your business.",
           "features": [
-            "24/7 monitoring",
-            "Security updates",
-            "Monthly cost optimization",
-            "Automated backup",
+            "Ongoing integrations",
+            "Monitoring and alerts",
+            "Automatic backup",
             "Priority support",
-            "Monthly reports"
-          ]
-        },
-        "enterprise": {
-          "name": "Enterprise Cloud",
-          "description": "Complete solution for large volumes",
-          "features": [
-            "Multi-cloud architecture",
-            "Custom SLA",
-            "Dedicated team",
-            "Disaster recovery",
-            "Advanced compliance",
-            "24/7 support"
+            "Monthly reports",
+            "99.5% SLA guaranteed"
           ]
         }
       },
       "faq": {
-        "title": "Frequently Asked Questions",
+        "title": "Infrastructure FAQs",
         "q1": {
-          "question": "How much can I save by migrating to cloud?",
-          "answer": "Companies generally save 20-40% in infrastructure costs after optimized migration. Besides direct savings, there are gains in scalability, availability and team productivity."
+          "question": "Which cloud provider do you use?",
+          "answer": "We mainly work with AWS and Vercel. We recommend the best fit for each case, considering cost and project requirements."
         },
         "q2": {
-          "question": "Does migration cause service interruption?",
-          "answer": "No! We plan migrations with zero downtime. We use strategies like blue-green deployment and gradual migration to ensure your services remain available."
+          "question": "Will the migration stop my operations?",
+          "answer": "No. We perform incremental migrations with zero downtime. Your old system continues running throughout the transition, with guaranteed rollback in case of any issues."
         },
         "q3": {
-          "question": "Which cloud provider do you recommend?",
-          "answer": "It depends on your needs. AWS is the most complete, Azure integrates well with Microsoft, Google Cloud is strong in data and ML. We evaluate your case to recommend the best option."
+          "question": "How much can I save by migrating to the cloud?",
+          "answer": "On average, our clients reduce infrastructure costs by 30% to 50% through resource optimization, auto-scaling and elimination of idle servers."
         },
         "q4": {
-          "question": "Do you manage the cloud after migration?",
-          "answer": "Yes! We offer managed cloud service with monitoring, continuous optimization, security updates and support. You focus on business, we take care of infrastructure."
+          "question": "Do you integrate with legacy systems?",
+          "answer": "Yes. We have experience with legacy systems, on-premise ERPs, proprietary databases and tools that don't have modern APIs. We create custom integration layers."
         }
       },
       "cta": {
-        "title": "Ready to Modernize Your Infrastructure?",
-        "description": "Get a free assessment of your current infrastructure",
-        "button": "Request Assessment"
+        "title": "Your systems need to communicate better?",
+        "description": "Let's map your integrations and build a plan to connect your entire operation.",
+        "button": "Request a free mapping",
+        "whatsappMessage": "Hi! I'm interested in cloud integration and infrastructure. I'd like to request a free mapping."
       }
     },
     "ux": {
       "meta": {
-        "title": "UX/UI Design | Lecabe",
-        "description": "Design of intuitive interfaces and delightful experiences. Research, prototypes and testing with real users."
+        "title": "Interfaces & Dashboards | Lecabe",
+        "description": "We create intuitive interfaces and control panels so your team can operate automations with ease."
       },
       "hero": {
-        "title": "UX/UI Design that Delights Users",
-        "subtitle": "We create intuitive interfaces based on research and real data",
-        "cta": "Assess My Product"
+        "title": "Interfaces your team will actually use",
+        "subtitle": "We design dashboards, control panels and operation interfaces that make your automations visible, accessible and easy to manage.",
+        "cta": "Request a UX audit",
+        "visualMetrics": ["Dashboards", "Panels", "WCAG AA", "User-tested"]
+      },
+      "metrics": {
+        "title": "Interfaces your team actually adopts",
+        "subtitle": "Proven results in usability and tool adoption",
+        "items": [
+          { "value": "80%", "label": "Increase in adoption" },
+          { "value": "50%", "label": "Fewer operational errors" },
+          { "value": "20h+", "label": "Testing per project" },
+          { "value": "WCAG AA", "label": "Accessibility" }
+        ]
       },
       "overview": {
-        "title": "Digital Experiences that Convert",
-        "content": "We combine user research, design thinking and iterative prototyping to create interfaces your users love to use. Our process is based on data, testing and continuous validation."
+        "title": "Design focused on operations",
+        "content": "An automation only generates value if people can use it. We design interfaces built for those who operate day to day: dashboards with the right metrics, panels that facilitate decision-making and tools that integrate naturally into the team's routine. No unnecessary complexity."
       },
       "features": {
-        "title": "Our UX/UI Services",
+        "title": "What we design",
         "research": {
-          "title": "UX Research",
-          "description": "Interviews, usability testing and behavioral analysis"
+          "title": "User Research",
+          "description": "We interview and observe your team to understand how they work, where they get stuck and what they need to see to make better decisions."
         },
         "prototyping": {
-          "title": "Prototyping",
-          "description": "High-fidelity wireframes and interactive prototypes"
+          "title": "Rapid Prototyping",
+          "description": "We create interactive prototypes that your team can test before a single line of code is written."
         },
         "testing": {
-          "title": "User Testing",
-          "description": "Validation with real users before development"
+          "title": "Usability Testing",
+          "description": "We validate every interface with real users to ensure it's intuitive and efficient in practice."
         },
-        "designSystem": {
+        "design-system": {
           "title": "Design System",
-          "description": "Documented reusable component library"
+          "description": "We build a consistent component system that ensures visual quality and development speed."
         },
         "accessibility": {
           "title": "Accessibility",
-          "description": "Inclusive interfaces following WCAG 2.1"
+          "description": "Interfaces accessible to all user profiles, following WCAG standards."
         }
       },
       "process": {
-        "title": "Design Process",
+        "title": "Our design process",
         "research": {
-          "title": "Research",
-          "description": "User research and market analysis"
+          "title": "Understanding",
+          "description": "We map who will use it, what they need to see and what decisions the interface should facilitate."
         },
         "wireframe": {
-          "title": "Wireframes",
-          "description": "Structuring flows and information architecture"
+          "title": "Structure",
+          "description": "We define the information architecture and navigation flows before visual design."
         },
         "prototype": {
-          "title": "Prototype",
-          "description": "Visual design and high-fidelity interactions"
+          "title": "Prototyping",
+          "description": "We create navigable prototypes for validation with stakeholders and end users."
         },
         "testing": {
-          "title": "Testing",
-          "description": "Validation with real users and iteration"
+          "title": "Validation",
+          "description": "We test with real users and iterate based on collected feedback."
         },
         "handoff": {
-          "title": "Handoff",
-          "description": "Organized delivery for development"
+          "title": "Dev Handoff",
+          "description": "We deliver organized files with detailed specifications for implementation."
         }
       },
       "techStack": {
-        "title": "Design Tools",
-        "description": "We use the best tools for design and prototyping"
+        "title": "Design tools",
+        "description": "Tools we use to prototype and validate interfaces"
       },
       "packages": {
-        "title": "Design Packages",
+        "title": "Design Plans",
         "audit": {
           "name": "UX Audit",
-          "description": "Complete analysis of current experience",
+          "description": "Complete evaluation of current interfaces with improvement recommendations.",
           "features": [
             "Complete heuristic analysis",
-            "Usability testing",
-            "Report with recommendations",
-            "Prioritized improvement map",
-            "Results presentation"
+            "Testing with 5 real users",
+            "Prioritized report",
+            "Improvement recommendations",
+            "Competitor benchmarking",
+            "Executive presentation"
           ]
         },
         "redesign": {
-          "name": "Complete Redesign",
-          "description": "Complete interface reformulation",
+          "name": "Interface Design",
+          "description": "Complete dashboard and interface design for your automations.",
           "features": [
             "User research",
-            "Wireframes of all flows",
-            "Complete design system",
-            "Interactive prototype",
+            "Wireframes and prototypes",
+            "Complete visual design",
+            "Documented design system",
             "Usability testing",
-            "Dev handoff"
-          ]
-        },
-        "continuous": {
-          "name": "Continuous Design",
-          "description": "Designer dedicated to your product",
-          "features": [
-            "Monthly availability",
-            "Iterative improvements",
-            "A/B tests",
-            "Metrics analysis",
-            "Evolving design system",
-            "Dev team support"
+            "Development handoff",
+            "2 revision rounds",
+            "Implementation follow-up"
           ]
         }
       },
       "faq": {
-        "title": "Frequently Asked Questions",
+        "title": "Design FAQs",
         "q1": {
-          "question": "Why invest in UX/UI?",
-          "answer": "Good design increases conversions by 200% and reduces support costs by 50%. Satisfied users become brand promoters and return more often. It's investment, not cost."
+          "question": "Do I need design if I already have a working system?",
+          "answer": "If your team complains about the interface, takes long to find information or makes operational errors, yes. Good design reduces errors, speeds up work and increases tool adoption."
         },
         "q2": {
-          "question": "How long does a design project take?",
-          "answer": "A UX Audit takes 1-2 weeks. A complete redesign takes 4-8 weeks depending on complexity. We work with design sprints for incremental deliveries."
+          "question": "How long does an interface project take?",
+          "answer": "An audit takes 2 to 3 weeks. A complete interface project with research and prototyping takes 4 to 8 weeks depending on complexity."
         },
         "q3": {
-          "question": "Do you do tests with real users?",
-          "answer": "Yes! We include usability testing in all projects. We recruit participants from your target audience and conduct moderated sessions to validate design before development."
+          "question": "Do you test with real users?",
+          "answer": "Always. We test every interface with the real users who will operate it daily. It's the best way to ensure it works in practice, not just in Figma."
         },
         "q4": {
-          "question": "What is a Design System and do I need one?",
-          "answer": "Design System is a library of reusable components that accelerates development and ensures consistency. We recommend it for medium/large products or with multiple platforms."
+          "question": "Does the design work on mobile too?",
+          "answer": "Yes. We design responsive interfaces that work on desktop, tablet and mobile. For field operations, we also develop native mobile apps."
         }
       },
       "cta": {
-        "title": "Let's Improve Your Users' Experience?",
-        "description": "Request a free UX Audit of your product",
-        "button": "Request UX Audit"
+        "title": "Your team deserves interfaces that work",
+        "description": "Let's evaluate your current tools and design interfaces your team will love using.",
+        "button": "Request a UX audit",
+        "whatsappMessage": "Hi! I'm interested in interface design and dashboards. I'd like to request a UX audit."
       }
     },
     "ai": {
       "meta": {
-        "title": "Artificial Intelligence | Lecabe",
-        "description": "Custom AI and Machine Learning solutions. Chatbots, automation, predictive analysis and computer vision."
+        "title": "AI Consulting | Lecabe",
+        "description": "We analyze your operations and implement artificial intelligence where it truly makes a difference."
       },
       "hero": {
-        "title": "Artificial Intelligence that Drives Results",
-        "subtitle": "Automate processes and extract insights with cutting-edge AI",
-        "cta": "Explore Use Cases"
+        "title": "Artificial intelligence applied to your business",
+        "subtitle": "We don't sell AI as a trend. We analyze your operations, identify where artificial intelligence generates real impact and implement solutions that demonstrably reduce costs and increase efficiency.",
+        "cta": "Schedule AI consulting",
+        "visualMetrics": ["OpenAI", "LangChain", "Chatbots", "AI Automation"]
+      },
+      "metrics": {
+        "title": "AI that generates real returns",
+        "subtitle": "Proven results from AI consulting and implementation",
+        "items": [
+          { "value": "30%", "label": "Average cost reduction" },
+          { "value": "10+", "label": "AI implementations delivered" },
+          { "value": "95%+", "label": "Model accuracy" },
+          { "value": "2x", "label": "Average return on investment" }
+        ]
       },
       "overview": {
-        "title": "AI Applied to Your Business",
-        "content": "We implement artificial intelligence and machine learning solutions that generate real value. From intelligent chatbots to predictive analysis, we help your company leverage the power of AI."
+        "title": "AI that solves real problems",
+        "content": "Many companies want to use AI but don't know where to start — or have tried and didn't see results. Our consulting starts from your business problem, not the technology. We identify where AI makes sense, where simple automation works, and where it's not worth the investment. We only implement what generates returns."
       },
       "features": {
-        "title": "AI Solutions",
-        "mlModels": {
-          "title": "ML Models",
-          "description": "Custom models for prediction and classification"
+        "title": "What we do with AI",
+        "automation": {
+          "title": "AI-Powered Automation",
+          "description": "We use AI to automate decisions and processes that previously required manual analysis — classification, triage, data extraction and more."
         },
         "nlp": {
-          "title": "Language Processing",
-          "description": "Sentiment analysis, data extraction and summarization"
-        },
-        "computerVision": {
-          "title": "Computer Vision",
-          "description": "Image recognition and visual analysis"
-        },
-        "automation": {
-          "title": "Intelligent Automation",
-          "description": "RPA with AI for complex processes"
+          "title": "Text Processing",
+          "description": "Automated analysis of documents, emails and feedback. We extract and organize information from text using language models."
         },
         "chatbots": {
-          "title": "Advanced Chatbots",
-          "description": "Conversational assistants with LLMs"
+          "title": "Chatbots & Assistants",
+          "description": "Smart chatbots that serve customers, answer questions and perform simple tasks — integrated with WhatsApp, websites or internal systems."
         }
       },
       "process": {
-        "title": "AI Implementation Process",
+        "title": "Our AI consulting process",
         "discovery": {
-          "title": "Discovery",
-          "description": "Identification of use cases and feasibility"
+          "title": "Opportunity Assessment",
+          "description": "We analyze your operations to identify where AI can generate the most value and prioritize by business impact."
         },
         "data": {
-          "title": "Data Preparation",
-          "description": "Data collection, cleaning and organization"
+          "title": "Data Evaluation",
+          "description": "We verify if your data is sufficient and high-quality enough to train models. If not, we help structure it."
         },
         "modeling": {
-          "title": "Modeling",
-          "description": "Model training and optimization"
+          "title": "Proof of Concept",
+          "description": "We develop a quick MVP to validate technical feasibility and return potential before a larger investment."
         },
         "validation": {
-          "title": "Validation",
-          "description": "Rigorous testing and fine-tuning"
+          "title": "Implementation",
+          "description": "We scale the validated solution to production, with performance monitoring and automated retraining."
         },
         "deploy": {
-          "title": "Deploy",
-          "description": "Production implementation with monitoring"
+          "title": "Continuous Optimization",
+          "description": "We track results, adjust models and expand to new use cases as they emerge."
         }
       },
       "techStack": {
-        "title": "AI Stack",
-        "description": "Cutting-edge artificial intelligence technologies"
+        "title": "AI technologies",
+        "description": "Tools we use to implement AI solutions"
       },
       "packages": {
-        "title": "AI Packages",
+        "title": "AI Consulting Plans",
         "poc": {
-          "name": "Proof of Concept",
-          "description": "Validate the feasibility of your AI idea",
+          "name": "Assessment & POC",
+          "description": "Complete evaluation + proof of concept to validate an AI opportunity.",
           "features": [
-            "Feasibility analysis",
-            "Pilot dataset",
-            "Baseline model",
-            "Performance metrics",
-            "Executive report",
-            "Evolution roadmap"
+            "AI opportunity assessment",
+            "Data quality evaluation",
+            "1 proof of concept implemented",
+            "Report with estimated ROI",
+            "Next steps recommendations",
+            "Executive presentation"
           ]
         },
         "implementation": {
-          "name": "Complete Implementation",
-          "description": "Production-ready AI solution",
+          "name": "Implementation",
+          "description": "Complete development of a production-ready AI solution.",
           "features": [
-            "Optimized model",
-            "Data pipeline",
-            "Integration API",
-            "Management interface",
+            "Trained and optimized model",
+            "Production inference API",
+            "Integration with your systems",
             "Performance monitoring",
-            "3 months of support"
-          ]
-        },
-        "optimization": {
-          "name": "Continuous Optimization",
-          "description": "Constant model evolution",
-          "features": [
-            "Monthly retraining",
-            "Model A/B testing",
-            "Feature expansion",
-            "Drift analysis",
-            "Performance reports",
-            "Dedicated support"
+            "Results dashboard",
+            "90 days of follow-up",
+            "Automated retraining",
+            "Documentation and training"
           ]
         }
       },
       "faq": {
-        "title": "Frequently Asked Questions",
+        "title": "AI FAQs",
         "q1": {
-          "question": "Does my company have enough data for AI?",
-          "answer": "It depends on the use case. Some models work with little data (few-shot learning), others need larger volumes. We do an initial assessment to determine feasibility."
+          "question": "Does my company need a lot of data to use AI?",
+          "answer": "It depends on the case. Some models need large volumes of data, but there are AI solutions that work with little data or use pre-trained models. In the initial consultation, we evaluate feasibility with the data you have."
         },
         "q2": {
-          "question": "How much does it cost to implement an AI solution?",
-          "answer": "A PoC starts at accessible values for validation. Complete implementations vary according to complexity. ROI is generally achieved in 6-12 months with process automation."
+          "question": "Is AI too expensive for my company?",
+          "answer": "Not necessarily. The initial assessment identifies high-impact, low-cost opportunities. Many solutions use existing AI APIs without training models from scratch. Investment always starts from a clear ROI."
         },
         "q3": {
-          "question": "How to ensure the model remains accurate?",
-          "answer": "We implement continuous performance monitoring and periodic retraining. We automatically detect drift (degradation) and adjust the model as needed."
+          "question": "How do I know if AI will work for my case?",
+          "answer": "That's exactly what the POC (proof of concept) phase is for. We test technical feasibility with your real data before any larger investment. If it doesn't work, you don't spend more."
         },
         "q4": {
-          "question": "Do you use ready-made or custom models?",
-          "answer": "It depends on the case. For chatbots we use LLMs like GPT-4 with fine-tuning. For specific cases, we train custom models. We always seek the best cost-benefit."
+          "question": "What's the difference between automation and AI?",
+          "answer": "Automation follows fixed rules (if X, then Y). AI learns patterns and makes decisions based on data. Often the best solution combines both. In consulting, we define what makes most sense for each process."
         }
       },
       "cta": {
-        "title": "Ready to Implement AI in Your Business?",
-        "description": "Let's identify high-impact use cases for your company",
-        "button": "Schedule Consultation"
+        "title": "Discover where AI makes sense in your business",
+        "description": "Schedule a free consultation. We'll analyze your operations and show the AI opportunities with the highest return potential.",
+        "button": "Schedule an AI consultation",
+        "whatsappMessage": "Hi! I'm interested in AI consulting. I'd like to schedule a conversation about applying artificial intelligence to my business."
       }
     }
   },
   "companyPages": {
     "overview": {
-      "meta": {
-        "title": "About Lecabe | Our Story and Values",
-        "description": "Learn about Lecabe, our history, values and how we transform challenges into innovative technology solutions."
-      },
       "hero": {
-        "title": "Transforming Ideas into Digital Solutions",
-        "subtitle": "We are a software house specialized in creating unique digital products that accelerate businesses"
+        "title": "Intelligent automation for companies that want to grow",
+        "subtitle": "We are Lecabe — a technology company specialized in turning manual processes into automated operations, with or without artificial intelligence."
       },
       "stats": {
         "founded": {
@@ -898,251 +951,229 @@
           "label": "Founded"
         },
         "team": {
-          "value": "10+",
-          "label": "Professionals"
+          "value": "8+",
+          "label": "Specialists"
         },
         "projects": {
-          "value": "15+",
-          "label": "Delivered Projects"
+          "value": "30+",
+          "label": "Automations delivered"
         },
         "satisfaction": {
           "value": "100%",
-          "label": "Client Satisfaction"
+          "label": "Satisfaction"
         }
       },
       "mission": {
         "title": "Our Mission",
-        "content": "Transform business challenges into innovative technology solutions that generate real results and accelerate digital growth."
+        "content": "To eliminate operational complexity for companies through intelligent automation, allowing teams to focus on strategic activities while technology handles the operational work."
       },
       "vision": {
         "title": "Our Vision",
-        "content": "To be recognized as the preferred partner for companies seeking custom technological excellence in digital transformation."
+        "content": "To be the reference in process automation and AI consulting for companies seeking operational efficiency without technological complexity."
       },
       "cta": {
-        "title": "Ready to Work with Us?",
-        "description": "Join our team and help build the future of technology",
-        "button": "View Open Positions"
+        "title": "Join the team",
+        "description": "We're always looking for people who want to solve real problems with technology.",
+        "button": "View open positions"
       }
     },
     "about": {
-      "meta": {
-        "title": "About Us | Lecabe's History and Values",
-        "description": "Learn our story, our values and the principles that guide our work in delivering innovative technology solutions."
-      },
       "hero": {
-        "title": "Our Story",
-        "subtitle": "Learn how Lecabe came to be and the values that guide us"
+        "title": "About Lecabe",
+        "subtitle": "From software developers to automation specialists: our journey is guided by results."
       },
       "story": {
-        "title": "How We Started",
-        "content": "Lecabe was born from the vision of creating a software company that truly understands its clients' needs. Founded in 2019, we started with a small team of passionate developers who believed technology should be accessible and truly useful.\n\nOver the years, we have grown organically, always prioritizing quality over quantity. Each project taught us something new, each client helped us improve our process. Today, we are proud to say we maintain the same values we started with: technical excellence, transparency and genuine commitment to our clients' success.\n\nOur goal has always been clear: to be more than just a software supplier. We want to be strategic partners, contributing real value and helping our clients achieve their goals. And that's exactly what we do, project after project."
+        "title": "Our Story",
+        "content": "Lecabe was born in 2019 from the frustration of seeing companies spend hours on processes that could be automated in minutes. We started as a software development company and, over the years, realized that the greatest value we delivered wasn't code — it was time back for our clients.\n\nToday we are specialists in process automation and AI consulting. We help companies of all sizes identify what can be automated, implement tailored solutions and reap measurable results.\n\nOur differentiator is simple: we don't sell technology for the sake of it. We start from the business problem, understand the operation and only then propose the right solution — whether it's a simple integration or an artificial intelligence model."
       },
       "values": {
         "title": "Our Values",
         "items": {
           "excellence": {
-            "title": "Technical Excellence",
-            "description": "We pursue mastery in every line of code, every design and every solution we deliver"
+            "title": "Results first",
+            "description": "Every solution we deliver must generate measurable impact. If it doesn't save time, money or reduce errors, we don't do it."
           },
           "transparency": {
-            "title": "Transparency",
-            "description": "Clear and honest communication at every stage, without surprises or hidden information"
+            "title": "Total transparency",
+            "description": "No unnecessary technical jargon. We communicate clearly what we're doing, why and how much it costs."
           },
           "partnership": {
-            "title": "True Partnership",
-            "description": "Your success is our success. We work as an extension of your team"
+            "title": "True partnership",
+            "description": "We work as an extension of your team. Your success is our success."
           },
           "innovation": {
-            "title": "Continuous Innovation",
-            "description": "Always up to date with the latest technologies and best market practices"
+            "title": "Intentional simplicity",
+            "description": "The best solution is the simplest one that solves the problem. We avoid over-engineering."
           },
           "impact": {
-            "title": "Real Impact",
-            "description": "Solutions that generate measurable results and make a difference in your business"
+            "title": "Real impact",
+            "description": "We focus on automations that make a difference in daily operations, not showcase projects."
           },
           "quality": {
-            "title": "Quality Without Negotiation",
-            "description": "We never compromise quality to meet unrealistic deadlines"
+            "title": "Continuous evolution",
+            "description": "We keep up with new technologies to always bring the best solution for each problem."
           }
         }
       },
       "principles": {
-        "title": "Our Work Principles",
+        "title": "How We Work",
         "items": {
           "understanding": {
-            "title": "1. Deep Understanding",
-            "description": "Before writing any code, we invest time in truly understanding your business, your users and your challenges. This is what allows us to deliver solutions that really solve."
+            "title": "Understand before proposing",
+            "description": "We invest time understanding your real operations before suggesting any technical solution."
           },
           "collaboration": {
-            "title": "2. Active Collaboration",
-            "description": "We work closely with your team, maintaining open and constant communication. You are not just a client, you are part of the process."
+            "title": "Close collaboration",
+            "description": "Frequent check-ins and open communication at every project stage."
           },
           "delivery": {
-            "title": "3. Progressive Delivery",
-            "description": "We work with agile methodology, delivering value from the first weeks. This allows you to see the project evolve and make adjustments along the way."
+            "title": "Impactful delivery",
+            "description": "Every delivery solves a real problem and generates immediate value for your operations."
           },
           "support": {
-            "title": "4. Continuous Support",
-            "description": "Our commitment doesn't end with delivery. We are here for updates, improvements and to help your software evolve with your business."
+            "title": "Support that evolves",
+            "description": "We don't abandon the project after delivery. We monitor, adjust and evolve alongside you."
           }
         }
       }
     },
     "team": {
-      "meta": {
-        "title": "Our Team | Meet Who Makes It Happen",
-        "description": "Get to know the talented people who make up Lecabe's team and help deliver innovative technology solutions."
-      },
       "hero": {
         "title": "Our Team",
-        "subtitle": "Meet the people who make Lecabe happen every day"
+        "subtitle": "Developers, analysts and consultants dedicated to solving your automation challenges."
       },
       "founders": {
         "title": "Founders",
-        "description": "The people who started Lecabe's story"
+        "description": "The people behind Lecabe"
       },
       "leadership": {
         "title": "Leadership",
-        "description": "Strategy and vision for the future"
+        "description": "Strategic direction and project management"
       },
       "developers": {
-        "title": "Developers",
-        "description": "The masterminds behind our solutions"
+        "title": "Development",
+        "description": "Full-stack engineers and developers"
       },
       "designers": {
-        "title": "Designers",
-        "description": "Creating delightful experiences"
+        "title": "Design & UX",
+        "description": "Intuitive interfaces and experiences"
+      },
+      "comingSoon": {
+        "title": "Coming soon",
+        "description": "We're preparing special content so you can get to know our team better."
       },
       "joinTeam": {
-        "title": "Join Our Team",
-        "description": "We are always looking for talented people who want to make a difference",
-        "button": "View Open Positions"
+        "title": "Want to join?",
+        "description": "We're always looking for people who share our passion for solving problems with technology.",
+        "button": "View open positions"
       }
     },
     "culture": {
-      "meta": {
-        "title": "Work Culture | Environment and Benefits at Lecabe",
-        "description": "Learn about Lecabe's culture, our work environment, our benefits and what it's like to be part of our team."
-      },
       "hero": {
         "title": "Our Culture",
-        "subtitle": "An environment where people grow and thrive"
+        "subtitle": "An environment where solving real problems is the main motivation."
       },
       "intro": {
-        "title": "Work Environment",
-        "content": "At Lecabe, we believe that talented people thrive in an environment of trust, autonomy and continuous learning. We cultivate a culture where everyone has a voice, where mistakes are learning opportunities and where technical excellence goes hand in hand with empathy and collaboration.\n\nWe are not a perfect company, but we constantly work to become a better place to work. We hear our team, we adjust processes and we always seek to balance productivity with quality of life."
+        "title": "What it's like to work at Lecabe",
+        "content": "At Lecabe, we believe that people motivated by real impact do the best work. Our environment is remote-first, collaborative and results-focused — not hours worked.\n\nWe value autonomy, continuous learning and direct communication. Everyone on the team has an active voice in decisions and visibility into the impact of their work."
       },
       "pillars": {
-        "title": "Culture Pillars",
+        "title": "Our Pillars",
         "items": {
           "learning": {
-            "title": "Continuous Learning",
-            "description": "We encourage and support professional development through courses, books, conferences and internal projects"
+            "title": "Continuous learning",
+            "description": "Individual budget for courses, certifications and conferences. Learning is part of the job."
           },
           "autonomy": {
-            "title": "Autonomy with Responsibility",
-            "description": "We trust your judgment and give you freedom to decide how to deliver the best results"
+            "title": "Autonomy with accountability",
+            "description": "We trust you to manage your time and deliver quality results."
           },
           "balance": {
-            "title": "Work-Life Balance",
-            "description": "Flexible hours, optional remote work and respect for your personal time"
+            "title": "Real balance",
+            "description": "Flexible hours, remote work and respect for your personal time."
           },
           "diversity": {
-            "title": "Diversity and Inclusion",
-            "description": "We value different perspectives and experiences, and we actively work to create an inclusive environment"
+            "title": "Diversity",
+            "description": "Diverse teams solve problems better. We seek people from different backgrounds and perspectives."
           },
           "transparency": {
             "title": "Transparency",
-            "description": "Open information about the company, clear decisions and space for questioning and suggesting"
+            "description": "Open numbers, shared decisions and constant feedback."
           },
           "impact": {
-            "title": "Meaningful Impact",
-            "description": "Challenging projects that make a difference and allow you to grow professionally"
+            "title": "Impact focus",
+            "description": "We measure success by the value we deliver to clients, not by lines of code."
           }
         }
       },
       "benefits": {
-        "title": "Benefits and Perks",
+        "title": "Benefits",
         "items": {
           "remote": {
-            "title": "Remote or Hybrid Work",
-            "description": "Choose the mode that works best for you and your routine"
+            "title": "100% Remote",
+            "description": "Work from wherever you want. Our team is spread across Brazil."
           },
           "equipment": {
-            "title": "Complete Equipment",
-            "description": "Latest laptop, monitor, ergonomic desk and good work setup"
+            "title": "Complete equipment",
+            "description": "Laptop, monitor, chair and everything you need to work well."
           },
           "health": {
-            "title": "Health Plan",
-            "description": "Quality health and dental plan for you and dependents"
+            "title": "Health insurance",
+            "description": "Medical and dental coverage for you and dependents."
           },
           "pto": {
-            "title": "Flexible PTO",
-            "description": "Vacation and day off policy that respects your well-being needs"
+            "title": "Flexible time off",
+            "description": "30 days of vacation with flexibility to use as you prefer."
           },
           "education": {
-            "title": "Education Budget",
-            "description": "Annual budget for courses, certifications, books and conferences"
+            "title": "Education budget",
+            "description": "Monthly allowance to invest in your professional development."
           },
           "bonus": {
-            "title": "Results Bonus",
-            "description": "Profit sharing program tied to company and individual performance"
+            "title": "Performance bonus",
+            "description": "Profit sharing tied to delivery impact."
           }
         }
       },
       "workingHere": {
-        "title": "What It's Like to Work Here",
+        "title": "Team Testimonials",
         "testimonials": [
           {
-            "quote": "Lecabe gave me space to grow as a developer and learn new technologies. I feel challenged and supported at the same time.",
-            "author": "João Silva",
-            "role": "Full Stack Developer"
+            "quote": "What I love most about Lecabe is seeing the direct impact of my work. When I automate a process that saves hours for an entire team, the motivation is on another level.",
+            "author": "Senior Developer",
+            "role": "Automation Team"
           },
           {
-            "quote": "I have never worked in a place with such transparent and horizontal communication. I feel my opinion truly matters.",
-            "author": "Maria Santos",
-            "role": "UX Designer"
-          },
-          {
-            "quote": "The balance between technical challenge and respect for personal time is real here. I can deliver quality work without burning out.",
-            "author": "Pedro Costa",
-            "role": "DevOps Engineer"
+            "quote": "The autonomy and trust I receive here allow me to do the best work of my career. And the best part: from home, at my own pace.",
+            "author": "AI Consultant",
+            "role": "Artificial Intelligence Team"
           }
         ]
-      },
-      "cta": {
-        "title": "Want to Be Part of Our Team?",
-        "description": "Check out our open positions and see if it's the right fit",
-        "button": "View Careers"
       }
     },
     "careers": {
-      "meta": {
-        "title": "Careers | Open Positions at Lecabe",
-        "description": "Join the Lecabe team. Check out our open positions and build your career with us."
-      },
       "hero": {
-        "title": "Build Your Career with Us",
-        "subtitle": "Join a team passionate about technology and innovation"
+        "title": "Careers at Lecabe",
+        "subtitle": "Join a team that's transforming how companies operate."
       },
       "whyJoin": {
-        "title": "Why Join Lecabe",
+        "title": "Why work at Lecabe?",
         "items": {
           "growth": {
-            "title": "Accelerated Growth",
-            "description": "Challenging projects that push your technical and professional growth"
+            "title": "Real problems",
+            "description": "You'll work on projects that make a concrete difference in our clients' operations."
           },
           "projects": {
-            "title": "Diverse Projects",
-            "description": "Work on varied and innovative solutions, from MVPs to enterprise systems"
+            "title": "Cutting-edge technology",
+            "description": "AI, automation, cloud — we work with the latest in the market."
           },
           "team": {
-            "title": "Talented Team",
-            "description": "Learn and collaborate with experienced professionals passionate about technology"
+            "title": "Collaborative team",
+            "description": "People who help each other, share knowledge and celebrate results together."
           },
           "impact": {
-            "title": "Real Impact",
-            "description": "See the concrete result of your work making a difference in clients' businesses"
+            "title": "Accelerated growth",
+            "description": "A growing company means more opportunities for you to grow too."
           }
         }
       },
@@ -1150,53 +1181,58 @@
         "title": "Open Positions",
         "empty": {
           "title": "No open positions at the moment",
-          "description": "We have no openings at the moment, but we are always growing. Send a spontaneous application!"
+          "description": "Send your resume and we'll get in touch when an opportunity arises."
         },
         "spontaneous": {
-          "title": "Spontaneous Application",
-          "description": "Don't see a position that fits? Send your resume anyway! We are always looking for talented people and may have openings opening up soon.",
-          "button": "Send Application"
-        }
+          "title": "Spontaneous application",
+          "description": "Didn't find an ideal role? Send your resume anyway — we're always open to meeting talented people.",
+          "button": "Send resume"
+        },
+        "apply": "Apply",
+        "location": "Location",
+        "type": "Type",
+        "remote": "Remote",
+        "hybrid": "Hybrid",
+        "onsite": "On-site"
       },
       "process": {
-        "title": "Selection Process",
+        "title": "Our Hiring Process",
         "steps": {
           "application": {
             "title": "Application",
-            "description": "Send your resume and a brief introduction. Tell us about your experience and why you want to join Lecabe"
+            "description": "Send your resume and tell us why you want to work with automation and AI."
           },
           "screening": {
-            "title": "Resume Screening",
-            "description": "We carefully review all applications and select candidates who best fit the position profile"
+            "title": "Initial chat",
+            "description": "An informal conversation to get to know each other and align expectations."
           },
           "interview": {
-            "title": "Cultural Interview",
-            "description": "A conversation to better understand you, your experiences and see if there is alignment with Lecabe's culture"
+            "title": "Technical interview",
+            "description": "We evaluate your skills with a practical challenge related to day-to-day work."
           },
           "technical": {
-            "title": "Technical Challenge",
-            "description": "Practical test to evaluate your technical skills. We value real problem solving over decorating theory"
+            "title": "Practical challenge",
+            "description": "A mini-project to see how you solve real problems."
           },
           "offer": {
             "title": "Offer",
-            "description": "If it's a fit, we make an offer and clarify all benefits, expectations and start date"
+            "description": "If there's a match, we send a proposal with all the details."
           }
         }
       },
       "cta": {
-        "title": "Ready to Grow with Us?",
-        "description": "Send your application and start your journey at Lecabe",
-        "button": "Apply Now"
+        "title": "Didn't find your role?",
+        "description": "Send your resume anyway. We're always open to meeting talented people.",
+        "button": "Send resume"
       }
     }
   },
   "privacy": {
     "title": "Privacy Policy",
-    "lastUpdated": "Last updated"
+    "lastUpdated": "Last updated: March 2026"
   },
   "terms": {
     "title": "Terms of Service",
-    "lastUpdated": "Last updated"
+    "lastUpdated": "Last updated: March 2026"
   }
 }
-

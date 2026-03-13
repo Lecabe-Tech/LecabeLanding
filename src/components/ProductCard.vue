@@ -36,7 +36,7 @@ const openDemo = (): void => {
     class="product-card relative flex flex-col bg-white dark:bg-brand-medium-dark-primary/30 rounded-xl overflow-hidden shadow-lg transition-all duration-300 group animate-scale-in h-full"
     :class="`animation-delay-${animationDelay}`"
     role="article"
-    :aria-label="`Produto: ${product.name}`"
+    :aria-label="`${t('ui.productLabel')}: ${product.name}`"
   >
     <!-- Product Image -->
     <div class="relative w-full h-48 md:h-56 overflow-hidden bg-gray-100 dark:bg-brand-dark">
@@ -49,10 +49,10 @@ const openDemo = (): void => {
       <!-- Badges -->
       <div class="absolute top-3 right-3 flex flex-col gap-2">
         <div class="bg-brand-primary text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
-          {{ product.qtd_vendas }} vendas
+          {{ product.qtd_vendas }} {{ t('marketplace.product.sales') }}
         </div>
         <div class="bg-brand-alternative text-white px-3 py-1 rounded-full text-xs font-bold shadow-lg">
-          {{ product.qtd_assinantes }} assinantes
+          {{ product.qtd_assinantes }} {{ t('marketplace.product.subscribers') }}
         </div>
       </div>
     </div>
@@ -92,14 +92,14 @@ const openDemo = (): void => {
       <div class="flex gap-2">
         <button
           class="flex-1 px-4 py-2.5 bg-brand-primary dark:bg-brand-light-primary text-white rounded-lg font-semibold text-sm hover:bg-brand-dark-primary dark:hover:bg-brand-medium-primary hover:scale-105 transition-all duration-300 shadow-md focus:outline-none focus:ring-2 focus:ring-brand-dark-primary dark:focus:ring-brand-medium-primary"
-          :aria-label="`Ver detalhes de ${product.name}`"
+          :aria-label="`${t('marketplace.product.viewDetails')} - ${product.name}`"
           @click="viewDetails"
         >
           {{ t('marketplace.product.viewDetails') }}
         </button>
         <button
           class="flex-1 px-4 py-2.5 bg-white dark:bg-brand-dark text-brand-primary dark:text-brand-light-primary border-2 border-brand-primary dark:border-brand-light-primary rounded-lg font-semibold text-sm hover:bg-brand-primary hover:text-white dark:hover:bg-brand-light-primary dark:hover:text-brand-dark transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand-primary dark:focus:ring-brand-light-primary"
-          :aria-label="`Ver demonstração ao vivo de ${product.name}`"
+          :aria-label="`${t('marketplace.product.liveDemo')} - ${product.name}`"
           @click="openDemo"
         >
           {{ t('marketplace.product.liveDemo') }}

@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import type { Package } from '@/types/service'
 import GlassCard from '@/components/ui/GlassCard.vue'
+
+const { t } = useI18n()
 
 interface Props {
   packages: Package[]
@@ -48,7 +51,7 @@ const packageHasFeature = (pkg: Package, feature: string): boolean => {
         >
           <path d="M224,48H32a8,8,0,0,0-8,8V200a8,8,0,0,0,8,8H224a8,8,0,0,0,8-8V56A8,8,0,0,0,224,48ZM40,112H80v32H40Zm56,0H216v32H96ZM216,64V96H40V64ZM40,160H80v32H40Zm176,32H96V160H216v32Z" />
         </svg>
-        <span>{{ comparisonMode ? 'Ver Cartões' : 'Comparar Planos' }}</span>
+        <span>{{ comparisonMode ? t('ui.viewCards') : t('ui.comparePlans') }}</span>
       </button>
     </div>
 
@@ -67,7 +70,7 @@ const packageHasFeature = (pkg: Package, feature: string): boolean => {
           v-if="pkg.highlighted"
           class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-brand-primary to-brand-dark-primary dark:from-brand-light-primary dark:to-brand-primary text-white text-sm font-semibold rounded-full shadow-lg z-20"
         >
-          Recomendado
+          {{ t('pricing.recommended') }}
         </div>
 
         <GlassCard
@@ -122,7 +125,7 @@ const packageHasFeature = (pkg: Package, feature: string): boolean => {
               ]"
               @click="emit('select-package', pkg)"
             >
-              Escolher Plano
+              {{ t('pricing.choosePlan') }}
             </button>
           </div>
         </GlassCard>
@@ -137,7 +140,7 @@ const packageHasFeature = (pkg: Package, feature: string): boolean => {
             <thead>
               <tr class="border-b border-gray-200 dark:border-gray-700">
                 <th class="text-left py-4 px-4 text-sm font-semibold text-gray-700 dark:text-gray-300">
-                  Recursos
+                  {{ t('pricing.features') }}
                 </th>
                 <th
                   v-for="pkg in packages"
@@ -149,7 +152,7 @@ const packageHasFeature = (pkg: Package, feature: string): boolean => {
                       v-if="pkg.highlighted"
                       class="absolute -top-6 left-1/2 -translate-x-1/2 px-3 py-1 bg-gradient-to-r from-brand-primary to-brand-dark-primary text-white text-xs font-semibold rounded-full shadow-md whitespace-nowrap"
                     >
-                      Recomendado
+                      {{ t('pricing.recommended') }}
                     </div>
                     <div class="text-lg font-bold text-gray-900 dark:text-white">
                       {{ pkg.name }}
@@ -217,7 +220,7 @@ const packageHasFeature = (pkg: Package, feature: string): boolean => {
                     ]"
                     @click="emit('select-package', pkg)"
                   >
-                    Escolher
+                    {{ t('pricing.choose') }}
                   </button>
                 </td>
               </tr>

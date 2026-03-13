@@ -6,7 +6,6 @@ import { useContactForm } from '@/composables/useContactForm'
 import TechBadge from '@/components/TechBadge.vue'
 import SubmitButton from '@/components/SubmitButton.vue'
 import MetricsSection from '@/components/MetricsSection.vue'
-import TestimonialsSection from '@/components/TestimonialsSection.vue'
 import FAQSection from '@/components/FAQSection.vue'
 import TechBackground from '@/components/TechBackground.vue'
 import HeroVisualCard from '@/components/ui/HeroVisualCard.vue'
@@ -170,25 +169,9 @@ watch(() => window.location.hash, () => {
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <!-- Left Side - Text Content -->
           <div class="flex flex-col gap-6 text-center lg:text-left order-2 lg:order-1">
-            <!-- Logo Badge -->
-            <div class="flex justify-center lg:justify-start">
-              <div class="inline-flex items-center gap-2 bg-brand-primary/10 dark:bg-brand-light-primary/20 px-4 py-2 rounded-full">
-                <img
-                  src="/assets/logos/simbolo-gradient.png"
-                  alt="Lecabe"
-                  class="h-6 w-auto"
-                >
-                <span class="text-brand-primary dark:text-brand-light-primary text-sm font-semibold">Software House</span>
-              </div>
-            </div>
-
             <!-- Headline with Bold Typography and Gradient -->
             <h1 class="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.1] tracking-tight">
-              <span class="text-gray-900 dark:text-white">Software </span>
-              <span class="text-gradient-animated">Personalizado</span>
-              <span class="text-gray-900 dark:text-white"> que </span>
-              <span class="text-gradient-animated">Acelera</span>
-              <span class="text-gray-900 dark:text-white"> seu Negócio</span>
+              <span class="text-gray-900 dark:text-white">{{ t('hero.title') }}</span>
             </h1>
 
             <!-- Subtitle -->
@@ -261,7 +244,7 @@ watch(() => window.location.hash, () => {
                   alt="Lecabe"
                   class="h-10 w-auto"
                 >
-                <span class="text-brand-primary dark:text-brand-light-primary text-sm font-semibold uppercase tracking-wider">Sobre Nós</span>
+                <span class="text-brand-primary dark:text-brand-light-primary text-sm font-semibold uppercase tracking-wider">{{ t('nav.about') }}</span>
               </div>
               <h2 class="text-gray-900 dark:text-white text-3xl md:text-4xl lg:text-5xl font-black leading-tight mb-6">
                 {{ t('about.title') }}
@@ -274,26 +257,26 @@ watch(() => window.location.hash, () => {
               <div class="flex flex-wrap gap-8">
                 <div>
                   <div class="text-3xl font-black text-brand-primary dark:text-brand-light-primary">
-                    5+
+                    {{ t('metrics.items.experience.value') }}
                   </div>
                   <div class="text-gray-500 dark:text-gray-400 text-sm">
-                    Anos de experiência
+                    {{ t('metrics.items.experience.label') }}
                   </div>
                 </div>
                 <div>
                   <div class="text-3xl font-black text-brand-primary dark:text-brand-light-primary">
-                    10+
+                    {{ t('metrics.items.projects.value') }}
                   </div>
                   <div class="text-gray-500 dark:text-gray-400 text-sm">
-                    Projetos entregues
+                    {{ t('metrics.items.projects.label') }}
                   </div>
                 </div>
                 <div>
                   <div class="text-3xl font-black text-brand-primary dark:text-brand-light-primary">
-                    100%
+                    {{ t('metrics.items.satisfaction.value') }}
                   </div>
                   <div class="text-gray-500 dark:text-gray-400 text-sm">
-                    Satisfação
+                    {{ t('metrics.items.satisfaction.label') }}
                   </div>
                 </div>
               </div>
@@ -391,7 +374,7 @@ watch(() => window.location.hash, () => {
                   alt="Lecabe"
                   class="h-10 w-auto"
                 >
-                <span class="text-brand-primary dark:text-brand-light-primary text-sm font-semibold uppercase tracking-wider">Serviços</span>
+                <span class="text-brand-primary dark:text-brand-light-primary text-sm font-semibold uppercase tracking-wider">{{ t('nav.services') }}</span>
               </div>
               <h2 class="text-gray-900 dark:text-white text-3xl md:text-4xl lg:text-5xl font-black leading-tight mb-4">
                 {{ t('services.subtitle') }}
@@ -404,7 +387,7 @@ watch(() => window.location.hash, () => {
               class="self-start lg:self-auto flex items-center gap-2 text-brand-primary dark:text-brand-light-primary font-semibold hover:gap-3 transition-all"
               @click="scrollToSection('contact')"
             >
-              <span>Falar sobre seu projeto</span>
+              <span>{{ t('hero.cta') }}</span>
               <svg
                 class="w-5 h-5"
                 fill="none"
@@ -449,7 +432,7 @@ watch(() => window.location.hash, () => {
                 </p>
               </div>
               <div class="flex items-center gap-2 text-white/60 text-sm mt-6">
-                <span>Nosso principal serviço</span>
+                <span>{{ t('services.title') }}</span>
                 <svg
                   class="w-4 h-4"
                   fill="none"
@@ -666,7 +649,7 @@ watch(() => window.location.hash, () => {
                   alt="Lecabe"
                   class="h-10 w-auto"
                 >
-                <span class="text-brand-primary dark:text-brand-light-primary text-sm font-semibold uppercase tracking-wider">Stack</span>
+                <span class="text-brand-primary dark:text-brand-light-primary text-sm font-semibold uppercase tracking-wider">{{ t('technologies.categories.devops') }}</span>
               </div>
               <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 dark:text-white leading-tight">
                 {{ t('technologies.title') }}
@@ -674,7 +657,7 @@ watch(() => window.location.hash, () => {
             </div>
             <div class="lg:col-span-7">
               <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed">
-                Utilizamos as tecnologias mais modernas e consolidadas do mercado para entregar soluções robustas e escaláveis
+                {{ t('technologies.subtitle') }}
               </p>
             </div>
           </div>
@@ -694,7 +677,7 @@ watch(() => window.location.hash, () => {
                 >
                   <path d="M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32Zm0,176H48V48H208ZM82.34,141.66a8,8,0,0,1,0-11.32l32-32a8,8,0,0,1,11.32,11.32L100.69,136l24.97,24.97a8,8,0,0,1-11.32,11.32Zm80-43.32a8,8,0,0,1,0,11.32l-32,32a8,8,0,0,1-11.32-11.32L144.69,104,119.72,79.03a8,8,0,0,1,11.32-11.32Z" />
                 </svg>
-                Frontend
+                {{ t('technologies.categories.frontend') }}
               </h3>
               <div class="grid grid-cols-3 gap-3">
                 <TechBadge
@@ -728,7 +711,7 @@ watch(() => window.location.hash, () => {
                 >
                   <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm40-68a28,28,0,0,1-28,28h-8v8a8,8,0,0,1-16,0v-8H104a8,8,0,0,1,0-16h36a12,12,0,0,0,0-24H116a28,28,0,0,1,0-56h12V72a8,8,0,0,1,16,0v8h12a8,8,0,0,1,0,16H116a12,12,0,0,0,0,24h24A28,28,0,0,1,168,148Z" />
                 </svg>
-                Backend
+                {{ t('technologies.categories.backend') }}
               </h3>
               <div class="grid grid-cols-3 gap-3">
                 <TechBadge
@@ -762,7 +745,7 @@ watch(() => window.location.hash, () => {
                 >
                   <path d="M227.32,73.37,182.63,28.69a16,16,0,0,0-22.63,0L36.69,152A15.86,15.86,0,0,0,32,163.31V208a16,16,0,0,0,16,16H216a8,8,0,0,0,0-16H115.32l112-112A16,16,0,0,0,227.32,73.37Z" />
                 </svg>
-                Design
+                {{ t('technologies.categories.frontend') }}
               </h3>
               <div class="flex justify-center">
                 <TechBadge
@@ -786,7 +769,7 @@ watch(() => window.location.hash, () => {
                 >
                   <path d="M128,24C74.17,24,32,48.6,32,80v96c0,31.4,42.17,56,96,56s96-24.6,96-56V80C224,48.6,181.83,24,128,24Zm0,16c44.45,0,80,20.3,80,40s-35.55,40-80,40S48,100.3,48,80,83.55,40,128,40ZM48,176V147.08c18.06,16.07,46.29,26.92,80,26.92s61.94-10.85,80-26.92V176c0,19.7-35.55,40-80,40S48,195.7,48,176Zm80-24c-33.71,0-61.94-10.85-80-26.92V96.08c18.06,16.07,46.29,26.92,80,26.92s61.94-10.85,80-26.92V125.08C189.94,141.15,161.71,152,128,152Z" />
                 </svg>
-                Bancos de Dados
+                {{ t('technologies.categories.database') }}
               </h3>
               <div class="grid grid-cols-4 gap-3">
                 <TechBadge
@@ -825,7 +808,7 @@ watch(() => window.location.hash, () => {
                 >
                   <path d="M160,40A88.09,88.09,0,0,0,81.29,88.67,64,64,0,1,0,72,216h88a88,88,0,0,0,0-176Z" />
                 </svg>
-                Cloud & DevOps
+                {{ t('technologies.categories.devops') }}
               </h3>
               <div class="grid grid-cols-2 gap-3">
                 <TechBadge
@@ -862,13 +845,13 @@ watch(() => window.location.hash, () => {
                 alt="Lecabe"
                 class="h-10 w-auto"
               >
-              <span class="text-brand-primary dark:text-brand-light-primary text-sm font-semibold uppercase tracking-wider">Processo</span>
+              <span class="text-brand-primary dark:text-brand-light-primary text-sm font-semibold uppercase tracking-wider">{{ t('timeline.title') }}</span>
             </div>
             <h2 class="text-3xl md:text-4xl lg:text-5xl font-black text-gray-900 dark:text-white leading-tight mb-4">
               {{ t('timeline.title') }}
             </h2>
             <p class="text-gray-600 dark:text-gray-400 text-lg leading-relaxed max-w-2xl mx-auto">
-              Nossa metodologia ágil garante transparência e qualidade em cada etapa do desenvolvimento
+              {{ t('timeline.subtitle') }}
             </p>
           </div>
 
@@ -931,7 +914,7 @@ watch(() => window.location.hash, () => {
                             >
                               <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z" />
                             </svg>
-                            <span>1-2 semanas</span>
+                            <span>{{ t('timeline.duration') }}</span>
                           </div>
                         </div>
                       </div>
@@ -1091,7 +1074,7 @@ watch(() => window.location.hash, () => {
                             <span class="px-3 py-1.5 bg-gray-100 dark:bg-brand-dark rounded-lg text-xs font-semibold text-gray-700 dark:text-gray-300">Vue.js</span>
                             <span class="px-3 py-1.5 bg-gray-100 dark:bg-brand-dark rounded-lg text-xs font-semibold text-gray-700 dark:text-gray-300">Node.js</span>
                             <span class="px-3 py-1.5 bg-gray-100 dark:bg-brand-dark rounded-lg text-xs font-semibold text-gray-700 dark:text-gray-300">PostgreSQL</span>
-                            <span class="px-3 py-1.5 bg-gray-100 dark:bg-brand-dark rounded-lg text-xs font-semibold text-gray-700 dark:text-gray-300">+mais</span>
+                            <span class="px-3 py-1.5 bg-gray-100 dark:bg-brand-dark rounded-lg text-xs font-semibold text-gray-700 dark:text-gray-300">{{ t('timeline.techMore') }}</span>
                           </div>
                         </div>
                       </div>
@@ -1155,9 +1138,6 @@ watch(() => window.location.hash, () => {
       </section>
     </div>
 
-    <!-- Testimonials Section -->
-    <TestimonialsSection />
-
     <!-- FAQ Section -->
     <FAQSection />
 
@@ -1184,13 +1164,13 @@ watch(() => window.location.hash, () => {
                     alt="Lecabe"
                     class="h-10 w-auto"
                   >
-                  <span class="text-brand-primary dark:text-brand-light-primary text-sm font-semibold uppercase tracking-wider">Contato</span>
+                  <span class="text-brand-primary dark:text-brand-light-primary text-sm font-semibold uppercase tracking-wider">{{ t('nav.contact') }}</span>
                 </div>
                 <h2 class="text-gray-900 dark:text-white text-3xl md:text-4xl lg:text-5xl font-black leading-tight mb-4">
                   {{ t('contact.title') }}
                 </h2>
                 <p class="text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
-                  {{ t('contact.description') }}
+                  {{ t('contact.subtitle') }}
                 </p>
               </div>
 
@@ -1239,7 +1219,7 @@ watch(() => window.location.hash, () => {
                       Telefone
                     </p>
                     <p class="text-gray-900 dark:text-white font-semibold">
-                      +55 (11) 9999-9999
+                      +55 (11) 99413-2821
                     </p>
                   </div>
                 </div>
@@ -1263,7 +1243,7 @@ watch(() => window.location.hash, () => {
                       Localização
                     </p>
                     <p class="text-gray-900 dark:text-white font-semibold">
-                      São Paulo, Brasil
+                      Aguaí, SP — Brasil
                     </p>
                   </div>
                 </div>
@@ -1286,10 +1266,10 @@ watch(() => window.location.hash, () => {
                   </div>
                   <div>
                     <p class="text-gray-900 dark:text-white font-semibold text-sm">
-                      Resposta garantida
+                      {{ t('contact.guaranteedResponse') }}
                     </p>
                     <p class="text-gray-500 dark:text-gray-400 text-xs">
-                      Retornamos em até 24 horas úteis
+                      {{ t('contact.responseTime') }}
                     </p>
                   </div>
                 </div>
@@ -1301,7 +1281,7 @@ watch(() => window.location.hash, () => {
               <div class="bg-white/90 dark:bg-brand-medium-dark-primary rounded-3xl p-6 md:p-8 border border-gray-100 dark:border-brand-medium-dark-primary shadow-xl shadow-gray-200/50 dark:shadow-none backdrop-blur-sm">
                 <form
                   class="space-y-5"
-                  aria-label="Formulário de contato"
+                  :aria-label="t('ui.contactForm')"
                   @submit.prevent="handleContactSubmit"
                 >
                   <!-- Name Field -->
@@ -1337,7 +1317,7 @@ watch(() => window.location.hash, () => {
                     <span
                       v-if="formErrors.name"
                       class="text-red-500 text-xs mt-1 block"
-                    >Nome é obrigatório</span>
+                    >{{ t('contact.form.errors.nameRequired') }}</span>
                   </div>
 
                   <!-- Email Field -->
@@ -1373,7 +1353,7 @@ watch(() => window.location.hash, () => {
                     <span
                       v-if="formErrors.email"
                       class="text-red-500 text-xs mt-1 block"
-                    >E-mail inválido</span>
+                    >{{ t('contact.form.errors.emailInvalid') }}</span>
                   </div>
 
                   <!-- Subject and Language Row -->
@@ -1407,7 +1387,7 @@ watch(() => window.location.hash, () => {
                       <span
                         v-if="formErrors.subject"
                         class="text-red-500 text-xs mt-1 block"
-                      >Assunto é obrigatório</span>
+                      >{{ t('contact.form.errors.subjectRequired') }}</span>
                     </div>
 
                     <!-- Language -->
@@ -1459,7 +1439,7 @@ watch(() => window.location.hash, () => {
                       <span
                         v-if="formErrors.language"
                         class="text-red-500 text-xs mt-1 block"
-                      >Idioma é obrigatório</span>
+                      >{{ t('contact.form.errors.languageRequired') }}</span>
                     </div>
                   </div>
 
@@ -1494,7 +1474,7 @@ watch(() => window.location.hash, () => {
                       <span
                         v-if="formErrors.message"
                         class="text-red-500 text-xs"
-                      >Mínimo 20 caracteres</span>
+                      >{{ t('contact.form.errors.minCharacters') }}</span>
                       <span class="text-gray-400 text-xs ml-auto">{{ formData.message.length }}/20</span>
                     </div>
                   </div>
